@@ -10,6 +10,7 @@ target 'aria2 remote' do
   # Pods for aria2 remote
   
   pod 'wpxmlrpc'
-  pod 'AFNetworking', '~> 3.0'
-
+  pod 'AFNetworking',  '~> 1.3.3'
+  pod 'AFJSONRPCClient'
+  
 end

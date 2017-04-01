@@ -7,203 +7,216 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		020031D60A2E44E66E18D8E11410C964 /* WPXMLRPCDecoderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 303B87615D4CE42916C04211BDAB71AC /* WPXMLRPCDecoderDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0CC83DC01579D68C879B454EB34D4D78 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCC85399EA7E4FD8AADBA88B2CCB918 /* Cocoa.framework */; };
-		26BFA5307997CBD959B0DEE6D1860316 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B51B19B5DC6DDCCA7FA2BE4A759A9E5 /* AFURLSessionManager.m */; };
-		2867AF39F082A431289CFC56B7DB8B13 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9B4D017CBF32E657321A46935A4388 /* SystemConfiguration.framework */; };
-		33AF4FD6C823C628ABEF78959A499933 /* wpxmlrpc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C54BCD3EF509A9F2693507F5854769 /* wpxmlrpc-dummy.m */; };
-		374ADAECC391D70FCAAC77F776FA4ADC /* WPXMLRPCDataCleaner.h in Headers */ = {isa = PBXBuildFile; fileRef = E41553AB8993A30608A5DADFB9C3BAEF /* WPXMLRPCDataCleaner.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3F12F2CE20A6800C97D2A94D4A29B2B2 /* WPXMLRPCDataCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4174F511BE9FFED91D640FF052F8A6 /* WPXMLRPCDataCleaner.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		473C5AD9209B38F2F2C50F9043E33E39 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E7226E387551A60AD8298074197731 /* CoreServices.framework */; };
-		5AE751CD9231B6E63C964585B6CBCEAB /* WPStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DC08E6349C6465E8B75D4E0D7DE0FE8D /* WPStringUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5C0DB599ACC1DC37B52E941826ECA0A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCC85399EA7E4FD8AADBA88B2CCB918 /* Cocoa.framework */; };
-		60333A1B4177B7DE350238DE809B3E2F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E79F569B08CD2C0E6613C3CFB8901C8 /* AFURLResponseSerialization.m */; };
-		6087C4B176B2517BBE4A34FA1F895D06 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A18BF56680B02048E5FF2CDE5C934 /* AFURLRequestSerialization.m */; };
-		69AC1C43936A09E6B8C12DD7B4227BC7 /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9869103F31CEFA6E7A9ACE909953039 /* AFNetworking-dummy.m */; };
-		71DF63626C511DB276D0C45984A1C09E /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E121A6D7746BC567E28E457275CA94 /* AFNetworkReachabilityManager.m */; };
-		739977C75BDAB3348F81792AFD170BD4 /* WPBase64Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 527071B5D0160729555957005A7FEAA3 /* WPBase64Utils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		787BE512B17D378E851F01E4E0B93F10 /* Pods-aria2 remote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C02C4B916E25D041FEB041165E45B /* Pods-aria2 remote-dummy.m */; };
-		7D237069835C673B8737DD09379C28EB /* WPStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B16225D326BD4CC48020C79A77863BAE /* WPStringUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7E390D9BFDCEFA60EF7D095604BCB2B2 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 582780133896D46136CF0D883F414CA0 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E03584191D99ABBE1DEFC250FB7C190 /* WPXMLRPCDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1335E9CF6343CA4DC44DE54A60345CEF /* WPXMLRPCDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92F213DDDCF82729C63891BA0A122726 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EF9DCB612699867CAAB962D349E1C0DE /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A076880AFEBCE643EF6724B38FB590C5 /* WPXMLRPCDecoderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53115AA7712E92590596F4CD70366132 /* WPXMLRPCDecoderDelegate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A76B54EDE3FBC2B32558C23142F23B31 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6427C8D75C304497C58F4894A9AB506E /* AFHTTPSessionManager.m */; };
-		A82CF48320EA8764450D197E7538B538 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = D5210015C48B80F1A3CE6458EE486266 /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C20D6CE3C91C338FF77CFEB5E91D3EA6 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDB7EE5D480468E50883EDE1969079F /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C81384C8E0A01F3A841D5289DA19C34D /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0457B62AE9E02C3B71993EDD1C83E247 /* AFSecurityPolicy.m */; };
-		C84B36A7F23AFEDD44F344E3E9E5827B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7892C2662B8D3F62F8AF900BC74BFEC /* Security.framework */; };
-		C93F6CA15B2DF888DE964CD15158C749 /* WPXMLRPC.h in Headers */ = {isa = PBXBuildFile; fileRef = AC5D71C2D304005FBCC89652DA92D64B /* WPXMLRPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CCE19E7D2D3AD672F301465CB3F5D2A7 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7F598AA35F3494A507C7391966EA4B /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF2FB964F468645431C6BCEB67A70B2C /* WPXMLRPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8F88FE5202F5A528DC276E0A2DA3D9 /* WPXMLRPCEncoder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E48A8D2FDC35A0CEED4296147A514B6A /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AB62F92BEBE24FD82517AB919872FA /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F23D09A74068012F30E4919E243EDB72 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 503C2D378555EC737F26DCB44D4D3BDE /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3FE58289A3E305B1F7EABABD2CDAAC2 /* WPXMLRPCEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E11F8BCA7680D52BB90A63EE6209AC /* WPXMLRPCEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4E6863F559FC96BA99D66ED18094D37 /* WPXMLRPCDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FA942832FA99B0199A463036462631EE /* WPXMLRPCDecoder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F903D4B8C4F138E1A3AD297D7660890D /* WPBase64Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 71D98AA39C01AEF9A98C084B039ED718 /* WPBase64Utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FFBD5A95D1810D21D3D0DA48B1147861 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCC85399EA7E4FD8AADBA88B2CCB918 /* Cocoa.framework */; };
+		0A74D8F1B44F198940A4476FECFB0DD2 /* Pods-aria2 remote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C02C4B916E25D041FEB041165E45B /* Pods-aria2 remote-dummy.m */; };
+		0C925E71B9D862D93CAE62CC2118A951 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F131A453E397B65E786EBAF53EF2E1 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		115B5F80E4605A5A2D48A54E99A8ACB3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCC85399EA7E4FD8AADBA88B2CCB918 /* Cocoa.framework */; };
+		1266423836930A0D899C022D1BD6964D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D98A6B53135AA5378DC7FD325138A99 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		147D0EF0719C46F800E8F4C3D6E40E98 /* WPXMLRPC.h in Headers */ = {isa = PBXBuildFile; fileRef = D73A8F9F68CB46CCAFA608DFEF2C91B1 /* WPXMLRPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		222F00A3FD8F9F7C46CA52ACF59AB1F1 /* WPXMLRPCDecoderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A675FF50636370E8AB8F79AE0D4704 /* WPXMLRPCDecoderDelegate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2330D099ED882566D84297F9DC5C558D /* AFJSONRPCClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D65E34F0A6C6C50850C37BB66F5E314 /* AFJSONRPCClient-dummy.m */; };
+		29A5D8ED9DE62421578CB69C86E2C133 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D191D0E198B71C72407B4F05864D4359 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2B85D78BDD0299676DD08130C2E70F4B /* wpxmlrpc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCD1918A242E518F79F524C3A70AD0B /* wpxmlrpc-dummy.m */; };
+		305A1E6849A01D4EA62A0E5B61F65902 /* WPXMLRPCDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C558CABE84F364BC47D2492A37B4072D /* WPXMLRPCDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		320EB64AB7EB8B1F05DD1EB9EA832060 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E7226E387551A60AD8298074197731 /* CoreServices.framework */; };
+		3D68134BC4A97FCAE0896885B5463C85 /* AFImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1069DA02CA55296718DBD8E8B579212A /* AFImageRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40861A435CA222560C7B4C1F5679FD7E /* WPXMLRPCEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = AC2E825ECDC9BAC241C843DB7FFEBD2B /* WPXMLRPCEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5071E05E963FE4FF0D21F2E47DF453DC /* AFPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A1949BBD5ECB99FFF00D11A549AB2758 /* AFPropertyListRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5304B7E740F9B8E871CEACBBB6C5E16E /* WPXMLRPCDecoderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B5055EFEE2CB88F2FCE0B340E1AD5F4D /* WPXMLRPCDecoderDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		53EA452F016CD93C66B6D02AA65AEEF7 /* AFXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 97511A7EA6F34A116E69F0B916D9E182 /* AFXMLRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		576B023E6ECD0231314CF80E34232E01 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F2F97AB28FBBEBBF5BD43CB0F5F0EE /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65C23EA2E27907ED3C5D75D9A97C94DA /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F079B675A76BC85FF8849F8BEC0F99 /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		67B6B4B9CE9E7C05F265386567E06889 /* AFJSONRPCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 11A8725283CDC8B87EE78B4154D8F6B3 /* AFJSONRPCClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68E9B6E88E41F22E172DF60B13384481 /* AFJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = FCE76DA4C1CA8E9D5AFB66A3D08F6007 /* AFJSONRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		700D4B1899D0D5C9B78D757B7D7F4681 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 57781558554AAA52F078747D1DB10510 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		79030699F39831608193244A5F0891B9 /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 629927ADFCA674783927FDB991A762F7 /* AFHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79757EE16405CD614EF9D85FCC7A0A71 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E96F0BBBEB0C48E790B207696A94A1C /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7C52D9B14488F0BCF273129187F6813F /* WPBase64Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 419BB7FD17EF97FD153FD6DAB9B18B13 /* WPBase64Utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7FB3B6C32BB04E39425F0A104B675456 /* WPXMLRPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 601D7AA45264BF1CBB3D7E540FAEC04B /* WPXMLRPCEncoder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		91E56CBCE71CB957C3DAC2E5306A9CF9 /* AFJSONRPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D83EC74CE8CDA30F259C251618F14E94 /* AFJSONRPCClient.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		932DA5FBC7E6594FCACDD39F0AF3B056 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7892C2662B8D3F62F8AF900BC74BFEC /* Security.framework */; };
+		94EED1E36984304AF289E87A221B4812 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2744F77748615DFE941C8857E4A8F8 /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		98101687463381B9F843CB385F313387 /* WPXMLRPCDataCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F5A5FA317A3147A1797BA7FB458868 /* WPXMLRPCDataCleaner.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9F088EE4D3E3B1BCB0B28D5E3968FF31 /* WPStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E530258092F41669FF65300C31E7D7 /* WPStringUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AA14FDF3227779035C7D1DD488808C09 /* WPXMLRPCDataCleaner.h in Headers */ = {isa = PBXBuildFile; fileRef = 026332133330EC9282A07F4040E32894 /* WPXMLRPCDataCleaner.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B64472C514173547EE7C043C8D098240 /* WPXMLRPCDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF3A25F164CFD52B47ACAF05C945697 /* WPXMLRPCDecoder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C501B0850AA92E2CE3686571BE4899A0 /* WPStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 05893BFE982DE103F5E64194766B9F66 /* WPStringUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CCE2138D314A957D2648675408B5F45B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCC85399EA7E4FD8AADBA88B2CCB918 /* Cocoa.framework */; };
+		D50316E197294F7797FCC29EE8515A42 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCC85399EA7E4FD8AADBA88B2CCB918 /* Cocoa.framework */; };
+		DE7EEDF912F9CEFCD89CE3364BF969DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCC85399EA7E4FD8AADBA88B2CCB918 /* Cocoa.framework */; };
+		DF2004F70CA0C3513D04D55C8BE68D7B /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E59919E2B4F3C646BAC75DE0EE483F2 /* AFNetworking-dummy.m */; };
+		E7FA202BD84C53B12BA6A16963F82ECD /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3050D71646811107278CF244E372E8A3 /* AFURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E89B2A470A016A8281FECC8C68A18B73 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = BE75C60DAF3BDA8A1A1D0C895835E7AC /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAE1C6BC800F8EB56D0CF301F4DF83F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9B4D017CBF32E657321A46935A4388 /* SystemConfiguration.framework */; };
+		EB5C84512A2E4B5380F2D5477D238C27 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0E151791D9F1D7773E081129D9DDD4 /* AFHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBC1D9966748C32797831BD5ADD8C1C8 /* WPBase64Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 638463E2626601E25EF067D11AEEB2DC /* WPBase64Utils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F73CB286B64211AA45B6CD861DFEE5F6 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6532058D1EF5CDE0D22B717887BF79BF /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F9493AC09EA864CF049CDA2864376958 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F80CBC6F40E09E11A9CE44F81AA7EB84 /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE70835E3AB04C6E27D8603629C2FC6B /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C74E672378FFDD5B092EEAE8950AFC /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DF09658A3BFDBEEE33DB81DD44B9D8C1 /* PBXContainerItemProxy */ = {
+		4A25657C568D8973C22A889B51EBC98D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E44AE298D538F76278421193C97E79C6;
+			remoteGlobalIDString = B694CE1CB2671313956EDA4BDF50AE1B;
+			remoteInfo = AFJSONRPCClient;
+		};
+		4B71C88C5DBEF38B68149B3B2C73AECD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E010F5FA492F1F7FED87EB20D60F55C;
 			remoteInfo = AFNetworking;
 		};
-		FF68370B14205418234162CA20A50B1C /* PBXContainerItemProxy */ = {
+		A5C4B7BA9B21ADC69CE9D7C22E23559A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5F785FE51A811832A1CF881C0E709ED3;
+			remoteGlobalIDString = A07DF2297131498CA46F559F1FDAA1C9;
 			remoteInfo = wpxmlrpc;
+		};
+		EAA756D9BA74555E247369B5F2BB0143 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E010F5FA492F1F7FED87EB20D60F55C;
+			remoteInfo = AFNetworking;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0457B62AE9E02C3B71993EDD1C83E247 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
-		08E121A6D7746BC567E28E457275CA94 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		0B58FB89941D2A5ADB37B285877E40CC /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
-		0EDB7EE5D480468E50883EDE1969079F /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
-		1116C9D5A4408268514BA3C9DAE16E04 /* libPods-aria2 remote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-aria2 remote.a"; path = "libPods-aria2 remote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1335E9CF6343CA4DC44DE54A60345CEF /* WPXMLRPCDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCDecoder.h; path = WPXMLRPC/WPXMLRPCDecoder.h; sourceTree = "<group>"; };
+		026332133330EC9282A07F4040E32894 /* WPXMLRPCDataCleaner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCDataCleaner.h; path = WPXMLRPC/WPXMLRPCDataCleaner.h; sourceTree = "<group>"; };
+		05893BFE982DE103F5E64194766B9F66 /* WPStringUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPStringUtils.h; path = WPXMLRPC/WPStringUtils.h; sourceTree = "<group>"; };
+		1069DA02CA55296718DBD8E8B579212A /* AFImageRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageRequestOperation.h; path = AFNetworking/AFImageRequestOperation.h; sourceTree = "<group>"; };
+		11A8725283CDC8B87EE78B4154D8F6B3 /* AFJSONRPCClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFJSONRPCClient.h; path = AFJSONRPCClient/AFJSONRPCClient.h; sourceTree = "<group>"; };
+		11F131A453E397B65E786EBAF53EF2E1 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = AFNetworking/AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		15E7226E387551A60AD8298074197731 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		1803A1774D431D62E091129C16FFEE1A /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFNetworking.a; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B51B19B5DC6DDCCA7FA2BE4A759A9E5 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		1AB16B10162E8CDD7D24149743197A07 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFNetworking.a; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9B4D017CBF32E657321A46935A4388 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		1ED2ACB2F06FDB24B115E1A9996C0307 /* libwpxmlrpc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libwpxmlrpc.a; path = libwpxmlrpc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		22BCE855ACA7B764420FEBAF75C6AD9B /* Pods-aria2 remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-aria2 remote.release.xcconfig"; sourceTree = "<group>"; };
 		2C0C02C4B916E25D041FEB041165E45B /* Pods-aria2 remote-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-aria2 remote-dummy.m"; sourceTree = "<group>"; };
-		303B87615D4CE42916C04211BDAB71AC /* WPXMLRPCDecoderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCDecoderDelegate.h; path = WPXMLRPC/WPXMLRPCDecoderDelegate.h; sourceTree = "<group>"; };
-		36AB62F92BEBE24FD82517AB919872FA /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		3B68A46F73B74973463DBA7205937CC6 /* libwpxmlrpc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libwpxmlrpc.a; path = libwpxmlrpc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D98A6B53135AA5378DC7FD325138A99 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		3050D71646811107278CF244E372E8A3 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		30A675FF50636370E8AB8F79AE0D4704 /* WPXMLRPCDecoderDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCDecoderDelegate.m; path = WPXMLRPC/WPXMLRPCDecoderDelegate.m; sourceTree = "<group>"; };
+		33BA60F0EED840A5C96425F9A8C78CA3 /* libPods-aria2 remote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-aria2 remote.a"; path = "libPods-aria2 remote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E59919E2B4F3C646BAC75DE0EE483F2 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		40F079B675A76BC85FF8849F8BEC0F99 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFJSONRequestOperation.m; path = AFNetworking/AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		419BB7FD17EF97FD153FD6DAB9B18B13 /* WPBase64Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPBase64Utils.h; path = WPXMLRPC/WPBase64Utils.h; sourceTree = "<group>"; };
 		48B802949C48AD792056C162FFB91945 /* Pods-aria2 remote-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-aria2 remote-frameworks.sh"; sourceTree = "<group>"; };
-		503C2D378555EC737F26DCB44D4D3BDE /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		51BFAFE57593EC3CF4CBDD650503FF16 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
-		527071B5D0160729555957005A7FEAA3 /* WPBase64Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPBase64Utils.m; path = WPXMLRPC/WPBase64Utils.m; sourceTree = "<group>"; };
-		53115AA7712E92590596F4CD70366132 /* WPXMLRPCDecoderDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCDecoderDelegate.m; path = WPXMLRPC/WPXMLRPCDecoderDelegate.m; sourceTree = "<group>"; };
+		4D65E34F0A6C6C50850C37BB66F5E314 /* AFJSONRPCClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFJSONRPCClient-dummy.m"; sourceTree = "<group>"; };
 		561C07FC7DCC8307BCFC4F75425087DD /* Pods-aria2 remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-aria2 remote.debug.xcconfig"; sourceTree = "<group>"; };
-		582780133896D46136CF0D883F414CA0 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		57781558554AAA52F078747D1DB10510 /* AFHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = AFNetworking/AFHTTPClient.m; sourceTree = "<group>"; };
 		59DC4F4960DDC4CFF9DF5C8FDCD8A09F /* Pods-aria2 remote-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-aria2 remote-acknowledgements.plist"; sourceTree = "<group>"; };
-		5E7F598AA35F3494A507C7391966EA4B /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
-		5EFDBF02C4F0214BB444C2F2CFB43320 /* wpxmlrpc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = wpxmlrpc.xcconfig; sourceTree = "<group>"; };
-		6427C8D75C304497C58F4894A9AB506E /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		70E11F8BCA7680D52BB90A63EE6209AC /* WPXMLRPCEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCEncoder.h; path = WPXMLRPC/WPXMLRPCEncoder.h; sourceTree = "<group>"; };
-		71D98AA39C01AEF9A98C084B039ED718 /* WPBase64Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPBase64Utils.h; path = WPXMLRPC/WPBase64Utils.h; sourceTree = "<group>"; };
-		7E79F569B08CD2C0E6613C3CFB8901C8 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		8F4174F511BE9FFED91D640FF052F8A6 /* WPXMLRPCDataCleaner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCDataCleaner.m; path = WPXMLRPC/WPXMLRPCDataCleaner.m; sourceTree = "<group>"; };
+		601D7AA45264BF1CBB3D7E540FAEC04B /* WPXMLRPCEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCEncoder.m; path = WPXMLRPC/WPXMLRPCEncoder.m; sourceTree = "<group>"; };
+		629927ADFCA674783927FDB991A762F7 /* AFHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = AFNetworking/AFHTTPClient.h; sourceTree = "<group>"; };
+		638463E2626601E25EF067D11AEEB2DC /* WPBase64Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPBase64Utils.m; path = WPXMLRPC/WPBase64Utils.m; sourceTree = "<group>"; };
+		64FA96B864C803DB982105B712AC82A6 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		6532058D1EF5CDE0D22B717887BF79BF /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		6EF3A25F164CFD52B47ACAF05C945697 /* WPXMLRPCDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCDecoder.m; path = WPXMLRPC/WPXMLRPCDecoder.m; sourceTree = "<group>"; };
+		7A95BE7C810DDB9D628021F9FC1307D5 /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
+		907F532F3A3DC2F3C50DDC6F3DEEEA63 /* AFJSONRPCClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFJSONRPCClient.xcconfig; sourceTree = "<group>"; };
+		90F2F97AB28FBBEBBF5BD43CB0F5F0EE /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = AFNetworking/AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A07BC1FA2E7B272CF002F1B73C75F9B5 /* wpxmlrpc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "wpxmlrpc-prefix.pch"; sourceTree = "<group>"; };
+		97511A7EA6F34A116E69F0B916D9E182 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFXMLRequestOperation.h; path = AFNetworking/AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		9C0E151791D9F1D7773E081129D9DDD4 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		9E96F0BBBEB0C48E790B207696A94A1C /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = AFNetworking/AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		A1949BBD5ECB99FFF00D11A549AB2758 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFPropertyListRequestOperation.h; path = AFNetworking/AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
 		A2838459B6952926C2B0B84D775C9A22 /* Pods-aria2 remote-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-aria2 remote-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AA8F88FE5202F5A528DC276E0A2DA3D9 /* WPXMLRPCEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCEncoder.m; path = WPXMLRPC/WPXMLRPCEncoder.m; sourceTree = "<group>"; };
-		AC5D71C2D304005FBCC89652DA92D64B /* WPXMLRPC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPC.h; path = WPXMLRPC/WPXMLRPC.h; sourceTree = "<group>"; };
-		B16225D326BD4CC48020C79A77863BAE /* WPStringUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPStringUtils.h; path = WPXMLRPC/WPStringUtils.h; sourceTree = "<group>"; };
+		AC2E825ECDC9BAC241C843DB7FFEBD2B /* WPXMLRPCEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCEncoder.h; path = WPXMLRPC/WPXMLRPCEncoder.h; sourceTree = "<group>"; };
+		AFCD1918A242E518F79F524C3A70AD0B /* wpxmlrpc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "wpxmlrpc-dummy.m"; sourceTree = "<group>"; };
+		B24DE9674495C8BE713BA722817591E3 /* wpxmlrpc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = wpxmlrpc.xcconfig; sourceTree = "<group>"; };
+		B5055EFEE2CB88F2FCE0B340E1AD5F4D /* WPXMLRPCDecoderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCDecoderDelegate.h; path = WPXMLRPC/WPXMLRPCDecoderDelegate.h; sourceTree = "<group>"; };
+		B8E530258092F41669FF65300C31E7D7 /* WPStringUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPStringUtils.m; path = WPXMLRPC/WPStringUtils.m; sourceTree = "<group>"; };
+		BE75C60DAF3BDA8A1A1D0C895835E7AC /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		C087DF439A484CA21E797E46EE828651 /* Pods-aria2 remote-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-aria2 remote-resources.sh"; sourceTree = "<group>"; };
-		C49A18BF56680B02048E5FF2CDE5C934 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		D5210015C48B80F1A3CE6458EE486266 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
-		D7C54BCD3EF509A9F2693507F5854769 /* wpxmlrpc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "wpxmlrpc-dummy.m"; sourceTree = "<group>"; };
-		DC08E6349C6465E8B75D4E0D7DE0FE8D /* WPStringUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPStringUtils.m; path = WPXMLRPC/WPStringUtils.m; sourceTree = "<group>"; };
-		E41553AB8993A30608A5DADFB9C3BAEF /* WPXMLRPCDataCleaner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCDataCleaner.h; path = WPXMLRPC/WPXMLRPCDataCleaner.h; sourceTree = "<group>"; };
-		E9869103F31CEFA6E7A9ACE909953039 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		C2C74E672378FFDD5B092EEAE8950AFC /* AFImageRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageRequestOperation.m; path = AFNetworking/AFImageRequestOperation.m; sourceTree = "<group>"; };
+		C558CABE84F364BC47D2492A37B4072D /* WPXMLRPCDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCDecoder.h; path = WPXMLRPC/WPXMLRPCDecoder.h; sourceTree = "<group>"; };
+		D191D0E198B71C72407B4F05864D4359 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		D731F98B5228CFB8A369553803BF9713 /* wpxmlrpc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "wpxmlrpc-prefix.pch"; sourceTree = "<group>"; };
+		D73A8F9F68CB46CCAFA608DFEF2C91B1 /* WPXMLRPC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPC.h; path = WPXMLRPC/WPXMLRPC.h; sourceTree = "<group>"; };
+		D83EC74CE8CDA30F259C251618F14E94 /* AFJSONRPCClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFJSONRPCClient.m; path = AFJSONRPCClient/AFJSONRPCClient.m; sourceTree = "<group>"; };
+		DDCC840160B5AC92277E1679D22AE91B /* AFJSONRPCClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFJSONRPCClient-prefix.pch"; sourceTree = "<group>"; };
+		E4CE16E0447B842BF6638BD91E86607E /* libAFJSONRPCClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFJSONRPCClient.a; path = libAFJSONRPCClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCC85399EA7E4FD8AADBA88B2CCB918 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		EF9DCB612699867CAAB962D349E1C0DE /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		EC2744F77748615DFE941C8857E4A8F8 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFPropertyListRequestOperation.m; path = AFNetworking/AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		F6F5A5FA317A3147A1797BA7FB458868 /* WPXMLRPCDataCleaner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCDataCleaner.m; path = WPXMLRPC/WPXMLRPCDataCleaner.m; sourceTree = "<group>"; };
 		F7892C2662B8D3F62F8AF900BC74BFEC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		FA942832FA99B0199A463036462631EE /* WPXMLRPCDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCDecoder.m; path = WPXMLRPC/WPXMLRPCDecoder.m; sourceTree = "<group>"; };
+		F80CBC6F40E09E11A9CE44F81AA7EB84 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		FCE76DA4C1CA8E9D5AFB66A3D08F6007 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFJSONRequestOperation.h; path = AFNetworking/AFJSONRequestOperation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		748B38E18F3A8500E15282A4AC490BA1 /* Frameworks */ = {
+		04EE11F63F78AC92C8698F70FCFB15D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CC83DC01579D68C879B454EB34D4D78 /* Cocoa.framework in Frameworks */,
+				DE7EEDF912F9CEFCD89CE3364BF969DE /* Cocoa.framework in Frameworks */,
+				320EB64AB7EB8B1F05DD1EB9EA832060 /* CoreServices.framework in Frameworks */,
+				932DA5FBC7E6594FCACDD39F0AF3B056 /* Security.framework in Frameworks */,
+				EAE1C6BC800F8EB56D0CF301F4DF83F6 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA373A4CF7D22050D0A7806B00B66379 /* Frameworks */ = {
+		51DBABC40A01244499824C20BCBA951F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFBD5A95D1810D21D3D0DA48B1147861 /* Cocoa.framework in Frameworks */,
+				115B5F80E4605A5A2D48A54E99A8ACB3 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA8D9559007C9B6257DFDC52A600D0AA /* Frameworks */ = {
+		BEB896F03B0C713FE0035F1C1879155B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C0DB599ACC1DC37B52E941826ECA0A7 /* Cocoa.framework in Frameworks */,
-				473C5AD9209B38F2F2C50F9043E33E39 /* CoreServices.framework in Frameworks */,
-				C84B36A7F23AFEDD44F344E3E9E5827B /* Security.framework in Frameworks */,
-				2867AF39F082A431289CFC56B7DB8B13 /* SystemConfiguration.framework in Frameworks */,
+				D50316E197294F7797FCC29EE8515A42 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBBBD2E5DEACDBEDCA2D06B93FF6EB69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE2138D314A957D2648675408B5F45B /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		087AE54739102A6A3CC42EFE8D6ECA45 /* Serialization */ = {
+		05460272BC35B9CB77AA51A5244297CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36AB62F92BEBE24FD82517AB919872FA /* AFURLRequestSerialization.h */,
-				C49A18BF56680B02048E5FF2CDE5C934 /* AFURLRequestSerialization.m */,
-				503C2D378555EC737F26DCB44D4D3BDE /* AFURLResponseSerialization.h */,
-				7E79F569B08CD2C0E6613C3CFB8901C8 /* AFURLResponseSerialization.m */,
-			);
-			name = Serialization;
-			sourceTree = "<group>";
-		};
-		13EA5F3BAC0C5A2D0C222AD17C299A78 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1803A1774D431D62E091129C16FFEE1A /* libAFNetworking.a */,
-				1116C9D5A4408268514BA3C9DAE16E04 /* libPods-aria2 remote.a */,
-				3B68A46F73B74973463DBA7205937CC6 /* libwpxmlrpc.a */,
+				E4CE16E0447B842BF6638BD91E86607E /* libAFJSONRPCClient.a */,
+				1AB16B10162E8CDD7D24149743197A07 /* libAFNetworking.a */,
+				33BA60F0EED840A5C96425F9A8C78CA3 /* libPods-aria2 remote.a */,
+				1ED2ACB2F06FDB24B115E1A9996C0307 /* libwpxmlrpc.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3980DF35EF0F194A8E879B8A38E92354 /* AFNetworking */ = {
+		4392C5C72A16C63A984922D30B671EE0 /* AFJSONRPCClient */ = {
 			isa = PBXGroup;
 			children = (
-				5E7F598AA35F3494A507C7391966EA4B /* AFNetworking.h */,
-				4CC3ECA73D8B6B83F915862583707F89 /* NSURLSession */,
-				8CC7975D18B3A515F87372515AE15073 /* Reachability */,
-				51F463951EE799F22DFDB8D68BF3F4AD /* Security */,
-				087AE54739102A6A3CC42EFE8D6ECA45 /* Serialization */,
-				8CD0B25D1F3193FCF4AE06D7CD316C63 /* Support Files */,
+				11A8725283CDC8B87EE78B4154D8F6B3 /* AFJSONRPCClient.h */,
+				D83EC74CE8CDA30F259C251618F14E94 /* AFJSONRPCClient.m */,
+				618D4520FA58729F2D9DC15609803B88 /* Support Files */,
 			);
-			name = AFNetworking;
-			path = AFNetworking;
+			name = AFJSONRPCClient;
+			path = AFJSONRPCClient;
 			sourceTree = "<group>";
 		};
-		4AD2760FC2075336F560F13106FD86F2 /* Pods */ = {
+		519351B6E70ACEB671C602541322BBEF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3980DF35EF0F194A8E879B8A38E92354 /* AFNetworking */,
-				D7355E066FF834413185C1079C60D914 /* wpxmlrpc */,
+				B24DE9674495C8BE713BA722817591E3 /* wpxmlrpc.xcconfig */,
+				AFCD1918A242E518F79F524C3A70AD0B /* wpxmlrpc-dummy.m */,
+				D731F98B5228CFB8A369553803BF9713 /* wpxmlrpc-prefix.pch */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4CC3ECA73D8B6B83F915862583707F89 /* NSURLSession */ = {
-			isa = PBXGroup;
-			children = (
-				EF9DCB612699867CAAB962D349E1C0DE /* AFHTTPSessionManager.h */,
-				6427C8D75C304497C58F4894A9AB506E /* AFHTTPSessionManager.m */,
-				0EDB7EE5D480468E50883EDE1969079F /* AFURLSessionManager.h */,
-				1B51B19B5DC6DDCCA7FA2BE4A759A9E5 /* AFURLSessionManager.m */,
-			);
-			name = NSURLSession;
-			sourceTree = "<group>";
-		};
-		51F463951EE799F22DFDB8D68BF3F4AD /* Security */ = {
-			isa = PBXGroup;
-			children = (
-				D5210015C48B80F1A3CE6458EE486266 /* AFSecurityPolicy.h */,
-				0457B62AE9E02C3B71993EDD1C83E247 /* AFSecurityPolicy.m */,
-			);
-			name = Security;
+			name = "Support Files";
+			path = "../Target Support Files/wpxmlrpc";
 			sourceTree = "<group>";
 		};
 		5A8561B9A8D9E62204696E4D76C18D14 /* OS X */ = {
@@ -217,46 +230,69 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		618D4520FA58729F2D9DC15609803B88 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				CD75D5B60FCA72FBF7F9C770460B2C26 /* Frameworks */,
-				4AD2760FC2075336F560F13106FD86F2 /* Pods */,
-				13EA5F3BAC0C5A2D0C222AD17C299A78 /* Products */,
-				B90A3273976D6859E43737EBA3059580 /* Targets Support Files */,
+				907F532F3A3DC2F3C50DDC6F3DEEEA63 /* AFJSONRPCClient.xcconfig */,
+				4D65E34F0A6C6C50850C37BB66F5E314 /* AFJSONRPCClient-dummy.m */,
+				DDCC840160B5AC92277E1679D22AE91B /* AFJSONRPCClient-prefix.pch */,
 			);
+			name = "Support Files";
+			path = "../Target Support Files/AFJSONRPCClient";
 			sourceTree = "<group>";
 		};
-		8CC7975D18B3A515F87372515AE15073 /* Reachability */ = {
+		7105028C5D0256ED3E83895AF5EC4E56 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				582780133896D46136CF0D883F414CA0 /* AFNetworkReachabilityManager.h */,
-				08E121A6D7746BC567E28E457275CA94 /* AFNetworkReachabilityManager.m */,
-			);
-			name = Reachability;
-			sourceTree = "<group>";
-		};
-		8CD0B25D1F3193FCF4AE06D7CD316C63 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0B58FB89941D2A5ADB37B285877E40CC /* AFNetworking.xcconfig */,
-				E9869103F31CEFA6E7A9ACE909953039 /* AFNetworking-dummy.m */,
-				51BFAFE57593EC3CF4CBDD650503FF16 /* AFNetworking-prefix.pch */,
+				7A95BE7C810DDB9D628021F9FC1307D5 /* AFNetworking.xcconfig */,
+				3E59919E2B4F3C646BAC75DE0EE483F2 /* AFNetworking-dummy.m */,
+				64FA96B864C803DB982105B712AC82A6 /* AFNetworking-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AFNetworking";
 			sourceTree = "<group>";
 		};
-		B479C8811D96A81221689B4701796858 /* Support Files */ = {
+		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				5EFDBF02C4F0214BB444C2F2CFB43320 /* wpxmlrpc.xcconfig */,
-				D7C54BCD3EF509A9F2693507F5854769 /* wpxmlrpc-dummy.m */,
-				A07BC1FA2E7B272CF002F1B73C75F9B5 /* wpxmlrpc-prefix.pch */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				CD75D5B60FCA72FBF7F9C770460B2C26 /* Frameworks */,
+				80A4B0D9E93601A47006E6F69631BFD3 /* Pods */,
+				05460272BC35B9CB77AA51A5244297CC /* Products */,
+				B90A3273976D6859E43737EBA3059580 /* Targets Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/wpxmlrpc";
+			sourceTree = "<group>";
+		};
+		80A4B0D9E93601A47006E6F69631BFD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4392C5C72A16C63A984922D30B671EE0 /* AFJSONRPCClient */,
+				EE46B7F70761865EE30235543F08991F /* AFNetworking */,
+				A8C399129FA74C4BCB9B7D3A5A9E1BA5 /* wpxmlrpc */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A8C399129FA74C4BCB9B7D3A5A9E1BA5 /* wpxmlrpc */ = {
+			isa = PBXGroup;
+			children = (
+				419BB7FD17EF97FD153FD6DAB9B18B13 /* WPBase64Utils.h */,
+				638463E2626601E25EF067D11AEEB2DC /* WPBase64Utils.m */,
+				05893BFE982DE103F5E64194766B9F66 /* WPStringUtils.h */,
+				B8E530258092F41669FF65300C31E7D7 /* WPStringUtils.m */,
+				D73A8F9F68CB46CCAFA608DFEF2C91B1 /* WPXMLRPC.h */,
+				026332133330EC9282A07F4040E32894 /* WPXMLRPCDataCleaner.h */,
+				F6F5A5FA317A3147A1797BA7FB458868 /* WPXMLRPCDataCleaner.m */,
+				C558CABE84F364BC47D2492A37B4072D /* WPXMLRPCDecoder.h */,
+				6EF3A25F164CFD52B47ACAF05C945697 /* WPXMLRPCDecoder.m */,
+				B5055EFEE2CB88F2FCE0B340E1AD5F4D /* WPXMLRPCDecoderDelegate.h */,
+				30A675FF50636370E8AB8F79AE0D4704 /* WPXMLRPCDecoderDelegate.m */,
+				AC2E825ECDC9BAC241C843DB7FFEBD2B /* WPXMLRPCEncoder.h */,
+				601D7AA45264BF1CBB3D7E540FAEC04B /* WPXMLRPCEncoder.m */,
+				519351B6E70ACEB671C602541322BBEF /* Support Files */,
+			);
+			name = wpxmlrpc;
+			path = wpxmlrpc;
 			sourceTree = "<group>";
 		};
 		B90A3273976D6859E43737EBA3059580 /* Targets Support Files */ = {
@@ -290,104 +326,105 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D7355E066FF834413185C1079C60D914 /* wpxmlrpc */ = {
+		EE46B7F70761865EE30235543F08991F /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				71D98AA39C01AEF9A98C084B039ED718 /* WPBase64Utils.h */,
-				527071B5D0160729555957005A7FEAA3 /* WPBase64Utils.m */,
-				B16225D326BD4CC48020C79A77863BAE /* WPStringUtils.h */,
-				DC08E6349C6465E8B75D4E0D7DE0FE8D /* WPStringUtils.m */,
-				AC5D71C2D304005FBCC89652DA92D64B /* WPXMLRPC.h */,
-				E41553AB8993A30608A5DADFB9C3BAEF /* WPXMLRPCDataCleaner.h */,
-				8F4174F511BE9FFED91D640FF052F8A6 /* WPXMLRPCDataCleaner.m */,
-				1335E9CF6343CA4DC44DE54A60345CEF /* WPXMLRPCDecoder.h */,
-				FA942832FA99B0199A463036462631EE /* WPXMLRPCDecoder.m */,
-				303B87615D4CE42916C04211BDAB71AC /* WPXMLRPCDecoderDelegate.h */,
-				53115AA7712E92590596F4CD70366132 /* WPXMLRPCDecoderDelegate.m */,
-				70E11F8BCA7680D52BB90A63EE6209AC /* WPXMLRPCEncoder.h */,
-				AA8F88FE5202F5A528DC276E0A2DA3D9 /* WPXMLRPCEncoder.m */,
-				B479C8811D96A81221689B4701796858 /* Support Files */,
+				629927ADFCA674783927FDB991A762F7 /* AFHTTPClient.h */,
+				57781558554AAA52F078747D1DB10510 /* AFHTTPClient.m */,
+				9C0E151791D9F1D7773E081129D9DDD4 /* AFHTTPRequestOperation.h */,
+				2D98A6B53135AA5378DC7FD325138A99 /* AFHTTPRequestOperation.m */,
+				1069DA02CA55296718DBD8E8B579212A /* AFImageRequestOperation.h */,
+				C2C74E672378FFDD5B092EEAE8950AFC /* AFImageRequestOperation.m */,
+				FCE76DA4C1CA8E9D5AFB66A3D08F6007 /* AFJSONRequestOperation.h */,
+				40F079B675A76BC85FF8849F8BEC0F99 /* AFJSONRequestOperation.m */,
+				90F2F97AB28FBBEBBF5BD43CB0F5F0EE /* AFNetworkActivityIndicatorManager.h */,
+				9E96F0BBBEB0C48E790B207696A94A1C /* AFNetworkActivityIndicatorManager.m */,
+				F80CBC6F40E09E11A9CE44F81AA7EB84 /* AFNetworking.h */,
+				A1949BBD5ECB99FFF00D11A549AB2758 /* AFPropertyListRequestOperation.h */,
+				EC2744F77748615DFE941C8857E4A8F8 /* AFPropertyListRequestOperation.m */,
+				3050D71646811107278CF244E372E8A3 /* AFURLConnectionOperation.h */,
+				6532058D1EF5CDE0D22B717887BF79BF /* AFURLConnectionOperation.m */,
+				97511A7EA6F34A116E69F0B916D9E182 /* AFXMLRequestOperation.h */,
+				11F131A453E397B65E786EBAF53EF2E1 /* AFXMLRequestOperation.m */,
+				BE75C60DAF3BDA8A1A1D0C895835E7AC /* UIImageView+AFNetworking.h */,
+				D191D0E198B71C72407B4F05864D4359 /* UIImageView+AFNetworking.m */,
+				7105028C5D0256ED3E83895AF5EC4E56 /* Support Files */,
 			);
-			name = wpxmlrpc;
-			path = wpxmlrpc;
+			name = AFNetworking;
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B95B2FA21C62B17360E4CAF031ED9252 /* Headers */ = {
+		5203AD55518F78C7CFD186E3A3315D6E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F213DDDCF82729C63891BA0A122726 /* AFHTTPSessionManager.h in Headers */,
-				CCE19E7D2D3AD672F301465CB3F5D2A7 /* AFNetworking.h in Headers */,
-				7E390D9BFDCEFA60EF7D095604BCB2B2 /* AFNetworkReachabilityManager.h in Headers */,
-				A82CF48320EA8764450D197E7538B538 /* AFSecurityPolicy.h in Headers */,
-				E48A8D2FDC35A0CEED4296147A514B6A /* AFURLRequestSerialization.h in Headers */,
-				F23D09A74068012F30E4919E243EDB72 /* AFURLResponseSerialization.h in Headers */,
-				C20D6CE3C91C338FF77CFEB5E91D3EA6 /* AFURLSessionManager.h in Headers */,
+				79030699F39831608193244A5F0891B9 /* AFHTTPClient.h in Headers */,
+				EB5C84512A2E4B5380F2D5477D238C27 /* AFHTTPRequestOperation.h in Headers */,
+				3D68134BC4A97FCAE0896885B5463C85 /* AFImageRequestOperation.h in Headers */,
+				68E9B6E88E41F22E172DF60B13384481 /* AFJSONRequestOperation.h in Headers */,
+				576B023E6ECD0231314CF80E34232E01 /* AFNetworkActivityIndicatorManager.h in Headers */,
+				F9493AC09EA864CF049CDA2864376958 /* AFNetworking.h in Headers */,
+				5071E05E963FE4FF0D21F2E47DF453DC /* AFPropertyListRequestOperation.h in Headers */,
+				E7FA202BD84C53B12BA6A16963F82ECD /* AFURLConnectionOperation.h in Headers */,
+				53EA452F016CD93C66B6D02AA65AEEF7 /* AFXMLRequestOperation.h in Headers */,
+				E89B2A470A016A8281FECC8C68A18B73 /* UIImageView+AFNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF0D5DA82D6641B68D0E6B6EF49E30BA /* Headers */ = {
+		C3D0256371708B979494F3E3A22D89D8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F903D4B8C4F138E1A3AD297D7660890D /* WPBase64Utils.h in Headers */,
-				7D237069835C673B8737DD09379C28EB /* WPStringUtils.h in Headers */,
-				C93F6CA15B2DF888DE964CD15158C749 /* WPXMLRPC.h in Headers */,
-				374ADAECC391D70FCAAC77F776FA4ADC /* WPXMLRPCDataCleaner.h in Headers */,
-				8E03584191D99ABBE1DEFC250FB7C190 /* WPXMLRPCDecoder.h in Headers */,
-				020031D60A2E44E66E18D8E11410C964 /* WPXMLRPCDecoderDelegate.h in Headers */,
-				F3FE58289A3E305B1F7EABABD2CDAAC2 /* WPXMLRPCEncoder.h in Headers */,
+				7C52D9B14488F0BCF273129187F6813F /* WPBase64Utils.h in Headers */,
+				C501B0850AA92E2CE3686571BE4899A0 /* WPStringUtils.h in Headers */,
+				147D0EF0719C46F800E8F4C3D6E40E98 /* WPXMLRPC.h in Headers */,
+				AA14FDF3227779035C7D1DD488808C09 /* WPXMLRPCDataCleaner.h in Headers */,
+				305A1E6849A01D4EA62A0E5B61F65902 /* WPXMLRPCDecoder.h in Headers */,
+				5304B7E740F9B8E871CEACBBB6C5E16E /* WPXMLRPCDecoderDelegate.h in Headers */,
+				40861A435CA222560C7B4C1F5679FD7E /* WPXMLRPCEncoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD69A77C486DA72311F314964D2D2ACB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B6B4B9CE9E7C05F265386567E06889 /* AFJSONRPCClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2BFDC9290B2E31259106050481BC615D /* Pods-aria2 remote */ = {
+		5C1C87F4BAA129057AB8D9DB4C1D1697 /* Pods-aria2 remote */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C8717752F946D9BC970D7EBC8218D77 /* Build configuration list for PBXNativeTarget "Pods-aria2 remote" */;
+			buildConfigurationList = C7BB56C548BEBCA305B1840CB61A6251 /* Build configuration list for PBXNativeTarget "Pods-aria2 remote" */;
 			buildPhases = (
-				D82952D6E19E3845EC9B17C97CC2309F /* Sources */,
-				748B38E18F3A8500E15282A4AC490BA1 /* Frameworks */,
+				C9A58BFBEC62490534917EFF0107DFD2 /* Sources */,
+				CBBBD2E5DEACDBEDCA2D06B93FF6EB69 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C34C65AEA7F2FCD83734896DBA9A7C06 /* PBXTargetDependency */,
-				7B8153329D16EFFD9B132941A248D303 /* PBXTargetDependency */,
+				3CE10EF162BBA50BC18B4552EFB517D3 /* PBXTargetDependency */,
+				43F703146355FDC473C75682FB720C67 /* PBXTargetDependency */,
+				46CCBD2D41BD80F31F5F4D2C7A9BAEA3 /* PBXTargetDependency */,
 			);
 			name = "Pods-aria2 remote";
 			productName = "Pods-aria2 remote";
-			productReference = 1116C9D5A4408268514BA3C9DAE16E04 /* libPods-aria2 remote.a */;
+			productReference = 33BA60F0EED840A5C96425F9A8C78CA3 /* libPods-aria2 remote.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		5F785FE51A811832A1CF881C0E709ED3 /* wpxmlrpc */ = {
+		6E010F5FA492F1F7FED87EB20D60F55C /* AFNetworking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F506F81E7BE158F40A08AADCF9ECADC4 /* Build configuration list for PBXNativeTarget "wpxmlrpc" */;
+			buildConfigurationList = B9A349BAE66AF3D291B64C20D174B6B0 /* Build configuration list for PBXNativeTarget "AFNetworking" */;
 			buildPhases = (
-				8F8AD048C5357105111A7A827BC2DE24 /* Sources */,
-				FA373A4CF7D22050D0A7806B00B66379 /* Frameworks */,
-				FF0D5DA82D6641B68D0E6B6EF49E30BA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = wpxmlrpc;
-			productName = wpxmlrpc;
-			productReference = 3B68A46F73B74973463DBA7205937CC6 /* libwpxmlrpc.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E44AE298D538F76278421193C97E79C6 /* AFNetworking */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2B76C50DCB8F3B2C52486106A3289885 /* Build configuration list for PBXNativeTarget "AFNetworking" */;
-			buildPhases = (
-				DE38D84562125822592EAA31DB221187 /* Sources */,
-				FA8D9559007C9B6257DFDC52A600D0AA /* Frameworks */,
-				B95B2FA21C62B17360E4CAF031ED9252 /* Headers */,
+				96F8781561E8C29860B8AA79F4757AA6 /* Sources */,
+				04EE11F63F78AC92C8698F70FCFB15D6 /* Frameworks */,
+				5203AD55518F78C7CFD186E3A3315D6E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -395,7 +432,42 @@
 			);
 			name = AFNetworking;
 			productName = AFNetworking;
-			productReference = 1803A1774D431D62E091129C16FFEE1A /* libAFNetworking.a */;
+			productReference = 1AB16B10162E8CDD7D24149743197A07 /* libAFNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A07DF2297131498CA46F559F1FDAA1C9 /* wpxmlrpc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01C918C21B93AFFF9EBEA6777A2559E7 /* Build configuration list for PBXNativeTarget "wpxmlrpc" */;
+			buildPhases = (
+				267D81D941F8A91B5153A725A23C4AB1 /* Sources */,
+				BEB896F03B0C713FE0035F1C1879155B /* Frameworks */,
+				C3D0256371708B979494F3E3A22D89D8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wpxmlrpc;
+			productName = wpxmlrpc;
+			productReference = 1ED2ACB2F06FDB24B115E1A9996C0307 /* libwpxmlrpc.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B694CE1CB2671313956EDA4BDF50AE1B /* AFJSONRPCClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 201BF9B54BDDDE9FA5BC1C8F42EA225F /* Build configuration list for PBXNativeTarget "AFJSONRPCClient" */;
+			buildPhases = (
+				E2C0B7695D303C45261CD60D8AB6C5B5 /* Sources */,
+				51DBABC40A01244499824C20BCBA951F /* Frameworks */,
+				DD69A77C486DA72311F314964D2D2ACB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D665406E06121EE31DF6C349FE3A92CE /* PBXTargetDependency */,
+			);
+			name = AFJSONRPCClient;
+			productName = AFJSONRPCClient;
+			productReference = E4CE16E0447B842BF6638BD91E86607E /* libAFJSONRPCClient.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -415,99 +487,100 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 13EA5F3BAC0C5A2D0C222AD17C299A78 /* Products */;
+			productRefGroup = 05460272BC35B9CB77AA51A5244297CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E44AE298D538F76278421193C97E79C6 /* AFNetworking */,
-				2BFDC9290B2E31259106050481BC615D /* Pods-aria2 remote */,
-				5F785FE51A811832A1CF881C0E709ED3 /* wpxmlrpc */,
+				B694CE1CB2671313956EDA4BDF50AE1B /* AFJSONRPCClient */,
+				6E010F5FA492F1F7FED87EB20D60F55C /* AFNetworking */,
+				5C1C87F4BAA129057AB8D9DB4C1D1697 /* Pods-aria2 remote */,
+				A07DF2297131498CA46F559F1FDAA1C9 /* wpxmlrpc */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8F8AD048C5357105111A7A827BC2DE24 /* Sources */ = {
+		267D81D941F8A91B5153A725A23C4AB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				739977C75BDAB3348F81792AFD170BD4 /* WPBase64Utils.m in Sources */,
-				5AE751CD9231B6E63C964585B6CBCEAB /* WPStringUtils.m in Sources */,
-				33AF4FD6C823C628ABEF78959A499933 /* wpxmlrpc-dummy.m in Sources */,
-				3F12F2CE20A6800C97D2A94D4A29B2B2 /* WPXMLRPCDataCleaner.m in Sources */,
-				F4E6863F559FC96BA99D66ED18094D37 /* WPXMLRPCDecoder.m in Sources */,
-				A076880AFEBCE643EF6724B38FB590C5 /* WPXMLRPCDecoderDelegate.m in Sources */,
-				CF2FB964F468645431C6BCEB67A70B2C /* WPXMLRPCEncoder.m in Sources */,
+				EBC1D9966748C32797831BD5ADD8C1C8 /* WPBase64Utils.m in Sources */,
+				9F088EE4D3E3B1BCB0B28D5E3968FF31 /* WPStringUtils.m in Sources */,
+				2B85D78BDD0299676DD08130C2E70F4B /* wpxmlrpc-dummy.m in Sources */,
+				98101687463381B9F843CB385F313387 /* WPXMLRPCDataCleaner.m in Sources */,
+				B64472C514173547EE7C043C8D098240 /* WPXMLRPCDecoder.m in Sources */,
+				222F00A3FD8F9F7C46CA52ACF59AB1F1 /* WPXMLRPCDecoderDelegate.m in Sources */,
+				7FB3B6C32BB04E39425F0A104B675456 /* WPXMLRPCEncoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D82952D6E19E3845EC9B17C97CC2309F /* Sources */ = {
+		96F8781561E8C29860B8AA79F4757AA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				787BE512B17D378E851F01E4E0B93F10 /* Pods-aria2 remote-dummy.m in Sources */,
+				700D4B1899D0D5C9B78D757B7D7F4681 /* AFHTTPClient.m in Sources */,
+				1266423836930A0D899C022D1BD6964D /* AFHTTPRequestOperation.m in Sources */,
+				FE70835E3AB04C6E27D8603629C2FC6B /* AFImageRequestOperation.m in Sources */,
+				65C23EA2E27907ED3C5D75D9A97C94DA /* AFJSONRequestOperation.m in Sources */,
+				79757EE16405CD614EF9D85FCC7A0A71 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				DF2004F70CA0C3513D04D55C8BE68D7B /* AFNetworking-dummy.m in Sources */,
+				94EED1E36984304AF289E87A221B4812 /* AFPropertyListRequestOperation.m in Sources */,
+				F73CB286B64211AA45B6CD861DFEE5F6 /* AFURLConnectionOperation.m in Sources */,
+				0C925E71B9D862D93CAE62CC2118A951 /* AFXMLRequestOperation.m in Sources */,
+				29A5D8ED9DE62421578CB69C86E2C133 /* UIImageView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE38D84562125822592EAA31DB221187 /* Sources */ = {
+		C9A58BFBEC62490534917EFF0107DFD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A76B54EDE3FBC2B32558C23142F23B31 /* AFHTTPSessionManager.m in Sources */,
-				69AC1C43936A09E6B8C12DD7B4227BC7 /* AFNetworking-dummy.m in Sources */,
-				71DF63626C511DB276D0C45984A1C09E /* AFNetworkReachabilityManager.m in Sources */,
-				C81384C8E0A01F3A841D5289DA19C34D /* AFSecurityPolicy.m in Sources */,
-				6087C4B176B2517BBE4A34FA1F895D06 /* AFURLRequestSerialization.m in Sources */,
-				60333A1B4177B7DE350238DE809B3E2F /* AFURLResponseSerialization.m in Sources */,
-				26BFA5307997CBD959B0DEE6D1860316 /* AFURLSessionManager.m in Sources */,
+				0A74D8F1B44F198940A4476FECFB0DD2 /* Pods-aria2 remote-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2C0B7695D303C45261CD60D8AB6C5B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2330D099ED882566D84297F9DC5C558D /* AFJSONRPCClient-dummy.m in Sources */,
+				91E56CBCE71CB957C3DAC2E5306A9CF9 /* AFJSONRPCClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7B8153329D16EFFD9B132941A248D303 /* PBXTargetDependency */ = {
+		3CE10EF162BBA50BC18B4552EFB517D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = wpxmlrpc;
-			target = 5F785FE51A811832A1CF881C0E709ED3 /* wpxmlrpc */;
-			targetProxy = FF68370B14205418234162CA20A50B1C /* PBXContainerItemProxy */;
+			name = AFJSONRPCClient;
+			target = B694CE1CB2671313956EDA4BDF50AE1B /* AFJSONRPCClient */;
+			targetProxy = 4A25657C568D8973C22A889B51EBC98D /* PBXContainerItemProxy */;
 		};
-		C34C65AEA7F2FCD83734896DBA9A7C06 /* PBXTargetDependency */ = {
+		43F703146355FDC473C75682FB720C67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFNetworking;
-			target = E44AE298D538F76278421193C97E79C6 /* AFNetworking */;
-			targetProxy = DF09658A3BFDBEEE33DB81DD44B9D8C1 /* PBXContainerItemProxy */;
+			target = 6E010F5FA492F1F7FED87EB20D60F55C /* AFNetworking */;
+			targetProxy = 4B71C88C5DBEF38B68149B3B2C73AECD /* PBXContainerItemProxy */;
+		};
+		46CCBD2D41BD80F31F5F4D2C7A9BAEA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = wpxmlrpc;
+			target = A07DF2297131498CA46F559F1FDAA1C9 /* wpxmlrpc */;
+			targetProxy = A5C4B7BA9B21ADC69CE9D7C22E23559A /* PBXContainerItemProxy */;
+		};
+		D665406E06121EE31DF6C349FE3A92CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 6E010F5FA492F1F7FED87EB20D60F55C /* AFNetworking */;
+			targetProxy = EAA756D9BA74555E247369B5F2BB0143 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		10687B81F4287FD46C185AA4263D7D8D /* Release */ = {
+		2B1E0DE1ED6BAA8EEEE2697D5EB3AD10 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EFDBF02C4F0214BB444C2F2CFB43320 /* wpxmlrpc.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/wpxmlrpc/wpxmlrpc-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		18ECE5E677CE736BE98C335F06D235E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EFDBF02C4F0214BB444C2F2CFB43320 /* wpxmlrpc.xcconfig */;
+			baseConfigurationReference = 7A95BE7C810DDB9D628021F9FC1307D5 /* AFNetworking.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -517,7 +590,31 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/wpxmlrpc/wpxmlrpc-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		31B3376E3AF899D635BAA26A74ACA83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 907F532F3A3DC2F3C50DDC6F3DEEEA63 /* AFJSONRPCClient.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AFJSONRPCClient/AFJSONRPCClient-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -573,32 +670,7 @@
 			};
 			name = Debug;
 		};
-		5FE22111138FBA67F89BC6CE20BDEA9B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22BCE855ACA7B764420FEBAF75C6AD9B /* Pods-aria2 remote.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_NO_COMMON_BLOCKS = YES;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		76CB0494418C74B0B34C5FD2DAE46D9A /* Debug */ = {
+		5B9B24F9A3330987AD241430BDFE1FFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 561C07FC7DCC8307BCFC4F75425087DD /* Pods-aria2 remote.debug.xcconfig */;
 			buildSettings = {
@@ -623,9 +695,58 @@
 			};
 			name = Debug;
 		};
-		CD59D9BD58DDFD0B0B597686B77B987A /* Debug */ = {
+		653771F0D970AB895C358CCF6A15C5AF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B58FB89941D2A5ADB37B285877E40CC /* AFNetworking.xcconfig */;
+			baseConfigurationReference = 907F532F3A3DC2F3C50DDC6F3DEEEA63 /* AFJSONRPCClient.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AFJSONRPCClient/AFJSONRPCClient-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6FFF0F76C322D8785C4BE1ABAA62D858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22BCE855ACA7B764420FEBAF75C6AD9B /* Pods-aria2 remote.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		75AB2EA37274B049CD1C45D9AE0AB7D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B24DE9674495C8BE713BA722817591E3 /* wpxmlrpc.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -635,8 +756,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				GCC_PREFIX_HEADER = "Target Support Files/wpxmlrpc/wpxmlrpc-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -646,6 +767,54 @@
 				SDKROOT = macosx;
 			};
 			name = Debug;
+		};
+		C1CC2E8990F0051144867BC13816BFEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B24DE9674495C8BE713BA722817591E3 /* wpxmlrpc.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/wpxmlrpc/wpxmlrpc-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DA1E371C0F9EF47316005BE89AC231CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A95BE7C810DDB9D628021F9FC1307D5 /* AFNetworking.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
 		};
 		F6FC88CB717F413199C282718D2DC09F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -687,38 +856,23 @@
 			};
 			name = Release;
 		};
-		F96B78DADB0A0E3F0B341E89F9A08F03 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B58FB89941D2A5ADB37B285877E40CC /* AFNetworking.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2B76C50DCB8F3B2C52486106A3289885 /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
+		01C918C21B93AFFF9EBEA6777A2559E7 /* Build configuration list for PBXNativeTarget "wpxmlrpc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD59D9BD58DDFD0B0B597686B77B987A /* Debug */,
-				F96B78DADB0A0E3F0B341E89F9A08F03 /* Release */,
+				75AB2EA37274B049CD1C45D9AE0AB7D9 /* Debug */,
+				C1CC2E8990F0051144867BC13816BFEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		201BF9B54BDDDE9FA5BC1C8F42EA225F /* Build configuration list for PBXNativeTarget "AFJSONRPCClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31B3376E3AF899D635BAA26A74ACA83E /* Debug */,
+				653771F0D970AB895C358CCF6A15C5AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -732,20 +886,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C8717752F946D9BC970D7EBC8218D77 /* Build configuration list for PBXNativeTarget "Pods-aria2 remote" */ = {
+		B9A349BAE66AF3D291B64C20D174B6B0 /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76CB0494418C74B0B34C5FD2DAE46D9A /* Debug */,
-				5FE22111138FBA67F89BC6CE20BDEA9B /* Release */,
+				2B1E0DE1ED6BAA8EEEE2697D5EB3AD10 /* Debug */,
+				DA1E371C0F9EF47316005BE89AC231CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F506F81E7BE158F40A08AADCF9ECADC4 /* Build configuration list for PBXNativeTarget "wpxmlrpc" */ = {
+		C7BB56C548BEBCA305B1840CB61A6251 /* Build configuration list for PBXNativeTarget "Pods-aria2 remote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18ECE5E677CE736BE98C335F06D235E9 /* Debug */,
-				10687B81F4287FD46C185AA4263D7D8D /* Release */,
+				5B9B24F9A3330987AD241430BDFE1FFD /* Debug */,
+				6FFF0F76C322D8785C4BE1ABAA62D858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
