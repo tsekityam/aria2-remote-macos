@@ -8,6 +8,14 @@
 
 #import "ViewController.h"
 
+#import <AFJSONRPCClient/AFJSONRPCClient.h>
+
+@interface ViewController ()
+@property (weak) IBOutlet NSTextField *urlTextField;
+- (IBAction)getVersion:(id)sender;
+
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -24,4 +32,17 @@
 }
 
 
+- (IBAction)getVersion:(id)sender {
+    AFJSONRPCClient *client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithString:[_urlTextField stringValue]]];
+    
+    [client invokeMethod:@"aria2.getVersion" success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:@"Success"];
+        [alert setInformativeText:[NSString stringWithFormat:@"%@", responseObject]];
+        [alert runModal];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSAlert *alert = [NSAlert alertWithError:error];
+        [alert runModal];
+    }];
+}
 @end
