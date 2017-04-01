@@ -2,18 +2,15 @@ PODS:
   - AFJSONRPCClient (0.4.0):
     - AFNetworking (>= 0.10.0)
   - AFNetworking (1.3.4)
-  - wpxmlrpc (0.8.2)
 
 DEPENDENCIES:
   - AFJSONRPCClient
   - AFNetworking (~> 1.3.3)
-  - wpxmlrpc
 
 SPEC CHECKSUMS:
   AFJSONRPCClient: 0a950c6d58e2e0f6f90b87a6016641d3b2ae2394
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
-  wpxmlrpc: 38623cc415117914d6ab5bf2ab8a57a4076cc469
 
-PODFILE CHECKSUM: 07f4b93c14527d308de4b3a6122d110342332cb1
+PODFILE CHECKSUM: f7ced6febddf309e6a452ee45f0f9335cc67845a
 
 COCOAPODS: 1.1.1
