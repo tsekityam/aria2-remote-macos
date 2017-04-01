@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BC12F2249B9805134A52C2FE53B7C64 /* Pods-aria2 remote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C02C4B916E25D041FEB041165E45B /* Pods-aria2 remote-dummy.m */; };
+		0D53489B97E661A429F2491E1F87A264 /* WPStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E3DA81171F3E21B38D78B1FF33135D51 /* WPStringUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2C9F044A48D4A062E31602B8B9BAF57F /* WPXMLRPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 331D0B3139EAD6880FDDCBC9570B0F02 /* WPXMLRPCEncoder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		30B20A592A52AFBEE3066C8394ABCB7F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		40D9E4A5A2E7DBCE5ABEB6428A8602BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		4AC91293AA0C6F083ACC44D2F4E02312 /* WPXMLRPCDecoderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = BAC3E730126AE4653FB120D6FE868F1E /* WPXMLRPCDecoderDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		55E02ED411F88B23D44059A92A89B9BF /* WPXMLRPCDataCleaner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1701DA11719C7E1508DA511B893FCAE7 /* WPXMLRPCDataCleaner.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		630E46AC862A734966F1CC9D874464B5 /* WPStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A00808B4DBE94632761E04DC4BD23925 /* WPStringUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		708E3A0643FDE5C1E5B116971A5DC924 /* wpxmlrpc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A82F255DACE9AC69622B23DB48F9B0 /* wpxmlrpc-dummy.m */; };
+		7BB375EDDB293582F8DA10BD3D2605C2 /* WPXMLRPCDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 630C21F167D4F4F16F280AF5086EA854 /* WPXMLRPCDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F7D16B037C198C7A95F9E503FA94644 /* WPXMLRPCDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C4F3EE71783B94427CD782360A5E1 /* WPXMLRPCDecoder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A16717AC49DB42EA66ABEAD8B13CC911 /* WPXMLRPCEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C10C016B5FDCF9632505AA1D77B75E9E /* WPXMLRPCEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CED1EE5E80908A18B878870A1AA8043B /* WPBase64Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8426D207E2339B0D1CDBFD318CC76F09 /* WPBase64Utils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D03D422BB239B2B3207EE410D5138E6B /* WPXMLRPCDataCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6D3186704C35701E021AFF492A821 /* WPXMLRPCDataCleaner.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D4E66C0FFAEF22026D1DED16F56D41DF /* WPBase64Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 439DD00127C22F3A329AC3A76466B296 /* WPBase64Utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DD54374D80BA01B0FB3C593A3A569612 /* WPXMLRPCDecoderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B11ABA5F9F13C0E7AF7371A58AF24DD /* WPXMLRPCDecoderDelegate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EF8DB99F8CE236D94B9FCE0A806F32E9 /* WPXMLRPC.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8CC56B4B51AB612DA08CE44936CABD /* WPXMLRPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B29402AFA95FB86803FC2D6520F8752E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1805153F5B7636BFFF5DEAA48E9F77EB;
+			remoteInfo = wpxmlrpc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01E8FEB252A102C405EBADED581AE3A0 /* libPods-aria2 remote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-aria2 remote.a"; path = "libPods-aria2 remote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E1C4F3EE71783B94427CD782360A5E1 /* WPXMLRPCDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCDecoder.m; path = WPXMLRPC/WPXMLRPCDecoder.m; sourceTree = "<group>"; };
+		1701DA11719C7E1508DA511B893FCAE7 /* WPXMLRPCDataCleaner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCDataCleaner.h; path = WPXMLRPC/WPXMLRPCDataCleaner.h; sourceTree = "<group>"; };
+		22BCE855ACA7B764420FEBAF75C6AD9B /* Pods-aria2 remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-aria2 remote.release.xcconfig"; sourceTree = "<group>"; };
+		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2C0C02C4B916E25D041FEB041165E45B /* Pods-aria2 remote-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-aria2 remote-dummy.m"; sourceTree = "<group>"; };
+		331D0B3139EAD6880FDDCBC9570B0F02 /* WPXMLRPCEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCEncoder.m; path = WPXMLRPC/WPXMLRPCEncoder.m; sourceTree = "<group>"; };
+		37A82F255DACE9AC69622B23DB48F9B0 /* wpxmlrpc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "wpxmlrpc-dummy.m"; sourceTree = "<group>"; };
+		439DD00127C22F3A329AC3A76466B296 /* WPBase64Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPBase64Utils.h; path = WPXMLRPC/WPBase64Utils.h; sourceTree = "<group>"; };
+		48B802949C48AD792056C162FFB91945 /* Pods-aria2 remote-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-aria2 remote-frameworks.sh"; sourceTree = "<group>"; };
+		4B20A65C5CB37B45747A6BE385F30A47 /* libwpxmlrpc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libwpxmlrpc.a; path = libwpxmlrpc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE6D3186704C35701E021AFF492A821 /* WPXMLRPCDataCleaner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCDataCleaner.m; path = WPXMLRPC/WPXMLRPCDataCleaner.m; sourceTree = "<group>"; };
+		561C07FC7DCC8307BCFC4F75425087DD /* Pods-aria2 remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-aria2 remote.debug.xcconfig"; sourceTree = "<group>"; };
+		59DC4F4960DDC4CFF9DF5C8FDCD8A09F /* Pods-aria2 remote-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-aria2 remote-acknowledgements.plist"; sourceTree = "<group>"; };
+		630C21F167D4F4F16F280AF5086EA854 /* WPXMLRPCDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCDecoder.h; path = WPXMLRPC/WPXMLRPCDecoder.h; sourceTree = "<group>"; };
+		7B11ABA5F9F13C0E7AF7371A58AF24DD /* WPXMLRPCDecoderDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPXMLRPCDecoderDelegate.m; path = WPXMLRPC/WPXMLRPCDecoderDelegate.m; sourceTree = "<group>"; };
+		8426D207E2339B0D1CDBFD318CC76F09 /* WPBase64Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPBase64Utils.m; path = WPXMLRPC/WPBase64Utils.m; sourceTree = "<group>"; };
+		88CEFEEC86BB5291A6345BBB0FB5ACFF /* wpxmlrpc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = wpxmlrpc.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A00808B4DBE94632761E04DC4BD23925 /* WPStringUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WPStringUtils.m; path = WPXMLRPC/WPStringUtils.m; sourceTree = "<group>"; };
+		A2838459B6952926C2B0B84D775C9A22 /* Pods-aria2 remote-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-aria2 remote-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BAC3E730126AE4653FB120D6FE868F1E /* WPXMLRPCDecoderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCDecoderDelegate.h; path = WPXMLRPC/WPXMLRPCDecoderDelegate.h; sourceTree = "<group>"; };
+		C087DF439A484CA21E797E46EE828651 /* Pods-aria2 remote-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-aria2 remote-resources.sh"; sourceTree = "<group>"; };
+		C10C016B5FDCF9632505AA1D77B75E9E /* WPXMLRPCEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPCEncoder.h; path = WPXMLRPC/WPXMLRPCEncoder.h; sourceTree = "<group>"; };
+		E3DA81171F3E21B38D78B1FF33135D51 /* WPStringUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPStringUtils.h; path = WPXMLRPC/WPStringUtils.h; sourceTree = "<group>"; };
+		EF8CC56B4B51AB612DA08CE44936CABD /* WPXMLRPC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPXMLRPC.h; path = WPXMLRPC/WPXMLRPC.h; sourceTree = "<group>"; };
+		FCCEB67D85B04CE6D6127F8003F7ED9F /* wpxmlrpc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "wpxmlrpc-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		571784B88E73C5717AD49B878933B6B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B20A592A52AFBEE3066C8394ABCB7F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A778C57BBDAC10D53698A1E416CFDE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40D9E4A5A2E7DBCE5ABEB6428A8602BE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04C068A18C5413F804A2959126093416 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		095793DD9BA60EB02605FF0F96E10E3A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88CEFEEC86BB5291A6345BBB0FB5ACFF /* wpxmlrpc.xcconfig */,
+				37A82F255DACE9AC69622B23DB48F9B0 /* wpxmlrpc-dummy.m */,
+				FCCEB67D85B04CE6D6127F8003F7ED9F /* wpxmlrpc-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/wpxmlrpc";
+			sourceTree = "<group>";
+		};
+		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04C068A18C5413F804A2959126093416 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		727DB658BA319DBB283E10F4CC7E475A /* wpxmlrpc */ = {
+			isa = PBXGroup;
+			children = (
+				439DD00127C22F3A329AC3A76466B296 /* WPBase64Utils.h */,
+				8426D207E2339B0D1CDBFD318CC76F09 /* WPBase64Utils.m */,
+				E3DA81171F3E21B38D78B1FF33135D51 /* WPStringUtils.h */,
+				A00808B4DBE94632761E04DC4BD23925 /* WPStringUtils.m */,
+				EF8CC56B4B51AB612DA08CE44936CABD /* WPXMLRPC.h */,
+				1701DA11719C7E1508DA511B893FCAE7 /* WPXMLRPCDataCleaner.h */,
+				4EE6D3186704C35701E021AFF492A821 /* WPXMLRPCDataCleaner.m */,
+				630C21F167D4F4F16F280AF5086EA854 /* WPXMLRPCDecoder.h */,
+				0E1C4F3EE71783B94427CD782360A5E1 /* WPXMLRPCDecoder.m */,
+				BAC3E730126AE4653FB120D6FE868F1E /* WPXMLRPCDecoderDelegate.h */,
+				7B11ABA5F9F13C0E7AF7371A58AF24DD /* WPXMLRPCDecoderDelegate.m */,
+				C10C016B5FDCF9632505AA1D77B75E9E /* WPXMLRPCEncoder.h */,
+				331D0B3139EAD6880FDDCBC9570B0F02 /* WPXMLRPCEncoder.m */,
+				095793DD9BA60EB02605FF0F96E10E3A /* Support Files */,
+			);
+			name = wpxmlrpc;
+			path = wpxmlrpc;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				DFB3B91F240A9C8CBAB33EC2D3132CCD /* Pods */,
+				FD9BB02514CD2D10B9C3F937D7B2616D /* Products */,
+				B90A3273976D6859E43737EBA3059580 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B90A3273976D6859E43737EBA3059580 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4B945371BF752A7B6FA385EA5194548 /* Pods-aria2 remote */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C4B945371BF752A7B6FA385EA5194548 /* Pods-aria2 remote */ = {
+			isa = PBXGroup;
+			children = (
+				A2838459B6952926C2B0B84D775C9A22 /* Pods-aria2 remote-acknowledgements.markdown */,
+				59DC4F4960DDC4CFF9DF5C8FDCD8A09F /* Pods-aria2 remote-acknowledgements.plist */,
+				2C0C02C4B916E25D041FEB041165E45B /* Pods-aria2 remote-dummy.m */,
+				48B802949C48AD792056C162FFB91945 /* Pods-aria2 remote-frameworks.sh */,
+				C087DF439A484CA21E797E46EE828651 /* Pods-aria2 remote-resources.sh */,
+				561C07FC7DCC8307BCFC4F75425087DD /* Pods-aria2 remote.debug.xcconfig */,
+				22BCE855ACA7B764420FEBAF75C6AD9B /* Pods-aria2 remote.release.xcconfig */,
+			);
+			name = "Pods-aria2 remote";
+			path = "Target Support Files/Pods-aria2 remote";
+			sourceTree = "<group>";
+		};
+		DFB3B91F240A9C8CBAB33EC2D3132CCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				727DB658BA319DBB283E10F4CC7E475A /* wpxmlrpc */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD9BB02514CD2D10B9C3F937D7B2616D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01E8FEB252A102C405EBADED581AE3A0 /* libPods-aria2 remote.a */,
+				4B20A65C5CB37B45747A6BE385F30A47 /* libwpxmlrpc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		71980B52A6F3B11515D8806DF3454119 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E66C0FFAEF22026D1DED16F56D41DF /* WPBase64Utils.h in Headers */,
+				0D53489B97E661A429F2491E1F87A264 /* WPStringUtils.h in Headers */,
+				EF8DB99F8CE236D94B9FCE0A806F32E9 /* WPXMLRPC.h in Headers */,
+				55E02ED411F88B23D44059A92A89B9BF /* WPXMLRPCDataCleaner.h in Headers */,
+				7BB375EDDB293582F8DA10BD3D2605C2 /* WPXMLRPCDecoder.h in Headers */,
+				4AC91293AA0C6F083ACC44D2F4E02312 /* WPXMLRPCDecoderDelegate.h in Headers */,
+				A16717AC49DB42EA66ABEAD8B13CC911 /* WPXMLRPCEncoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1805153F5B7636BFFF5DEAA48E9F77EB /* wpxmlrpc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 063D228B3FA582D7CFECF8144DFDC58E /* Build configuration list for PBXNativeTarget "wpxmlrpc" */;
+			buildPhases = (
+				FCDE27308B7B3592C7163D755FCC3D3B /* Sources */,
+				571784B88E73C5717AD49B878933B6B6 /* Frameworks */,
+				71980B52A6F3B11515D8806DF3454119 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wpxmlrpc;
+			productName = wpxmlrpc;
+			productReference = 4B20A65C5CB37B45747A6BE385F30A47 /* libwpxmlrpc.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BA6DD3AB775681DB4F58B69DC3608183 /* Pods-aria2 remote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2930F816B97D665E5C17C9088FB9D54 /* Build configuration list for PBXNativeTarget "Pods-aria2 remote" */;
+			buildPhases = (
+				96BE3E1FF6C6E76F24DF7BF93A2EDECF /* Sources */,
+				8A778C57BBDAC10D53698A1E416CFDE2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B9CDD1C8B90E63AF868F721A1403F75 /* PBXTargetDependency */,
+			);
+			name = "Pods-aria2 remote";
+			productName = "Pods-aria2 remote";
+			productReference = 01E8FEB252A102C405EBADED581AE3A0 /* libPods-aria2 remote.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FD9BB02514CD2D10B9C3F937D7B2616D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA6DD3AB775681DB4F58B69DC3608183 /* Pods-aria2 remote */,
+				1805153F5B7636BFFF5DEAA48E9F77EB /* wpxmlrpc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96BE3E1FF6C6E76F24DF7BF93A2EDECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC12F2249B9805134A52C2FE53B7C64 /* Pods-aria2 remote-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCDE27308B7B3592C7163D755FCC3D3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED1EE5E80908A18B878870A1AA8043B /* WPBase64Utils.m in Sources */,
+				630E46AC862A734966F1CC9D874464B5 /* WPStringUtils.m in Sources */,
+				708E3A0643FDE5C1E5B116971A5DC924 /* wpxmlrpc-dummy.m in Sources */,
+				D03D422BB239B2B3207EE410D5138E6B /* WPXMLRPCDataCleaner.m in Sources */,
+				9F7D16B037C198C7A95F9E503FA94644 /* WPXMLRPCDecoder.m in Sources */,
+				DD54374D80BA01B0FB3C593A3A569612 /* WPXMLRPCDecoderDelegate.m in Sources */,
+				2C9F044A48D4A062E31602B8B9BAF57F /* WPXMLRPCEncoder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B9CDD1C8B90E63AF868F721A1403F75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = wpxmlrpc;
+			target = 1805153F5B7636BFFF5DEAA48E9F77EB /* wpxmlrpc */;
+			targetProxy = B29402AFA95FB86803FC2D6520F8752E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07E700BF904DBD9BF6DED82C3B391541 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88CEFEEC86BB5291A6345BBB0FB5ACFF /* wpxmlrpc.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/wpxmlrpc/wpxmlrpc-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		34342BBF37D3A9ED85FF2EB654934920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BF0B7206242C6497E034AF3E91A137FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22BCE855ACA7B764420FEBAF75C6AD9B /* Pods-aria2 remote.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C9B5FB1A6D51E70F15F4A4161916EEF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 561C07FC7DCC8307BCFC4F75425087DD /* Pods-aria2 remote.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CECA5A5C8688F433E6D2617982CB9636 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88CEFEEC86BB5291A6345BBB0FB5ACFF /* wpxmlrpc.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/wpxmlrpc/wpxmlrpc-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F6FC88CB717F413199C282718D2DC09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		063D228B3FA582D7CFECF8144DFDC58E /* Build configuration list for PBXNativeTarget "wpxmlrpc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E700BF904DBD9BF6DED82C3B391541 /* Debug */,
+				CECA5A5C8688F433E6D2617982CB9636 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34342BBF37D3A9ED85FF2EB654934920 /* Debug */,
+				F6FC88CB717F413199C282718D2DC09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2930F816B97D665E5C17C9088FB9D54 /* Build configuration list for PBXNativeTarget "Pods-aria2 remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9B5FB1A6D51E70F15F4A4161916EEF3 /* Debug */,
+				BF0B7206242C6497E034AF3E91A137FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
