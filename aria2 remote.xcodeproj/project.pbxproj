@@ -378,6 +378,7 @@
 				E83C50221E8FED200036349B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
