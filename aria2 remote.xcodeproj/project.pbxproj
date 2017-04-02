@@ -10,9 +10,10 @@
 		BFEBBEF435DEA7527D1A8A3C /* libPods-aria2 remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */; };
 		E83C50111E8FED200036349B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E83C50101E8FED200036349B /* AppDelegate.m */; };
 		E83C50141E8FED200036349B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E83C50131E8FED200036349B /* main.m */; };
-		E83C50171E8FED200036349B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E83C50161E8FED200036349B /* ViewController.m */; };
 		E83C50191E8FED200036349B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83C50181E8FED200036349B /* Assets.xcassets */; };
 		E83C501C1E8FED200036349B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83C501A1E8FED200036349B /* Main.storyboard */; };
+		E84697231E9027E100C79CAD /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84697221E9027E100C79CAD /* MainWindowController.m */; };
+		E84697261E90BAA100C79CAD /* SourceTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84697251E90BAA100C79CAD /* SourceTreeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +23,13 @@
 		E83C500F1E8FED200036349B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E83C50101E8FED200036349B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E83C50131E8FED200036349B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E83C50151E8FED200036349B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E83C50161E8FED200036349B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E83C50181E8FED200036349B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E83C501B1E8FED200036349B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E83C501D1E8FED200036349B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E84697211E9027E100C79CAD /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		E84697221E9027E100C79CAD /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		E84697241E90BAA100C79CAD /* SourceTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceTreeViewController.h; sourceTree = "<group>"; };
+		E84697251E90BAA100C79CAD /* SourceTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceTreeViewController.m; sourceTree = "<group>"; };
 		FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aria2 remote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,8 +85,10 @@
 			children = (
 				E83C500F1E8FED200036349B /* AppDelegate.h */,
 				E83C50101E8FED200036349B /* AppDelegate.m */,
-				E83C50151E8FED200036349B /* ViewController.h */,
-				E83C50161E8FED200036349B /* ViewController.m */,
+				E84697211E9027E100C79CAD /* MainWindowController.h */,
+				E84697221E9027E100C79CAD /* MainWindowController.m */,
+				E84697241E90BAA100C79CAD /* SourceTreeViewController.h */,
+				E84697251E90BAA100C79CAD /* SourceTreeViewController.m */,
 				E83C50181E8FED200036349B /* Assets.xcassets */,
 				E83C501A1E8FED200036349B /* Main.storyboard */,
 				E83C501D1E8FED200036349B /* Info.plist */,
@@ -222,7 +227,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E83C50171E8FED200036349B /* ViewController.m in Sources */,
+				E84697231E9027E100C79CAD /* MainWindowController.m in Sources */,
+				E84697261E90BAA100C79CAD /* SourceTreeViewController.m in Sources */,
 				E83C50141E8FED200036349B /* main.m in Sources */,
 				E83C50111E8FED200036349B /* AppDelegate.m in Sources */,
 			);
