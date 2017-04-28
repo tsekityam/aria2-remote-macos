@@ -69,9 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				E83C500E1E8FED200036349B /* aria2 remote */,
-				E83C500D1E8FED200036349B /* Products */,
-				5BD90AB3698D8D2EEB405E5C /* Pods */,
 				B49104AF5731B7E13E9CBB7F /* Frameworks */,
+				5BD90AB3698D8D2EEB405E5C /* Pods */,
+				E83C500D1E8FED200036349B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,18 +86,18 @@
 		E83C500E1E8FED200036349B /* aria2 remote */ = {
 			isa = PBXGroup;
 			children = (
+				E83C50121E8FED200036349B /* Supporting Files */,
 				E83C500F1E8FED200036349B /* AppDelegate.h */,
 				E83C50101E8FED200036349B /* AppDelegate.m */,
+				E83C50181E8FED200036349B /* Assets.xcassets */,
+				E83C501D1E8FED200036349B /* Info.plist */,
+				E83C501A1E8FED200036349B /* Main.storyboard */,
 				E84697211E9027E100C79CAD /* MainWindowController.h */,
 				E84697221E9027E100C79CAD /* MainWindowController.m */,
-				E84697241E90BAA100C79CAD /* SourceTreeViewController.h */,
-				E84697251E90BAA100C79CAD /* SourceTreeViewController.m */,
 				E846972C1E90C9A900C79CAD /* PreferencesViewController.h */,
 				E846972D1E90C9A900C79CAD /* PreferencesViewController.m */,
-				E83C50181E8FED200036349B /* Assets.xcassets */,
-				E83C501A1E8FED200036349B /* Main.storyboard */,
-				E83C501D1E8FED200036349B /* Info.plist */,
-				E83C50121E8FED200036349B /* Supporting Files */,
+				E84697241E90BAA100C79CAD /* SourceTreeViewController.h */,
+				E84697251E90BAA100C79CAD /* SourceTreeViewController.m */,
 			);
 			path = "aria2 remote";
 			sourceTree = "<group>";
@@ -232,11 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E84697231E9027E100C79CAD /* MainWindowController.m in Sources */,
-				E84697261E90BAA100C79CAD /* SourceTreeViewController.m in Sources */,
-				E846972E1E90C9A900C79CAD /* PreferencesViewController.m in Sources */,
-				E83C50141E8FED200036349B /* main.m in Sources */,
 				E83C50111E8FED200036349B /* AppDelegate.m in Sources */,
+				E83C50141E8FED200036349B /* main.m in Sources */,
+				E84697231E9027E100C79CAD /* MainWindowController.m in Sources */,
+				E846972E1E90C9A900C79CAD /* PreferencesViewController.m in Sources */,
+				E84697261E90BAA100C79CAD /* SourceTreeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
