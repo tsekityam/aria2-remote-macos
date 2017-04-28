@@ -18,7 +18,7 @@
     // Insert code here to initialize your application
     
     // Register the preference defaults early.
-    NSDictionary *appDefaults = @{@"Host": @"https://localhost:6800/jsonrpc",
+    NSDictionary *appDefaults = @{@"Host": @"http://localhost:6800/jsonrpc",
                                   @"Token": @""};
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 }
