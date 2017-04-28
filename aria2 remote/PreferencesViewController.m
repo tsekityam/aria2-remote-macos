@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+    
+    [_uriTextField setStringValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"Host"]];
+    [_tokenTextField setStringValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"Token"]];
 }
 
 - (IBAction)testConnectionButtonDidClick:(id)sender {
