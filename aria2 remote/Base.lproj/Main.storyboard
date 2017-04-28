@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -135,8 +135,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="serverTextField" destination="kg7-ts-HR6" id="fcm-qG-iye"/>
                         <outlet property="tokenTextField" destination="VyC-Rl-sGY" id="QRd-Hb-AjM"/>
-                        <outlet property="uriTextField" destination="kg7-ts-HR6" id="fcm-qG-iye"/>
                     </connections>
                 </viewController>
                 <customObject id="Bn2-FA-1mQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -924,14 +924,14 @@
         <scene sceneID="xxy-5P-Mn6">
             <objects>
                 <viewController id="IPN-eJ-eMw" customClass="SourceTreeViewController" sceneMemberID="viewController">
-                    <scrollView key="view" autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="ZdE-AD-W6Z">
+                    <scrollView key="view" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="ZdE-AD-W6Z">
                         <rect key="frame" x="0.0" y="0.0" width="130" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" drawsBackground="NO" id="Suf-N0-LJm">
                             <rect key="frame" x="1" y="1" width="128" height="298"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="xyl-VU-S8S" id="HGy-pu-7k1">
+                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="xyl-VU-S8S" id="HGy-pu-7k1">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="298"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>

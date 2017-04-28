@@ -11,7 +11,7 @@
 #import <AFJSONRPCClient/AFJSONRPCClient.h>
 
 @interface PreferencesViewController ()
-@property (weak) IBOutlet NSTextField *uriTextField;
+@property (weak) IBOutlet NSTextField *serverTextField;
 @property (weak) IBOutlet NSSecureTextField *tokenTextField;
 - (IBAction)testConnectionButtonDidClick:(id)sender;
 
@@ -23,12 +23,12 @@
     [super viewDidLoad];
     // Do view setup here.
     
-    [_uriTextField setStringValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"Host"]];
+    [_serverTextField setStringValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"Server"]];
     [_tokenTextField setStringValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"Token"]];
 }
 
 - (IBAction)testConnectionButtonDidClick:(id)sender {
-    AFJSONRPCClient *client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithString:[_uriTextField stringValue]]];
+    AFJSONRPCClient *client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithString:[_serverTextField stringValue]]];
     
     [client invokeMethod:@"aria2.getVersion" success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSAlert *alert = [[NSAlert alloc] init];
