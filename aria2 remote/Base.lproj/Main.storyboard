@@ -820,6 +820,9 @@ Gw
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="addButtonDidClick:" target="B8D-0N-5wS" id="utm-aa-22Z"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="287C7339-C098-477D-A41A-2449A20B0F5A" label="Continue" paletteLabel="Continue" image="ic_play_arrow" id="g0U-tY-o7V">
                                     <nil key="toolTip"/>

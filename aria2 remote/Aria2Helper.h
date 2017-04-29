@@ -20,5 +20,6 @@
 
 - (void)setServer:(NSString *)server token:(NSString *)token;
 
+- (void)addUri:(void (^)(NSString *gid))success uris:(NSArray *)uris;
 - (void)getVersion:(void (^)(NSString *version, NSArray *enabledFeatures))success;
 @end

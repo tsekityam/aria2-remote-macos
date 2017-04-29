@@ -8,7 +8,10 @@
 
 #import "MainWindowController.h"
 
+#import "Aria2Helper.h"
+
 @interface MainWindowController ()
+- (IBAction)addButtonDidClick:(id)sender;
 
 @end
 
@@ -22,4 +25,25 @@
     [[self window] setTitleVisibility:NSWindowTitleHidden];
 }
 
+- (IBAction)addButtonDidClick:(id)sender {
+    NSTextField *accessoryView = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 192*2, 22)];
+
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:@"Add Uri"];
+    [alert setAccessoryView:accessoryView];
+    [alert beginSheetModalForWindow:[self window] completionHandler:^(NSModalResponse returnCode) {
+        if (returnCode == NSAlertFirstButtonReturn) {
+            NSString *uri = [accessoryView stringValue];
+
+            [[Aria2Helper defaultHelper] addUri:^(NSString *gid) {
+                NSAlert *alert = [[NSAlert alloc] init];
+                [alert setMessageText:@"Success"];
+                [alert setInformativeText:[NSString stringWithFormat:@"gid: %@", gid]];
+                [alert runModal];
+            } uris:@[uri]];
+        }
+    }];
+}
 @end

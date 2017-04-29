@@ -66,6 +66,20 @@
     _client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithString:server]];
 }
 
+- (void)addUri:(void (^)(NSString *))success uris:(NSArray *)uris {
+    NSMutableArray *parameters = [self parameters];
+    [parameters addObject:uris];
+
+    [_client invokeMethod:@"aria2.addUri" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        success(responseObject);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSAlert *alert = [NSAlert alertWithError:error];
+        [alert runModal];
+    }];
+}
+
 - (void)getVersion:(void (^)(NSString *, NSArray *))success {
     [_client invokeMethod:@"aria2.getVersion" withParameters:[self parameters] success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
