@@ -26,7 +26,13 @@
 }
 
 - (IBAction)addButtonDidClick:(id)sender {
-    NSTextField *accessoryView = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 192*2, 22)];
+    NSTextField *accessoryView = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 192*2, 22*5)];
+
+    NSString *candidate = [[NSPasteboard generalPasteboard] stringForType:NSPasteboardTypeString];
+    NSURL *candidateURL = [NSURL URLWithString:candidate];
+    if (candidateURL && [candidateURL scheme]) {
+        [accessoryView setStringValue:candidate];
+    }
 
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"OK"];
