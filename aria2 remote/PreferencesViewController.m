@@ -25,8 +25,8 @@
     [super viewDidLoad];
     // Do view setup here.
     
-    [_serverTextField setStringValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"Server"]];
-    [_tokenTextField setStringValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"Token"]];
+    [_serverTextField setStringValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"server"]];
+    [_tokenTextField setStringValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"token"]];
 }
 
 - (IBAction)testConnectionButtonDidClick:(id)sender {
@@ -58,8 +58,8 @@
     NSString *server = [_serverTextField stringValue];
     NSString *token = [_tokenTextField stringValue];
 
-    [[NSUserDefaults standardUserDefaults] setValue:server forKey:@"Server"];
-    [[NSUserDefaults standardUserDefaults] setValue:token forKey:@"Token"];
+    [[NSUserDefaults standardUserDefaults] setValue:server forKey:@"server"];
+    [[NSUserDefaults standardUserDefaults] setValue:token forKey:@"token"];
 
     [[[self view] window] close];
 }
