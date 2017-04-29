@@ -75,4 +75,11 @@
     return cellView;
 }
 
+- (void)outlineViewSelectionDidChange:(NSNotification *)notification {
+    NSInteger selectedRow = [[notification object] selectedRow];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SoureTreeViewControllerSelectionDidChange" object:nil userInfo:@{@"selectedRow": [NSNumber numberWithInteger:selectedRow]}];
+
+}
+
 @end
