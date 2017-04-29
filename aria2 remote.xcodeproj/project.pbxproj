@@ -15,6 +15,7 @@
 		E84697231E9027E100C79CAD /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84697221E9027E100C79CAD /* MainWindowController.m */; };
 		E84697261E90BAA100C79CAD /* SourceTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84697251E90BAA100C79CAD /* SourceTreeViewController.m */; };
 		E846972E1E90C9A900C79CAD /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E846972D1E90C9A900C79CAD /* PreferencesViewController.m */; };
+		E84C07BA1EB457D90017693B /* Aria2Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E84C07B91EB457D90017693B /* Aria2Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		E84697251E90BAA100C79CAD /* SourceTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceTreeViewController.m; sourceTree = "<group>"; };
 		E846972C1E90C9A900C79CAD /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
 		E846972D1E90C9A900C79CAD /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PreferencesViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E84C07B81EB457D90017693B /* Aria2Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aria2Helper.h; sourceTree = "<group>"; };
+		E84C07B91EB457D90017693B /* Aria2Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aria2Helper.m; sourceTree = "<group>"; };
 		FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aria2 remote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,6 +92,8 @@
 				E83C50121E8FED200036349B /* Supporting Files */,
 				E83C500F1E8FED200036349B /* AppDelegate.h */,
 				E83C50101E8FED200036349B /* AppDelegate.m */,
+				E84C07B81EB457D90017693B /* Aria2Helper.h */,
+				E84C07B91EB457D90017693B /* Aria2Helper.m */,
 				E83C50181E8FED200036349B /* Assets.xcassets */,
 				E83C501D1E8FED200036349B /* Info.plist */,
 				E83C501A1E8FED200036349B /* Main.storyboard */,
@@ -233,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E83C50111E8FED200036349B /* AppDelegate.m in Sources */,
+				E84C07BA1EB457D90017693B /* Aria2Helper.m in Sources */,
 				E83C50141E8FED200036349B /* main.m in Sources */,
 				E84697231E9027E100C79CAD /* MainWindowController.m in Sources */,
 				E846972E1E90C9A900C79CAD /* PreferencesViewController.m in Sources */,

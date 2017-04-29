@@ -8,7 +8,7 @@
 
 #import "PreferencesViewController.h"
 
-#import <AFJSONRPCClient/AFJSONRPCClient.h>
+#import "Aria2Helper.h"
 
 @interface PreferencesViewController ()
 @property (weak) IBOutlet NSTextField *serverTextField;
@@ -33,21 +33,8 @@
     NSString *server = [_serverTextField stringValue];
     NSString *token = [_tokenTextField stringValue];
     
-    NSMutableArray *parameters = [NSMutableArray array];
-    
-    if ([token length] > 0) {
-        [parameters addObject:[NSString stringWithFormat:@"token:%@", token]];
-    }
-    
-    AFJSONRPCClient *client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithString:server]];
-    [client invokeMethod:@"aria2.getVersion" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSAlert *alert = [[NSAlert alloc] init];
-        [alert setMessageText:@"Success"];
-        [alert runModal];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSAlert *alert = [NSAlert alertWithError:error];
-        [alert runModal];
-    }];
+    Aria2Helper *helper = [[Aria2Helper alloc] initWithServer:server token:token];
+    [helper getVersion];
 }
 
 - (IBAction)cancelButtonDidClick:(id)sender {
