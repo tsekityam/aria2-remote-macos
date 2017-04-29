@@ -29,7 +29,6 @@
 @end
 
 @interface Aria2Download : NSObject
-@property NSDictionary *statusDictionay;
 @property NSString *gid;
 @property NSString *status;
 @property NSString *totalLength;

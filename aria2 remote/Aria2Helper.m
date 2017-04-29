@@ -149,6 +149,11 @@
 
 @end
 
+@interface Aria2Download ()
+@property NSDictionary *statusDictionay;
+
+@end
+
 @implementation Aria2Download
 
 + (instancetype)downloadWithStatus:(id)status {
