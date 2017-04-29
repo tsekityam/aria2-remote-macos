@@ -24,8 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-    
-    
+
     [_outlineView setDataSource:self];
     [_outlineView setDelegate:self];
 }
