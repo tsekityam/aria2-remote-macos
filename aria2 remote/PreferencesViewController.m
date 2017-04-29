@@ -28,6 +28,7 @@
 }
 
 - (IBAction)testConnectionButtonDidClick:(id)sender {
+    NSString *server = [_serverTextField stringValue];
     NSString *token = [_tokenTextField stringValue];
     
     NSMutableArray *parameters = [NSMutableArray array];
@@ -36,7 +37,7 @@
         [parameters addObject:[NSString stringWithFormat:@"token:%@", token]];
     }
     
-    AFJSONRPCClient *client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithString:[_serverTextField stringValue]]];
+    AFJSONRPCClient *client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithString:server]];
     [client invokeMethod:@"aria2.getVersion" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSAlert *alert = [[NSAlert alloc] init];
         [alert setMessageText:@"Success"];
