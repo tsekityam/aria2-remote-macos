@@ -66,11 +66,14 @@
     _client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithString:server]];
 }
 
-- (void)getVersion {
+- (void)getVersion:(void (^)(NSString *, NSArray *))success {
     [_client invokeMethod:@"aria2.getVersion" withParameters:[self parameters] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSAlert *alert = [[NSAlert alloc] init];
-        [alert setMessageText:@"Success"];
-        [alert runModal];
+        
+        NSString *version = [responseObject objectForKey:@"version"];
+        NSArray *enabledFeatures = [responseObject objectForKey:@"enabledFeatures"];
+        
+        success(version, enabledFeatures);
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSAlert *alert = [NSAlert alertWithError:error];
         [alert runModal];

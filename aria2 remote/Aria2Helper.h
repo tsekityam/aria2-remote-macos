@@ -20,5 +20,5 @@
 
 - (void)setServer:(NSString *)server token:(NSString *)token;
 
-- (void)getVersion;
+- (void)getVersion:(void (^)(NSString *version, NSArray *enabledFeatures))success;
 @end

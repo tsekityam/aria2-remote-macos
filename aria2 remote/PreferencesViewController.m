@@ -34,7 +34,12 @@
     NSString *token = [_tokenTextField stringValue];
     
     Aria2Helper *helper = [[Aria2Helper alloc] initWithServer:server token:token];
-    [helper getVersion];
+    [helper getVersion:^(NSString *version, NSArray *enabledFeatures) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:@"Success"];
+        [alert setInformativeText:[NSString stringWithFormat:@"version: %@\nenabled features: %@", version, [enabledFeatures componentsJoinedByString:@", "]]];
+        [alert runModal];
+    }];
 }
 
 - (IBAction)cancelButtonDidClick:(id)sender {
