@@ -45,6 +45,14 @@
     return [NSNumber numberWithInteger:index];
 }
 
+- (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item {
+    if ([item integerValue] == ROW_HEADER_DOWNLOADS) {
+        return NO;
+    }
+
+    return YES;
+}
+
 - (NSView *)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
     NSTableCellView *cellView = nil;
