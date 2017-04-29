@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class Aria2Download;
 @interface Aria2Helper : NSObject
 
 + (instancetype)defaultHelper;
 
 + (instancetype)helperWithServer:(NSString *)server;
 + (instancetype)helperWithServer:(NSString *)server token:(NSString *)token;
+
++ (void)updateDownloads:(NSMutableArray<Aria2Download *> *)sourceDownloads to:(NSArray<Aria2Download *> *)targetDownloads;
 
 - (instancetype)initWithServer:(NSString *)server;
 - (instancetype)initWithServer:(NSString *)server token:(NSString *)token;

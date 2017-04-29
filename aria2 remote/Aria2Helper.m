@@ -19,6 +19,13 @@
 
 @end
 
+@interface Aria2Download ()
+@property NSDictionary *statusDictionay;
+
+- (void)updateStatusTo:(Aria2Download *)target;
+
+@end
+
 @implementation Aria2Helper
 
 + (instancetype)defaultHelper {
@@ -38,6 +45,22 @@
 + (instancetype)helperWithServer:(NSString *)server token:(NSString *)token
 {
     return [[Aria2Helper alloc] initWithServer:server token:token];
+}
+
++ (void)updateDownloads:(NSMutableArray<Aria2Download *> *)sourceDownloads to:(NSArray<Aria2Download *> *)targetDownloads {
+    NSArray *tempSourceDownloads = [sourceDownloads copy];
+    [sourceDownloads removeAllObjects];
+
+    for (Aria2Download *target in targetDownloads) {
+        NSInteger indexOfTarget = [tempSourceDownloads indexOfObject:target];
+        if (indexOfTarget != NSNotFound) {
+            Aria2Download *source = [tempSourceDownloads objectAtIndex:indexOfTarget];
+            [source updateStatusTo:target];
+            [sourceDownloads addObject:source];
+        } else {
+            [sourceDownloads addObject:target];
+        }
+    }
 }
 
 - (instancetype)initWithServer:(NSString *)server {
@@ -149,11 +172,6 @@
 
 @end
 
-@interface Aria2Download ()
-@property NSDictionary *statusDictionay;
-
-@end
-
 @implementation Aria2Download
 
 + (instancetype)downloadWithStatus:(id)status {
@@ -193,8 +211,45 @@
     return self;
 }
 
+- (BOOL)isEqual:(id)object {
+    if ([object isKindOfClass:[Aria2Download class]]) {
+        return [_gid isEqual:[object gid]];
+    }
+    return NO;
+}
+
 - (id)objectForKey:(id)key {
     return [_statusDictionay objectForKey:key];
+}
+
+- (void)updateStatusTo:(Aria2Download *)target {
+    if ([_gid isEqualToString:[target gid]]) {
+       _statusDictionay = [target statusDictionay];
+
+        _status = [target status];
+        _totalLength =[target totalLength];
+        _completedLength =[target completedLength];
+        _uploadLength = [target uploadLength];
+        _bitfield = [target bitfield];
+        _downloadSpeed = [target downloadSpeed];
+        _uploadSpeed = [target uploadSpeed];
+        _infoHash = [target infoHash];
+        _numSeeders:[target numSeeders];
+        _seeder:[target seeder];
+        _pieceLength:[target pieceLength];
+        _numPieces:[target numPieces];
+        _connections:[target connections];
+        _errorCode:[target errorCode];
+        _errorMessage:[target errorMessage];
+        _followedBy:[target followedBy];
+        _following:[target following];
+        _belongsTo:[target belongsTo];
+        _dir:[target dir];
+        _files:[target files];
+        _bittorrent:[target bittorrent];
+        _verifiedLength:[target verifiedLength];
+        _verifyIntegrityPending:[target verifyIntegrityPending];
+    }
 }
 
 @end
