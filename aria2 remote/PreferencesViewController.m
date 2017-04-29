@@ -14,6 +14,8 @@
 @property (weak) IBOutlet NSTextField *serverTextField;
 @property (weak) IBOutlet NSSecureTextField *tokenTextField;
 - (IBAction)testConnectionButtonDidClick:(id)sender;
+- (IBAction)cancelButtonDidClick:(id)sender;
+- (IBAction)okButtonDidClick:(id)sender;
 
 @end
 
@@ -47,4 +49,19 @@
         [alert runModal];
     }];
 }
+
+- (IBAction)cancelButtonDidClick:(id)sender {
+    [[[self view] window] close];
+}
+
+- (IBAction)okButtonDidClick:(id)sender {
+    NSString *server = [_serverTextField stringValue];
+    NSString *token = [_tokenTextField stringValue];
+
+    [[NSUserDefaults standardUserDefaults] setValue:server forKey:@"Server"];
+    [[NSUserDefaults standardUserDefaults] setValue:token forKey:@"Token"];
+
+    [[[self view] window] close];
+}
+
 @end
