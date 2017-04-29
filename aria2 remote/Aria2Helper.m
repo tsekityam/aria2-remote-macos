@@ -183,30 +183,30 @@
     if (self) {
         _statusDictionay = status;
 
-        _gid = [status objectForKey:@"gid"];
-        _status = [status objectForKey:@"status"];
-        _totalLength = [status objectForKey:@"totalLength"];
-        _completedLength = [status objectForKey:@"completedLength"];
-        _uploadLength = [status objectForKey:@"uploadLength"];
-        _bitfield = [status objectForKey:@"bitfield"];
-        _downloadSpeed = [status objectForKey:@"downloadSpeed"];
-        _uploadSpeed = [status objectForKey:@"uploadSpeed"];
-        _infoHash = [status objectForKey:@"infoHash"];
-        _numSeeders = [status objectForKey:@"numSeeders"];
-        _seeder = [status objectForKey:@"seeder"];
-        _pieceLength = [status objectForKey:@"pieceLength"];
-        _numPieces = [status objectForKey:@"numPieces"];
-        _connections = [status objectForKey:@"connections"];
-        _errorCode = [status objectForKey:@"errorCode"];
-        _errorMessage = [status objectForKey:@"errorMessage"];
-        _followedBy = [status objectForKey:@"followedBy"];
-        _following = [status objectForKey:@"following"];
-        _belongsTo = [status objectForKey:@"belongsTo"];
-        _dir = [status objectForKey:@"dir"];
-        _files = [status objectForKey:@"files"];
-        _bittorrent = [status objectForKey:@"bittorrent"];
-        _verifiedLength = [status objectForKey:@"verifiedLength"];
-        _verifyIntegrityPending = [status objectForKey:@"verifyIntegrityPending"];
+        _gid = [status objectForKey:@"gid"] ? [status objectForKey:@"gid"] : @"";
+        _status = [status objectForKey:@"status"] ? [status objectForKey:@"status"] : @"";
+        _totalLength = [status objectForKey:@"totalLength"] ? [status objectForKey:@"totalLength"] : @"";
+        _completedLength = [status objectForKey:@"completedLength"] ? [status objectForKey:@"completedLength"] : @"";
+        _uploadLength = [status objectForKey:@"uploadLength"] ? [status objectForKey:@"uploadLength"] : @"";
+        _bitfield = [status objectForKey:@"bitfield"] ? [status objectForKey:@"bitfield"] : @"";
+        _downloadSpeed = [status objectForKey:@"downloadSpeed"] ? [status objectForKey:@"downloadSpeed"] : @"";
+        _uploadSpeed = [status objectForKey:@"uploadSpeed"] ? [status objectForKey:@"uploadSpeed"] : @"";
+        _infoHash = [status objectForKey:@"infoHash"] ? [status objectForKey:@"infoHash"] : @"";
+        _numSeeders = [status objectForKey:@"numSeeders"] ? [status objectForKey:@"numSeeders"] : @"";
+        _seeder = [status objectForKey:@"seeder"] ? [status objectForKey:@"seeder"] : @"";
+        _pieceLength = [status objectForKey:@"pieceLength"] ? [status objectForKey:@"pieceLength"] : @"";
+        _numPieces = [status objectForKey:@"numPieces"] ? [status objectForKey:@"numPieces"] : @"";
+        _connections = [status objectForKey:@"connections"] ? [status objectForKey:@"connections"] : @"";
+        _errorCode = [status objectForKey:@"errorCode"] ? [status objectForKey:@"errorCode"] : @"";
+        _errorMessage = [status objectForKey:@"errorMessage"] ? [status objectForKey:@"errorMessage"] : @"";
+        _followedBy = [status objectForKey:@"followedBy"] ? [status objectForKey:@"followedBy"] : @"";
+        _following = [status objectForKey:@"following"] ? [status objectForKey:@"following"] : @"";
+        _belongsTo = [status objectForKey:@"belongsTo"] ? [status objectForKey:@"belongsTo"] : @"";
+        _dir = [status objectForKey:@"dir"] ? [status objectForKey:@"dir"] : @"";
+        _files = [status objectForKey:@"files"] ? [status objectForKey:@"files"] : @[];
+        _bittorrent = [status objectForKey:@"bittorrent"] ? [status objectForKey:@"bittorrent"] : @{};
+        _verifiedLength = [status objectForKey:@"verifiedLength"] ? [status objectForKey:@"verifiedLength"] : @"";
+        _verifyIntegrityPending = [status objectForKey:@"verifyIntegrityPending"] ? [status objectForKey:@"verifyIntegrityPending"] : @"";
     }
     return self;
 }
