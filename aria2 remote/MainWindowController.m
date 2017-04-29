@@ -26,7 +26,7 @@
 }
 
 - (IBAction)addButtonDidClick:(id)sender {
-    NSTextField *accessoryView = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 192*2, 22)];
+    NSTextView *accessoryView = [[NSTextView alloc] initWithFrame:NSMakeRect(0, 0, 192*2, 22*5)];
 
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"OK"];
@@ -35,7 +35,7 @@
     [alert setAccessoryView:accessoryView];
     [alert beginSheetModalForWindow:[self window] completionHandler:^(NSModalResponse returnCode) {
         if (returnCode == NSAlertFirstButtonReturn) {
-            NSString *uri = [accessoryView stringValue];
+            NSString *uri = [[accessoryView textStorage] string];
 
             [[Aria2Helper defaultHelper] addUri:^(NSString *gid) {
                 NSAlert *alert = [[NSAlert alloc] init];
