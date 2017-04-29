@@ -21,6 +21,16 @@
 
 @implementation Aria2Helper
 
++ (instancetype)defaultHelper {
+    static Aria2Helper *defaultHelper = nil;
+    if (defaultHelper == nil) {
+        NSString *server = [[NSUserDefaults standardUserDefaults] stringForKey:@"server"];
+        NSString *token= [[NSUserDefaults standardUserDefaults] stringForKey:@"token"];
+        defaultHelper = [Aria2Helper helperWithServer:server token:token];
+    }
+    return defaultHelper;
+}
+
 + (instancetype)helperWithServer:(NSString *)server {
     return [[Aria2Helper alloc] initWithServer:server];
 }
@@ -49,6 +59,11 @@
         [parameters addObject:[NSString stringWithFormat:@"token:%@", _token]];
     }
     return parameters;
+}
+
+- (void)setServer:(NSString *)server token:(NSString *)token {
+    _token = token;
+    _client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithString:server]];
 }
 
 - (void)getVersion {

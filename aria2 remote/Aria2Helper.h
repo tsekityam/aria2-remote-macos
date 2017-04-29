@@ -10,11 +10,15 @@
 
 @interface Aria2Helper : NSObject
 
++ (instancetype)defaultHelper;
+
 + (instancetype)helperWithServer:(NSString *)server;
 + (instancetype)helperWithServer:(NSString *)server token:(NSString *)token;
 
 - (instancetype)initWithServer:(NSString *)server;
 - (instancetype)initWithServer:(NSString *)server token:(NSString *)token;
+
+- (void)setServer:(NSString *)server token:(NSString *)token;
 
 - (void)getVersion;
 @end

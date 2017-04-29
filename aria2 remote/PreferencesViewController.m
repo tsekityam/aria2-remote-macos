@@ -47,6 +47,8 @@
 
     [[NSUserDefaults standardUserDefaults] setValue:server forKey:@"server"];
     [[NSUserDefaults standardUserDefaults] setValue:token forKey:@"token"];
+    
+    [[Aria2Helper defaultHelper] setServer:server token:token];
 
     [[[self view] window] close];
 }
