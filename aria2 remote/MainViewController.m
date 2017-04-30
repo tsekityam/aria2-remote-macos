@@ -18,7 +18,7 @@
 @property NSMutableArray *activeDownloads;
 @property NSMutableArray *waitingDownloads;
 @property NSMutableArray *stoppedDownloads;
-@property NSOperationQueue *tellActiveQueue;
+@property NSOperationQueue *tellQueue;
 
 - (void)sourceTreeViewSelectionDidChange:(NSNotification *)notifiication;
 
@@ -32,7 +32,7 @@
         _activeDownloads = [NSMutableArray array];
         _waitingDownloads = [NSMutableArray array];
         _stoppedDownloads = [NSMutableArray array];
-        _tellActiveQueue = [[NSOperationQueue alloc] init];
+        _tellQueue = [[NSOperationQueue alloc] init];
     }
     return self;
 }
@@ -43,7 +43,7 @@
         _activeDownloads = [NSMutableArray array];
         _waitingDownloads = [NSMutableArray array];
         _stoppedDownloads = [NSMutableArray array];
-        _tellActiveQueue = [[NSOperationQueue alloc] init];
+        _tellQueue = [[NSOperationQueue alloc] init];
     }
     return self;
 }
@@ -52,7 +52,7 @@
     [super viewDidLoad];
     // Do view setup here.
 
-    [_tellActiveQueue addOperationWithBlock:^{
+    [_tellQueue addOperationWithBlock:^{
         while (true) {
             [[Aria2Helper defaultHelper] tell:^(NSArray *downloads) {
                 NSInteger selectedRow = [_mainTableView selectedRow];
