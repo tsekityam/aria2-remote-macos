@@ -272,10 +272,15 @@
         NSArray *dirComponents = [dirURL pathComponents];
 
         Aria2File *file = [_files objectAtIndex:0];
+        NSString *filePath = [file path];
         NSURL *filePathURL = [NSURL URLWithString:[[file path] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]]];
         NSArray *filePathComponents = [filePathURL pathComponents];
 
-        return [filePathComponents objectAtIndex:[dirComponents count]];
+        if ([filePath hasPrefix:_dir]) {
+            return [filePathComponents objectAtIndex:[dirComponents count]];
+        } else {
+            return filePath;
+        }
     }
 
     return @"";
