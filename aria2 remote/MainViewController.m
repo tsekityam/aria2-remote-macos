@@ -60,8 +60,8 @@
 
     [_tellActiveQueue addOperationWithBlock:^{
         while (true) {
-            [[Aria2Helper defaultHelper] tellActive:^(NSArray *downloads) {
-                if (_visibleDownloads == _activeDownloads) {
+            if (_visibleDownloads == _activeDownloads) {
+                [[Aria2Helper defaultHelper] tellActive:^(NSArray *downloads) {
 
                     NSInteger selectedRow = [_mainTableView selectedRow];
                     Aria2Download *selectedDownload = nil;
@@ -80,18 +80,16 @@
                             [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
                         }
                     }];
-                } else {
-                    [Aria2Helper updateDownloads:_activeDownloads to:downloads];
-                }
-            }];
+                }];
+            }
             sleep(1);
         }
     }];
 
     [_tellWaitingQueue addOperationWithBlock:^{
         while (true) {
-            [[Aria2Helper defaultHelper] tellWaiting:^(NSArray *downloads) {
-                if (_visibleDownloads == _waitingDownloads) {
+            if (_visibleDownloads == _waitingDownloads) {
+                [[Aria2Helper defaultHelper] tellWaiting:^(NSArray *downloads) {
                     NSInteger selectedRow = [_mainTableView selectedRow];
                     Aria2Download *selectedDownload = nil;
 
@@ -109,18 +107,16 @@
                             [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
                         }
                     }];
-                } else {
-                    [Aria2Helper updateDownloads:_waitingDownloads to:downloads];
-                }
-            } offset:0 num:100];
+                } offset:0 num:100];
+            }
             sleep(1);
         }
     }];
 
     [_tellStoppedQueue addOperationWithBlock:^{
         while (true) {
-            [[Aria2Helper defaultHelper] tellStopped:^(NSArray *downloads) {
-                if (_visibleDownloads == _stoppedDownloads) {
+            if (_visibleDownloads == _stoppedDownloads) {
+                [[Aria2Helper defaultHelper] tellStopped:^(NSArray *downloads) {
                     NSInteger selectedRow = [_mainTableView selectedRow];
                     Aria2Download *selectedDownload = nil;
 
@@ -138,10 +134,8 @@
                             [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
                         }
                     }];
-                } else {
-                    [Aria2Helper updateDownloads:_stoppedDownloads to:downloads];
-                }
-            } offset:0 num:100];
+                } offset:0 num:100];
+            }
             sleep(1);
         }
     }];
