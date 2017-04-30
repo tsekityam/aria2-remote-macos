@@ -23,14 +23,13 @@
 
 - (void)setServer:(NSString *)server token:(NSString *)token;
 
+- (void)tell:(void (^)(NSArray *downloads))success failure:(void (^)(NSError *error))failure;
+
 - (void)addUri:(void (^)(NSString *gid))success uris:(NSArray *)uris;
 - (void)getVersion:(void (^)(NSString *version, NSArray *enabledFeatures))success;
 - (void)pause:(void (^)(NSArray *downloads))success gid:(NSString *)gid;
 - (void)unpause:(void (^)(NSArray *downloads))success gid:(NSString *)gid;
 - (void)remove:(void (^)(NSArray *downloads))success gid:(NSString *)gid;
-- (void)tellActive:(void (^)(NSArray *downloads))success failure:(void (^)(NSError *error))failure;
-- (void)tellWaiting:(void (^)(NSArray *downloads))success failure:(void (^)(NSError *error))failure offset:(NSInteger)offset num:(NSInteger)num;
-- (void)tellStopped:(void (^)(NSArray *downloads))success failure:(void (^)(NSError *error))failure offset:(NSInteger)offset num:(NSInteger)num;
 
 @end
 

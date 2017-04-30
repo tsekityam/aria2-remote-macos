@@ -16,6 +16,7 @@
 @property NSString *token;
 
 - (NSMutableArray *)parameters;
+- (NSArray<Aria2Download *> *)downloadsFromResponseObject:(id)responseObject;
 
 @end
 
@@ -88,6 +89,57 @@
     _client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithString:server]];
 }
 
+- (void)tell:(void (^)(NSArray *downloads))success failure:(void (^)(NSError *error))failure {
+    NSMutableArray *parameters = [NSMutableArray array];
+
+    NSMutableArray *tellWaitingParameters = [self parameters];
+    [tellWaitingParameters addObject:[NSNumber numberWithInteger:0]];
+    [tellWaitingParameters addObject:[NSNumber numberWithInteger:100]];
+
+    NSMutableArray *tellStoppedParameters = [self parameters];
+    [tellStoppedParameters addObject:[NSNumber numberWithInteger:0]];
+    [tellStoppedParameters addObject:[NSNumber numberWithInteger:100]];
+
+    NSDictionary *tellActive = @{@"methodName": @"aria2.tellActive", @"params": [self parameters]};
+    NSDictionary *tellWaiting = @{@"methodName": @"aria2.tellWaiting", @"params": tellWaitingParameters};
+    NSDictionary *tellStopped = @{@"methodName": @"aria2.tellStopped", @"params": tellStoppedParameters};
+
+    [parameters addObject:@[tellActive, tellWaiting, tellStopped]];
+
+    [_client invokeMethod:@"system.multicall" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *activateDownloads = [self downloadsFromResponseObject:responseObject[0]];
+        NSArray *waitingDownloads = [self downloadsFromResponseObject:responseObject[1]];
+        NSArray *stoppedDownloads = [self downloadsFromResponseObject:responseObject[2]];
+        success(@[activateDownloads, waitingDownloads, stoppedDownloads]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(error);
+    }];
+}
+
+- (NSArray<Aria2Download *> *)downloadsFromResponseObject:(id)responseObject {
+    NSMutableArray *downloads = [NSMutableArray array];
+
+    if ([responseObject isKindOfClass:[NSDictionary class]]){
+        if ([responseObject objectForKey:@"message"] &&
+            [responseObject objectForKey:@"code"]) {
+            // TODO: indicate that there is an error
+            return downloads;
+        }
+    } else if ([responseObject isKindOfClass:[NSArray class]]) {
+        if ([responseObject[0] isKindOfClass:[NSArray class]]) {
+            // the response object may come from system.multicall
+            for (id item in responseObject[0]) {
+                if ([item isKindOfClass:[NSDictionary class]]) {
+                    Aria2Download *download = [Aria2Download downloadWithStatus:item];
+                    [downloads addObject:download];
+                }
+            }
+        }
+    }
+
+    return downloads;
+}
+
 - (void)addUri:(void (^)(NSString *))success uris:(NSArray *)uris {
     NSMutableArray *parameters = [self parameters];
     [parameters addObject:uris];
@@ -155,59 +207,6 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSAlert *alert = [NSAlert alertWithError:error];
         [alert runModal];
-    }];
-}
-
-- (void)tellActive:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure {
-    [_client invokeMethod:@"aria2.tellActive" withParameters:[self parameters] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
-        NSMutableArray *downloads = [NSMutableArray array];
-        for (id element in responseObject) {
-            Aria2Download *download = [Aria2Download downloadWithStatus:element];
-            [downloads addObject:download];
-        }
-        success(downloads);
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        failure(error);
-    }];
-}
-
-- (void)tellWaiting:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure offset:(NSInteger)offset num:(NSInteger)num {
-    NSMutableArray *parameters = [self parameters];
-    [parameters addObject:[NSNumber numberWithInteger:offset]];
-    [parameters addObject:[NSNumber numberWithInteger:num]];
-
-    [_client invokeMethod:@"aria2.tellWaiting" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
-        NSMutableArray *downloads = [NSMutableArray array];
-        for (id element in responseObject) {
-            Aria2Download *download = [Aria2Download downloadWithStatus:element];
-            [downloads addObject:download];
-        }
-        success(downloads);
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        failure(error);
-    }];
-}
-
-- (void)tellStopped:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure offset:(NSInteger)offset num:(NSInteger)num {
-    NSMutableArray *parameters = [self parameters];
-    [parameters addObject:[NSNumber numberWithInteger:offset]];
-    [parameters addObject:[NSNumber numberWithInteger:num]];
-
-    [_client invokeMethod:@"aria2.tellStopped" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
-        NSMutableArray *downloads = [NSMutableArray array];
-        for (id element in responseObject) {
-            Aria2Download *download = [Aria2Download downloadWithStatus:element];
-            [downloads addObject:download];
-        }
-        success(downloads);
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        failure(error);
     }];
 }
 

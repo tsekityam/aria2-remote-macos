@@ -60,136 +60,28 @@
 
     [_tellActiveQueue addOperationWithBlock:^{
         while (true) {
-            if (_visibleDownloads == _activeDownloads) {
-                [[Aria2Helper defaultHelper] tellActive:^(NSArray *downloads) {
+            [[Aria2Helper defaultHelper] tell:^(NSArray *downloads) {
+                NSInteger selectedRow = [_mainTableView selectedRow];
+                Aria2Download *selectedDownload = nil;
 
-                    NSInteger selectedRow = [_mainTableView selectedRow];
-                    Aria2Download *selectedDownload = nil;
+                if (selectedRow != -1) {
+                    selectedDownload = [_visibleDownloads objectAtIndex:selectedRow];
+                }
 
-                    if (selectedRow != -1) {
-                        selectedDownload = [_activeDownloads objectAtIndex:selectedRow];
+                [Aria2Helper updateDownloads:_activeDownloads to:downloads[0]];
+                [Aria2Helper updateDownloads:_waitingDownloads to:downloads[1]];
+                [Aria2Helper updateDownloads:_stoppedDownloads to:downloads[2]];
+
+                NSInteger indexOfSelectedDownload = [_visibleDownloads indexOfObject:selectedDownload];
+
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [_mainTableView reloadData];
+                    if (indexOfSelectedDownload != NSNotFound) {
+                        [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
                     }
-
-                    [Aria2Helper updateDownloads:_activeDownloads to:downloads];
-
-                    NSInteger indexOfSelectedDownload = [_activeDownloads indexOfObject:selectedDownload];
-
-                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                        [_mainTableView reloadData];
-                        if (indexOfSelectedDownload != NSNotFound) {
-                            [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
-                        }
-                    }];
-                } failure:^(NSError *error) {
-                    NSInteger selectedRow = [_mainTableView selectedRow];
-                    Aria2Download *selectedDownload = nil;
-
-                    if (selectedRow != -1) {
-                        selectedDownload = [_activeDownloads objectAtIndex:selectedRow];
-                    }
-
-                    [Aria2Helper updateDownloads:_activeDownloads to:@[]];
-
-                    NSInteger indexOfSelectedDownload = [_activeDownloads indexOfObject:selectedDownload];
-
-                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                        [_mainTableView reloadData];
-                        if (indexOfSelectedDownload != NSNotFound) {
-                            [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
-                        }
-                    }];
                 }];
-            }
-            sleep(1);
-        }
-    }];
-
-    [_tellWaitingQueue addOperationWithBlock:^{
-        while (true) {
-            if (_visibleDownloads == _waitingDownloads) {
-                [[Aria2Helper defaultHelper] tellWaiting:^(NSArray *downloads) {
-                    NSInteger selectedRow = [_mainTableView selectedRow];
-                    Aria2Download *selectedDownload = nil;
-
-                    if (selectedRow != -1) {
-                        selectedDownload = [_waitingDownloads objectAtIndex:selectedRow];
-                    }
-
-                    [Aria2Helper updateDownloads:_waitingDownloads to:downloads];
-
-                    NSInteger indexOfSelectedDownload = [_waitingDownloads indexOfObject:selectedDownload];
-
-                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                        [_mainTableView reloadData];
-                        if (indexOfSelectedDownload != NSNotFound) {
-                            [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
-                        }
-                    }];
-                } failure:^(NSError *error) {
-                    NSInteger selectedRow = [_mainTableView selectedRow];
-                    Aria2Download *selectedDownload = nil;
-
-                    if (selectedRow != -1) {
-                        selectedDownload = [_waitingDownloads objectAtIndex:selectedRow];
-                    }
-
-                    [Aria2Helper updateDownloads:_waitingDownloads to:@[]];
-
-                    NSInteger indexOfSelectedDownload = [_waitingDownloads indexOfObject:selectedDownload];
-
-                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                        [_mainTableView reloadData];
-                        if (indexOfSelectedDownload != NSNotFound) {
-                            [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
-                        }
-                    }];
-                } offset:0 num:100];
-            }
-            sleep(1);
-        }
-    }];
-
-    [_tellStoppedQueue addOperationWithBlock:^{
-        while (true) {
-            if (_visibleDownloads == _stoppedDownloads) {
-                [[Aria2Helper defaultHelper] tellStopped:^(NSArray *downloads) {
-                    NSInteger selectedRow = [_mainTableView selectedRow];
-                    Aria2Download *selectedDownload = nil;
-
-                    if (selectedRow != -1) {
-                        selectedDownload = [_stoppedDownloads objectAtIndex:selectedRow];
-                    }
-
-                    [Aria2Helper updateDownloads:_stoppedDownloads to:downloads];
-
-                    NSInteger indexOfSelectedDownload = [_stoppedDownloads indexOfObject:selectedDownload];
-
-                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                        [_mainTableView reloadData];
-                        if (indexOfSelectedDownload != NSNotFound) {
-                            [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
-                        }
-                    }];
-                } failure:^(NSError *error) {
-                    NSInteger selectedRow = [_mainTableView selectedRow];
-                    Aria2Download *selectedDownload = nil;
-
-                    if (selectedRow != -1) {
-                        selectedDownload = [_stoppedDownloads objectAtIndex:selectedRow];
-                    }
-
-                    [Aria2Helper updateDownloads:_stoppedDownloads to:@[]];
-
-                    NSInteger indexOfSelectedDownload = [_stoppedDownloads indexOfObject:selectedDownload];
-
-                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                        [_mainTableView reloadData];
-                        if (indexOfSelectedDownload != NSNotFound) {
-                            [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
-                        }
-                    }];
-                } offset:0 num:100];
-            }
+            } failure:^(NSError *error) {
+            }];
             sleep(1);
         }
     }];
