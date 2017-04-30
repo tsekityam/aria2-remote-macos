@@ -19,8 +19,6 @@
 @property NSMutableArray *waitingDownloads;
 @property NSMutableArray *stoppedDownloads;
 @property NSOperationQueue *tellActiveQueue;
-@property NSOperationQueue *tellWaitingQueue;
-@property NSOperationQueue *tellStoppedQueue;
 
 - (void)sourceTreeViewSelectionDidChange:(NSNotification *)notifiication;
 
@@ -35,8 +33,6 @@
         _waitingDownloads = [NSMutableArray array];
         _stoppedDownloads = [NSMutableArray array];
         _tellActiveQueue = [[NSOperationQueue alloc] init];
-        _tellWaitingQueue = [[NSOperationQueue alloc] init];
-        _tellStoppedQueue = [[NSOperationQueue alloc] init];
     }
     return self;
 }
@@ -48,8 +44,6 @@
         _waitingDownloads = [NSMutableArray array];
         _stoppedDownloads = [NSMutableArray array];
         _tellActiveQueue = [[NSOperationQueue alloc] init];
-        _tellWaitingQueue = [[NSOperationQueue alloc] init];
-        _tellStoppedQueue = [[NSOperationQueue alloc] init];
     }
     return self;
 }
