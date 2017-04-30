@@ -116,7 +116,7 @@
     }];
 }
 
-- (void)tellActive:(void (^)(NSArray *))success {
+- (void)tellActive:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure {
     [_client invokeMethod:@"aria2.tellActive" withParameters:[self parameters] success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
         NSMutableArray *downloads = [NSMutableArray array];
@@ -127,11 +127,11 @@
         success(downloads);
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // TODO: notify user if fail to get active list
+        failure(error);
     }];
 }
 
-- (void)tellWaiting:(void (^)(NSArray *))success offset:(NSInteger)offset num:(NSInteger)num {
+- (void)tellWaiting:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure offset:(NSInteger)offset num:(NSInteger)num {
     NSMutableArray *parameters = [self parameters];
     [parameters addObject:[NSNumber numberWithInteger:offset]];
     [parameters addObject:[NSNumber numberWithInteger:num]];
@@ -146,11 +146,11 @@
         success(downloads);
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // TODO: notify user if fail to get active list
+        failure(error);
     }];
 }
 
-- (void)tellStopped:(void (^)(NSArray *))success offset:(NSInteger)offset num:(NSInteger)num {
+- (void)tellStopped:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure offset:(NSInteger)offset num:(NSInteger)num {
     NSMutableArray *parameters = [self parameters];
     [parameters addObject:[NSNumber numberWithInteger:offset]];
     [parameters addObject:[NSNumber numberWithInteger:num]];
@@ -165,7 +165,7 @@
         success(downloads);
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // TODO: notify user if fail to get active list
+        failure(error);
     }];
 }
 

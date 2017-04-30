@@ -80,6 +80,24 @@
                             [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
                         }
                     }];
+                } failure:^(NSError *error) {
+                    NSInteger selectedRow = [_mainTableView selectedRow];
+                    Aria2Download *selectedDownload = nil;
+
+                    if (selectedRow != -1) {
+                        selectedDownload = [_activeDownloads objectAtIndex:selectedRow];
+                    }
+
+                    [Aria2Helper updateDownloads:_activeDownloads to:@[]];
+
+                    NSInteger indexOfSelectedDownload = [_activeDownloads indexOfObject:selectedDownload];
+
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        [_mainTableView reloadData];
+                        if (indexOfSelectedDownload != NSNotFound) {
+                            [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
+                        }
+                    }];
                 }];
             }
             sleep(1);
@@ -107,6 +125,24 @@
                             [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
                         }
                     }];
+                } failure:^(NSError *error) {
+                    NSInteger selectedRow = [_mainTableView selectedRow];
+                    Aria2Download *selectedDownload = nil;
+
+                    if (selectedRow != -1) {
+                        selectedDownload = [_waitingDownloads objectAtIndex:selectedRow];
+                    }
+
+                    [Aria2Helper updateDownloads:_waitingDownloads to:@[]];
+
+                    NSInteger indexOfSelectedDownload = [_waitingDownloads indexOfObject:selectedDownload];
+
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        [_mainTableView reloadData];
+                        if (indexOfSelectedDownload != NSNotFound) {
+                            [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
+                        }
+                    }];
                 } offset:0 num:100];
             }
             sleep(1);
@@ -125,6 +161,24 @@
                     }
 
                     [Aria2Helper updateDownloads:_stoppedDownloads to:downloads];
+
+                    NSInteger indexOfSelectedDownload = [_stoppedDownloads indexOfObject:selectedDownload];
+
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        [_mainTableView reloadData];
+                        if (indexOfSelectedDownload != NSNotFound) {
+                            [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
+                        }
+                    }];
+                } failure:^(NSError *error) {
+                    NSInteger selectedRow = [_mainTableView selectedRow];
+                    Aria2Download *selectedDownload = nil;
+
+                    if (selectedRow != -1) {
+                        selectedDownload = [_stoppedDownloads objectAtIndex:selectedRow];
+                    }
+
+                    [Aria2Helper updateDownloads:_stoppedDownloads to:@[]];
 
                     NSInteger indexOfSelectedDownload = [_stoppedDownloads indexOfObject:selectedDownload];
 

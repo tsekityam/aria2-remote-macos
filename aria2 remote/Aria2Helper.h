@@ -25,9 +25,9 @@
 
 - (void)addUri:(void (^)(NSString *gid))success uris:(NSArray *)uris;
 - (void)getVersion:(void (^)(NSString *version, NSArray *enabledFeatures))success;
-- (void)tellActive:(void (^)(NSArray *downloads))success;
-- (void)tellWaiting:(void (^)(NSArray *downloads))success offset:(NSInteger)offset num:(NSInteger)num;
-- (void)tellStopped:(void (^)(NSArray *downloads))success offset:(NSInteger)offset num:(NSInteger)num;
+- (void)tellActive:(void (^)(NSArray *downloads))success failure:(void (^)(NSError *error))failure;
+- (void)tellWaiting:(void (^)(NSArray *downloads))success failure:(void (^)(NSError *error))failure offset:(NSInteger)offset num:(NSInteger)num;
+- (void)tellStopped:(void (^)(NSArray *downloads))success failure:(void (^)(NSError *error))failure offset:(NSInteger)offset num:(NSInteger)num;
 
 @end
 
