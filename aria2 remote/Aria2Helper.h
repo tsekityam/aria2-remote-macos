@@ -31,6 +31,7 @@
 
 @end
 
+@class Aria2File;
 @interface Aria2Download : NSObject
 @property NSString *gid;
 @property NSString *status;
@@ -52,7 +53,7 @@
 @property NSString *following;
 @property NSString *belongsTo;
 @property NSString *dir;
-@property NSArray<NSDictionary *> *files;
+@property NSArray<Aria2File *> *files;
 @property NSDictionary *bittorrent;
 @property NSString *verifiedLength;
 @property NSString *verifyIntegrityPending;
@@ -61,5 +62,20 @@
 
 - (instancetype)initWithStatus:(id)status;
 
+- (NSString *)name;
+
+@end
+
+@interface Aria2File : NSObject
+@property NSString *path;
+@property NSArray *uris;
+@property NSString *length;
+@property NSString *completedLength;
+@property NSString *selected;
+@property NSString *index;
+
++ (instancetype)fileWithDictionary:(NSDictionary *)dictionary;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

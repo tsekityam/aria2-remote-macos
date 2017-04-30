@@ -200,10 +200,20 @@
         _following = [status objectForKey:@"following"] ? [status objectForKey:@"following"] : @"";
         _belongsTo = [status objectForKey:@"belongsTo"] ? [status objectForKey:@"belongsTo"] : @"";
         _dir = [status objectForKey:@"dir"] ? [status objectForKey:@"dir"] : @"";
-        _files = [status objectForKey:@"files"] ? [status objectForKey:@"files"] : @[];
+//        _files = [status objectForKey:@"files"] ? [status objectForKey:@"files"] : @[];
         _bittorrent = [status objectForKey:@"bittorrent"] ? [status objectForKey:@"bittorrent"] : @{};
         _verifiedLength = [status objectForKey:@"verifiedLength"] ? [status objectForKey:@"verifiedLength"] : @"";
         _verifyIntegrityPending = [status objectForKey:@"verifyIntegrityPending"] ? [status objectForKey:@"verifyIntegrityPending"] : @"";
+
+        NSMutableArray *files = [NSMutableArray array];
+        if ([status objectForKey:@"files"]) {
+            for (NSDictionary *dictionary in [status objectForKey:@"files"]) {
+                Aria2File *file = [Aria2File fileWithDictionary:dictionary];
+                [files addObject:file];
+            }
+        }
+        _files = files;
+
     }
     return self;
 }
@@ -215,6 +225,20 @@
     return NO;
 }
 
+- (NSString *)name {
+    if ([_files count] > 0) {
+        NSURL *dirURL = [NSURL URLWithString:_dir];
+        NSArray *dirComponents = [dirURL pathComponents];
+
+        Aria2File *file = [_files objectAtIndex:0];
+        NSURL *filePathURL = [NSURL URLWithString:[[file path] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]]];
+        NSArray *filePathComponents = [filePathURL pathComponents];
+
+        return [filePathComponents objectAtIndex:[dirComponents count]];
+    }
+
+    return @"";
+}
 
 - (void)updateStatusTo:(Aria2Download *)target {
     if ([_gid isEqualToString:[target gid]]) {
@@ -241,7 +265,29 @@
         _bittorrent:[target bittorrent];
         _verifiedLength:[target verifiedLength];
         _verifyIntegrityPending:[target verifyIntegrityPending];
+
     }
+}
+
+@end
+
+@implementation Aria2File
+
++ (instancetype)fileWithDictionary:(NSDictionary *)dictionary {
+    return [[Aria2File alloc] initWithDictionary:dictionary];
+}
+
+- (instancetype)initWithDictionary:(id)dictionary {
+    self = [super init];
+    if (self) {
+        _path = [dictionary objectForKey:@"path"];
+        _uris = [dictionary objectForKey:@"uris"];
+        _length = [dictionary objectForKey:@"length"];
+        _completedLength = [dictionary objectForKey:@"completedLength"];
+        _selected = [dictionary objectForKey:@"selected"];
+        _index = [dictionary objectForKey:@"index"];
+    }
+    return self;
 }
 
 @end

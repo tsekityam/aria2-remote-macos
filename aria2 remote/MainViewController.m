@@ -209,6 +209,8 @@
         [[result textField] setStringValue:[download verifiedLength]];
     } else if ([[tableColumn identifier] isEqualToString:@"verifyIntegrityPending"]) {
         [[result textField] setStringValue:[download verifyIntegrityPending]];
+    } else if ([[tableColumn identifier] isEqualToString:@"name"]) {
+        [[result textField] setStringValue:[download name]];
     }
 
     // Return the result
