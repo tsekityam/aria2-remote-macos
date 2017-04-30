@@ -164,7 +164,52 @@
     NSTableCellView *result = [tableView makeViewWithIdentifier:[tableColumn identifier] owner:self];
 
     // Set the stringValue of the cell's text field to the nameArray value at row
-    result.textField.stringValue = [[_visibleDownloads objectAtIndex:row] objectForKey:[tableColumn identifier]];
+    Aria2Download *download = [_visibleDownloads objectAtIndex:row];
+    if ([[tableColumn identifier] isEqualToString:@"gid"]) {
+        [[result textField] setStringValue:[download gid]];
+    } else if ([[tableColumn identifier] isEqualToString:@"status"]) {
+        [[result textField] setStringValue:[download status]];
+    } else if ([[tableColumn identifier] isEqualToString:@"totalLength"]) {
+        [[result textField] setStringValue:[download totalLength]];
+    } else if ([[tableColumn identifier] isEqualToString:@"completedLength"]) {
+        [[result textField] setStringValue:[download completedLength]];
+    } else if ([[tableColumn identifier] isEqualToString:@"uploadLength"]) {
+        [[result textField] setStringValue:[download uploadLength]];
+    } else if ([[tableColumn identifier] isEqualToString:@"bitfield"]) {
+        [[result textField] setStringValue:[download bitfield]];
+    } else if ([[tableColumn identifier] isEqualToString:@"downloadSpeed"]) {
+        [[result textField] setStringValue:[download downloadSpeed]];
+    } else if ([[tableColumn identifier] isEqualToString:@"uploadSpeed"]) {
+        [[result textField] setStringValue:[download uploadSpeed]];
+    } else if ([[tableColumn identifier] isEqualToString:@"infoHash"]) {
+        [[result textField] setStringValue:[download infoHash]];
+    } else if ([[tableColumn identifier] isEqualToString:@"numSeeders"]) {
+        [[result textField] setStringValue:[download numSeeders]];
+    } else if ([[tableColumn identifier] isEqualToString:@"seeder"]) {
+        [[result textField] setStringValue:[download seeder]];
+    } else if ([[tableColumn identifier] isEqualToString:@"pieceLength"]) {
+        [[result textField] setStringValue:[download pieceLength]];
+    } else if ([[tableColumn identifier] isEqualToString:@"numPieces"]) {
+        [[result textField] setStringValue:[download numPieces]];
+    } else if ([[tableColumn identifier] isEqualToString:@"connections"]) {
+        [[result textField] setStringValue:[download connections]];
+    } else if ([[tableColumn identifier] isEqualToString:@"errorCode"]) {
+        [[result textField] setStringValue:[download errorCode]];
+    } else if ([[tableColumn identifier] isEqualToString:@"errorMessage"]) {
+        [[result textField] setStringValue:[download errorMessage]];
+    } else if ([[tableColumn identifier] isEqualToString:@"followedBy"]) {
+        [[result textField] setStringValue:[download followedBy]];
+    } else if ([[tableColumn identifier] isEqualToString:@"following"]) {
+        [[result textField] setStringValue:[download following]];
+    } else if ([[tableColumn identifier] isEqualToString:@"belongsTo"]) {
+        [[result textField] setStringValue:[download belongsTo]];
+    } else if ([[tableColumn identifier] isEqualToString:@"dir"]) {
+        [[result textField] setStringValue:[download dir]];
+    } else if ([[tableColumn identifier] isEqualToString:@"verifiedLength"]) {
+        [[result textField] setStringValue:[download verifiedLength]];
+    } else if ([[tableColumn identifier] isEqualToString:@"verifyIntegrityPending"]) {
+        [[result textField] setStringValue:[download verifyIntegrityPending]];
+    }
 
     // Return the result
     return result;

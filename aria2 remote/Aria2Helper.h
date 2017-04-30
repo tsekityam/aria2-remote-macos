@@ -61,6 +61,5 @@
 
 - (instancetype)initWithStatus:(id)status;
 
-- (id)objectForKey:(id)key;
 
 @end

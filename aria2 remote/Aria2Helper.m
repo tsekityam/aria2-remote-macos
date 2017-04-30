@@ -20,7 +20,6 @@
 @end
 
 @interface Aria2Download ()
-@property NSDictionary *statusDictionay;
 
 - (void)updateStatusTo:(Aria2Download *)target;
 
@@ -181,8 +180,6 @@
 - (instancetype)initWithStatus:(id)status {
     self = [super init];
     if (self) {
-        _statusDictionay = status;
-
         _gid = [status objectForKey:@"gid"] ? [status objectForKey:@"gid"] : @"";
         _status = [status objectForKey:@"status"] ? [status objectForKey:@"status"] : @"";
         _totalLength = [status objectForKey:@"totalLength"] ? [status objectForKey:@"totalLength"] : @"";
@@ -218,14 +215,9 @@
     return NO;
 }
 
-- (id)objectForKey:(id)key {
-    return [_statusDictionay objectForKey:key];
-}
 
 - (void)updateStatusTo:(Aria2Download *)target {
     if ([_gid isEqualToString:[target gid]]) {
-       _statusDictionay = [target statusDictionay];
-
         _status = [target status];
         _totalLength =[target totalLength];
         _completedLength =[target completedLength];
