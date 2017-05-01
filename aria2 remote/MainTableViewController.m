@@ -148,6 +148,7 @@
 }
 
 - (void)setVisibleDownloadType:(DownloadType)type {
+    [_mainTableView selectRowIndexes:[NSIndexSet indexSet] byExtendingSelection:NO];
     switch (type) {
         case DownloadTypeActive:
             _visibleDownloads = _activeDownloads;
