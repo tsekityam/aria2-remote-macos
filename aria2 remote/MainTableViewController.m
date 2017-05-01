@@ -53,20 +53,20 @@
     [_tellQueue addOperationWithBlock:^{
         while (true) {
             [[Aria2Helper defaultHelper] tell:^(NSArray *downloads) {
-                NSInteger selectedRow = [_mainTableView selectedRow];
-                Aria2Download *selectedDownload = nil;
-
-                if (selectedRow != -1) {
-                    selectedDownload = [_visibleDownloads objectAtIndex:selectedRow];
-                }
-
-                [Aria2Helper updateDownloads:_activeDownloads to:downloads[0]];
-                [Aria2Helper updateDownloads:_waitingDownloads to:downloads[1]];
-                [Aria2Helper updateDownloads:_stoppedDownloads to:downloads[2]];
-
-                NSInteger indexOfSelectedDownload = [_visibleDownloads indexOfObject:selectedDownload];
-
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    NSInteger selectedRow = [_mainTableView selectedRow];
+                    Aria2Download *selectedDownload = nil;
+                    
+                    if (selectedRow != -1) {
+                        selectedDownload = [_visibleDownloads objectAtIndex:selectedRow];
+                    }
+                    
+                    [Aria2Helper updateDownloads:_activeDownloads to:downloads[0]];
+                    [Aria2Helper updateDownloads:_waitingDownloads to:downloads[1]];
+                    [Aria2Helper updateDownloads:_stoppedDownloads to:downloads[2]];
+                    
+                    NSInteger indexOfSelectedDownload = [_visibleDownloads indexOfObject:selectedDownload];
+                    
                     [_mainTableView reloadData];
                     if (indexOfSelectedDownload != NSNotFound) {
                         [_mainTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexOfSelectedDownload] byExtendingSelection:NO];
