@@ -173,7 +173,7 @@
     [parameters addObject:gid];
 
     [_client invokeMethod:@"aria2.pause" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        // TODO: handle result
+        success(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSAlert *alert = [NSAlert alertWithError:error];
         [alert runModal];
@@ -185,7 +185,7 @@
     [parameters addObject:gid];
 
     [_client invokeMethod:@"aria2.unpause" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        // TODO: handle result
+        success(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSAlert *alert = [NSAlert alertWithError:error];
         [alert runModal];
@@ -197,7 +197,7 @@
     [parameters addObject:gid];
 
     [_client invokeMethod:@"aria2.remove" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        // TODO: handle result
+        success(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSAlert *alert = [NSAlert alertWithError:error];
         [alert runModal];
