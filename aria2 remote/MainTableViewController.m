@@ -20,8 +20,6 @@
 @property NSMutableArray *stoppedDownloads;
 @property NSOperationQueue *tellQueue;
 
-- (void)sourceTreeViewSelectionDidChange:(NSNotification *)notifiication;
-
 @end
 
 @implementation MainTableViewController
@@ -84,8 +82,6 @@
 
     [_mainTableView setDataSource:self];
     [_mainTableView setDelegate:self];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sourceTreeViewSelectionDidChange:) name:@"SoureTreeViewControllerSelectionDidChange" object:nil];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
@@ -151,16 +147,15 @@
     return result;
 }
 
-- (void)sourceTreeViewSelectionDidChange:(NSNotification *)notifiication {
-    [_mainTableView selectRowIndexes:[NSIndexSet indexSet] byExtendingSelection:NO];
-    switch ([[[notifiication userInfo] objectForKey:@"selectedRow"] integerValue]) {
-        case 1:
+- (void)setVisibleDownloadType:(DownloadType)type {
+    switch (type) {
+        case DownloadTypeActive:
             _visibleDownloads = _activeDownloads;
             break;
-        case 2:
+        case DownloadTypeWaiting:
             _visibleDownloads = _waitingDownloads;
             break;
-        case 3:
+        case DownloadTypeStopped:
             _visibleDownloads = _stoppedDownloads;
             break;
         default:

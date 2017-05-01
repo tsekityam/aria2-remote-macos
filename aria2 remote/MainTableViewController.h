@@ -8,6 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+typedef NS_ENUM(NSInteger, DownloadType) {
+    DownloadTypeActive,
+    DownloadTypeWaiting,
+    DownloadTypeStopped
+};
+
 @interface MainTableViewController : NSViewController
+
+- (void)setVisibleDownloadType:(DownloadType)type;
 
 @end

@@ -8,12 +8,6 @@
 
 #import "SourceTreeViewController.h"
 
-#define ROW_HEADER_DOWNLOADS 0
-#define ROW_ACTIVE_DOWNLOADS 1
-#define ROW_WAITING_DOWNLOADS 2
-#define ROW_STOPPED_DOWNLOADS 3
-#define MAX_NUM_ROWS 4
-
 @interface SourceTreeViewController () <NSOutlineViewDataSource, NSOutlineViewDelegate>
 @property (weak) IBOutlet NSOutlineView *outlineView;
 
@@ -79,10 +73,10 @@
 }
 
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification {
-    NSInteger selectedRow = [[notification object] selectedRow];
-
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"SoureTreeViewControllerSelectionDidChange" object:nil userInfo:@{@"selectedRow": [NSNumber numberWithInteger:selectedRow]}];
-
+    if ([[self delegate] respondsToSelector:@selector(sourceTreeViewController:selectedRowDidChangeTo:)]) {
+        NSInteger selectedRow = [[notification object] selectedRow];
+        [[self delegate] sourceTreeViewController:self selectedRowDidChangeTo:selectedRow];
+    }
 }
 
 @end

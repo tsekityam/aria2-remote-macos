@@ -9,8 +9,13 @@
 #import "MainWindowController.h"
 
 #import "Aria2Helper.h"
+#import "SourceTreeViewController.h"
+#import "MainTableViewController.h"
 
-@interface MainWindowController ()
+@interface MainWindowController () <SourceTreeViewControllerDelegate>
+@property SourceTreeViewController *sourceTreeViewController;
+@property MainTableViewController *mainTableViewController;
+
 - (IBAction)addButtonDidClick:(id)sender;
 
 @end
@@ -21,6 +26,14 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    for (id viewController in [[self contentViewController] childViewControllers]) {
+        if ([viewController isKindOfClass:[SourceTreeViewController class]]) {
+            _sourceTreeViewController = viewController;
+            [_sourceTreeViewController setDelegate:self];
+        } else if ([viewController isKindOfClass:[MainTableViewController class]]) {
+            _mainTableViewController = viewController;
+        }
+    }
     
     [[self window] setTitleVisibility:NSWindowTitleHidden];
 }
@@ -52,4 +65,21 @@
         }
     }];
 }
+
+- (void)sourceTreeViewController:(SourceTreeViewController *)controller selectedRowDidChangeTo:(NSInteger)row {
+    switch (row) {
+        case ROW_ACTIVE_DOWNLOADS:
+            [_mainTableViewController setVisibleDownloadType:DownloadTypeActive];
+            break;
+        case ROW_WAITING_DOWNLOADS:
+            [_mainTableViewController setVisibleDownloadType:DownloadTypeWaiting];
+            break;
+        case ROW_STOPPED_DOWNLOADS:
+            [_mainTableViewController setVisibleDownloadType:DownloadTypeStopped];
+            break;
+        default:
+            break;
+    }
+}
+
 @end
