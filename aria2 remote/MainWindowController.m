@@ -62,10 +62,11 @@
             NSString *uri = [accessoryView stringValue];
 
             [[Aria2Helper defaultHelper] addUri:^(NSString *gid) {
-                NSAlert *alert = [[NSAlert alloc] init];
-                [alert setMessageText:@"Success"];
-                [alert setInformativeText:[NSString stringWithFormat:@"gid: %@", gid]];
-                [alert runModal];
+                NSUserNotification *notification = [[NSUserNotification alloc] init];
+                [notification setTitle:@"Success - add"];
+                [notification setInformativeText:[NSString stringWithFormat:@"%@ is added", uri]];
+                [notification setDeliveryDate:[NSDate date]];
+                [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification:notification];
             } uris:@[uri]];
         }
     }];
