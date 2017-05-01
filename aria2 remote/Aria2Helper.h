@@ -27,9 +27,9 @@
 
 - (void)addUri:(void (^)(NSString *gid))success uris:(NSArray *)uris;
 - (void)getVersion:(void (^)(NSString *version, NSArray *enabledFeatures))success;
-- (void)pause:(void (^)(NSArray *downloads))success gid:(NSString *)gid;
-- (void)unpause:(void (^)(NSArray *downloads))success gid:(NSString *)gid;
-- (void)remove:(void (^)(NSArray *downloads))success gid:(NSString *)gid;
+- (void)pause:(void (^)(NSString *gid))success gid:(NSString *)gid;
+- (void)unpause:(void (^)(NSString *gid))success gid:(NSString *)gid;
+- (void)remove:(void (^)(NSString *gid))success gid:(NSString *)gid;
 
 @end
 

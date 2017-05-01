@@ -168,42 +168,36 @@
     }];
 }
 
-- (void)pause:(void (^)(NSArray *))success gid:(NSString *)gid {
+- (void)pause:(void (^)(NSString *))success gid:(NSString *)gid {
     NSMutableArray *parameters = [self parameters];
     [parameters addObject:gid];
 
     [_client invokeMethod:@"aria2.pause" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
         // TODO: handle result
-
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSAlert *alert = [NSAlert alertWithError:error];
         [alert runModal];
     }];
 }
 
-- (void)unpause:(void (^)(NSArray *))success gid:(NSString *)gid {
+- (void)unpause:(void (^)(NSString *))success gid:(NSString *)gid {
     NSMutableArray *parameters = [self parameters];
     [parameters addObject:gid];
 
     [_client invokeMethod:@"aria2.unpause" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
         // TODO: handle result
-
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSAlert *alert = [NSAlert alertWithError:error];
         [alert runModal];
     }];
 }
 
-- (void)remove:(void (^)(NSArray *))success gid:(NSString *)gid {
+- (void)remove:(void (^)(NSString *))success gid:(NSString *)gid {
     NSMutableArray *parameters = [self parameters];
     [parameters addObject:gid];
 
     [_client invokeMethod:@"aria2.remove" withParameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
         // TODO: handle result
-
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSAlert *alert = [NSAlert alertWithError:error];
         [alert runModal];
