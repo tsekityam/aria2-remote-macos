@@ -19,6 +19,7 @@
 - (IBAction)addButtonDidClick:(id)sender;
 - (IBAction)continueButtonDidClick:(id)sender;
 - (IBAction)pauseButtonDidClick:(id)sender;
+- (IBAction)stopButtonDidClick:(id)sender;
 
 @end
 
@@ -76,6 +77,12 @@
 
 - (IBAction)pauseButtonDidClick:(id)sender {
     [[Aria2Helper defaultHelper] pause:^(NSString *gid) {
+        // TODO: handle result
+    } gid:[_mainTableViewController selectedDownloadGID]];
+}
+
+- (IBAction)stopButtonDidClick:(id)sender {
+    [[Aria2Helper defaultHelper] remove:^(NSString *gid) {
         // TODO: handle result
     } gid:[_mainTableViewController selectedDownloadGID]];
 }

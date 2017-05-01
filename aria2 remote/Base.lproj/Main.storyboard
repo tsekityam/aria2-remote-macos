@@ -868,6 +868,9 @@ Gw
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="stopButtonDidClick:" target="B8D-0N-5wS" id="JZ6-Bu-nwZ"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="AD072317-14B5-4EA1-A049-4877C65EFEB7" label="Refresh" paletteLabel="Refresh" image="ic_refresh" id="6Ub-98-Lbd">
                                     <nil key="toolTip"/>
