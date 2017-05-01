@@ -63,8 +63,8 @@
 
             [[Aria2Helper defaultHelper] addUri:^(NSString *gid) {
                 NSUserNotification *notification = [[NSUserNotification alloc] init];
-                [notification setTitle:@"Success - add"];
-                [notification setInformativeText:[NSString stringWithFormat:@"%@ is added", uri]];
+                [notification setTitle:@"Add uri succeed"];
+                [notification setInformativeText:[NSString stringWithFormat:@"%@", uri]];
                 [notification setDeliveryDate:[NSDate date]];
                 [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification:notification];
             } uris:@[uri]];
@@ -76,8 +76,8 @@
     Aria2Download *selectedDownload = [_mainTableViewController selectedDownload];
     [[Aria2Helper defaultHelper] unpause:^(NSString *gid) {
         NSUserNotification *notification = [[NSUserNotification alloc] init];
-        [notification setTitle:@"Success - continue"];
-        [notification setInformativeText:[NSString stringWithFormat:@"%@ will be continued", [selectedDownload name]]];
+        [notification setTitle:@"Unpause succeed"];
+        [notification setInformativeText:[NSString stringWithFormat:@"%@", [selectedDownload name]]];
         [notification setDeliveryDate:[NSDate date]];
         [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification:notification];
     } gid:[selectedDownload gid]];
@@ -87,8 +87,8 @@
     Aria2Download *selectedDownload = [_mainTableViewController selectedDownload];
     [[Aria2Helper defaultHelper] pause:^(NSString *gid) {
         NSUserNotification *notification = [[NSUserNotification alloc] init];
-        [notification setTitle:@"Success - pause"];
-        [notification setInformativeText:[NSString stringWithFormat:@"%@ will be paused", [selectedDownload name]]];
+        [notification setTitle:@"Pause succeed"];
+        [notification setInformativeText:[NSString stringWithFormat:@"%@", [selectedDownload name]]];
         [notification setDeliveryDate:[NSDate date]];
         NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
         [center scheduleNotification:notification];
@@ -99,8 +99,8 @@
     Aria2Download *selectedDownload = [_mainTableViewController selectedDownload];
     [[Aria2Helper defaultHelper] remove:^(NSString *gid) {
         NSUserNotification *notification = [[NSUserNotification alloc] init];
-        [notification setTitle:@"Success - stop"];
-        [notification setInformativeText:[NSString stringWithFormat:@"%@ will be stopped", [selectedDownload name]]];
+        [notification setTitle:@"Remove succeed"];
+        [notification setInformativeText:[NSString stringWithFormat:@"%@", [selectedDownload name]]];
         [notification setDeliveryDate:[NSDate date]];
         NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
         [center scheduleNotification:notification];
