@@ -18,4 +18,6 @@ typedef NS_ENUM(NSInteger, DownloadType) {
 
 - (void)setVisibleDownloadType:(DownloadType)type;
 
+- (NSString *)selectedDownloadGID;
+
 @end

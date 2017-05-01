@@ -163,4 +163,8 @@
     }
 }
 
+- (NSString *)selectedDownloadGID {
+    return [[_visibleDownloads objectAtIndex:[_mainTableView selectedRow]] gid];
+}
+
 @end

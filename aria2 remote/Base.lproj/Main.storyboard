@@ -849,6 +849,9 @@ Gw
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="pauseButtonDidClick:" target="B8D-0N-5wS" id="rPw-Yp-qdg"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="7CFD8348-E00F-43A5-97C5-5A60418D3478" label="Stop" paletteLabel="Stop" image="ic_stop" id="f27-SZ-YpB">
                                     <nil key="toolTip"/>
@@ -1016,7 +1019,7 @@ Gw
             </objects>
             <point key="canvasLocation" x="178" y="1233"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Main Table View Controller-->
         <scene sceneID="aDk-ls-N2a">
             <objects>
                 <viewController id="8EP-ng-kZU" customClass="MainTableViewController" sceneMemberID="viewController">
