@@ -836,6 +836,9 @@ Gw
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="continueButtonDidClick:" target="B8D-0N-5wS" id="EH6-Qc-2gk"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="67251C37-5B43-46F0-AE73-970432BCB827" label="Pause" paletteLabel="Pause" image="ic_pause" id="cRM-h4-DQq">
                                     <nil key="toolTip"/>

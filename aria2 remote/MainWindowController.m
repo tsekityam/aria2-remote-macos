@@ -17,6 +17,7 @@
 @property MainTableViewController *mainTableViewController;
 
 - (IBAction)addButtonDidClick:(id)sender;
+- (IBAction)continueButtonDidClick:(id)sender;
 - (IBAction)pauseButtonDidClick:(id)sender;
 
 @end
@@ -65,6 +66,12 @@
             } uris:@[uri]];
         }
     }];
+}
+
+- (IBAction)continueButtonDidClick:(id)sender {
+    [[Aria2Helper defaultHelper] unpause:^(NSString *gid) {
+        // TODO: handle result
+    } gid:[_mainTableViewController selectedDownloadGID]];
 }
 
 - (IBAction)pauseButtonDidClick:(id)sender {
