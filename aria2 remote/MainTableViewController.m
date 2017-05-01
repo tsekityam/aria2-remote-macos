@@ -164,8 +164,8 @@
     }
 }
 
-- (NSString *)selectedDownloadGID {
-    return [[_visibleDownloads objectAtIndex:[_mainTableView selectedRow]] gid];
+- (Aria2Download *)selectedDownload {
+    return [_visibleDownloads objectAtIndex:[_mainTableView selectedRow]];
 }
 
 @end

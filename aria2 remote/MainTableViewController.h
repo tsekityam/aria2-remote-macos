@@ -14,10 +14,11 @@ typedef NS_ENUM(NSInteger, DownloadType) {
     DownloadTypeStopped
 };
 
+@class Aria2Download;
 @interface MainTableViewController : NSViewController
 
 - (void)setVisibleDownloadType:(DownloadType)type;
 
-- (NSString *)selectedDownloadGID;
+- (Aria2Download *)selectedDownload;
 
 @end

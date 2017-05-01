@@ -12,7 +12,7 @@
 #import "SourceTreeViewController.h"
 #import "MainTableViewController.h"
 
-@interface MainWindowController () <SourceTreeViewControllerDelegate>
+@interface MainWindowController () <SourceTreeViewControllerDelegate, NSUserNotificationCenterDelegate>
 @property SourceTreeViewController *sourceTreeViewController;
 @property MainTableViewController *mainTableViewController;
 
@@ -37,6 +37,8 @@
             _mainTableViewController = viewController;
         }
     }
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
     
     [[self window] setTitleVisibility:NSWindowTitleHidden];
 }
@@ -70,21 +72,38 @@
 }
 
 - (IBAction)continueButtonDidClick:(id)sender {
+    Aria2Download *selectedDownload = [_mainTableViewController selectedDownload];
     [[Aria2Helper defaultHelper] unpause:^(NSString *gid) {
-        // TODO: handle result
-    } gid:[_mainTableViewController selectedDownloadGID]];
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        [notification setTitle:@"Success - continue"];
+        [notification setInformativeText:[NSString stringWithFormat:@"%@ will be continued", [selectedDownload name]]];
+        [notification setDeliveryDate:[NSDate date]];
+        [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification:notification];
+    } gid:[selectedDownload gid]];
 }
 
 - (IBAction)pauseButtonDidClick:(id)sender {
+    Aria2Download *selectedDownload = [_mainTableViewController selectedDownload];
     [[Aria2Helper defaultHelper] pause:^(NSString *gid) {
-        // TODO: handle result
-    } gid:[_mainTableViewController selectedDownloadGID]];
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        [notification setTitle:@"Success - pause"];
+        [notification setInformativeText:[NSString stringWithFormat:@"%@ will be paused", [selectedDownload name]]];
+        [notification setDeliveryDate:[NSDate date]];
+        NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
+        [center scheduleNotification:notification];
+    } gid:[selectedDownload gid]];
 }
 
 - (IBAction)stopButtonDidClick:(id)sender {
+    Aria2Download *selectedDownload = [_mainTableViewController selectedDownload];
     [[Aria2Helper defaultHelper] remove:^(NSString *gid) {
-        // TODO: handle result
-    } gid:[_mainTableViewController selectedDownloadGID]];
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        [notification setTitle:@"Success - stop"];
+        [notification setInformativeText:[NSString stringWithFormat:@"%@ will be stopped", [selectedDownload name]]];
+        [notification setDeliveryDate:[NSDate date]];
+        NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
+        [center scheduleNotification:notification];
+    } gid:[selectedDownload gid]];
 }
 
 - (void)sourceTreeViewController:(SourceTreeViewController *)controller selectedRowDidChangeTo:(NSInteger)row {
@@ -101,6 +120,10 @@
         default:
             break;
     }
+}
+
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification {
+    return YES;
 }
 
 @end
