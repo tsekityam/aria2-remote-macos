@@ -1,5 +1,5 @@
 //
-//  MainViewController.h
+//  MainTableViewController.h
 //  aria2 remote
 //
 //  Created by Tse Kit Yam on 4/29/17.
@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MainViewController : NSViewController
+@interface MainTableViewController : NSViewController
 
 @end

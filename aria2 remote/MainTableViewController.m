@@ -1,16 +1,16 @@
 //
-//  MainViewController.m
+//  MainTableViewController.m
 //  aria2 remote
 //
 //  Created by Tse Kit Yam on 4/29/17.
 //  Copyright © 2017 Tse Kit Yam. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "MainTableViewController.h"
 
 #import "Aria2Helper.h"
 
-@interface MainViewController () <NSTableViewDataSource, NSTableViewDelegate>
+@interface MainTableViewController () <NSTableViewDataSource, NSTableViewDelegate>
 @property (weak) IBOutlet NSTableView *mainTableView;
 
 @property NSArray *visibleDownloads;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation MainViewController
+@implementation MainTableViewController
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
@@ -51,7 +51,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-
+    
     [_tellQueue addOperationWithBlock:^{
         while (true) {
             [[Aria2Helper defaultHelper] tell:^(NSArray *downloads) {

@@ -1019,7 +1019,7 @@ Gw
         <!--Main View Controller-->
         <scene sceneID="aDk-ls-N2a">
             <objects>
-                <viewController id="8EP-ng-kZU" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="8EP-ng-kZU" customClass="MainTableViewController" sceneMemberID="viewController">
                     <scrollView key="view" wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="Ofx-zT-qnQ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>

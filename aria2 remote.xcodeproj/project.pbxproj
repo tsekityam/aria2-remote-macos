@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BFEBBEF435DEA7527D1A8A3C /* libPods-aria2 remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */; };
-		E80FE32A1EB4DA3200052244 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E80FE3291EB4DA3200052244 /* MainViewController.m */; };
+		E80FE32A1EB4DA3200052244 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E80FE3291EB4DA3200052244 /* MainTableViewController.m */; };
 		E83C50111E8FED200036349B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E83C50101E8FED200036349B /* AppDelegate.m */; };
 		E83C50141E8FED200036349B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E83C50131E8FED200036349B /* main.m */; };
 		E83C50191E8FED200036349B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83C50181E8FED200036349B /* Assets.xcassets */; };
@@ -22,8 +22,8 @@
 /* Begin PBXFileReference section */
 		28EE140CD39DE16F984C247C /* Pods-aria2 remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aria2 remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote.debug.xcconfig"; sourceTree = "<group>"; };
 		D385B79B8F4BAEDCFC4C2D59 /* Pods-aria2 remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aria2 remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote.release.xcconfig"; sourceTree = "<group>"; };
-		E80FE3281EB4DA3200052244 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		E80FE3291EB4DA3200052244 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E80FE3281EB4DA3200052244 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		E80FE3291EB4DA3200052244 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		E83C500C1E8FED200036349B /* aria2 remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aria2 remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83C500F1E8FED200036349B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E83C50101E8FED200036349B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 				E83C50181E8FED200036349B /* Assets.xcassets */,
 				E83C501D1E8FED200036349B /* Info.plist */,
 				E83C501A1E8FED200036349B /* Main.storyboard */,
-				E80FE3281EB4DA3200052244 /* MainViewController.h */,
-				E80FE3291EB4DA3200052244 /* MainViewController.m */,
+				E80FE3281EB4DA3200052244 /* MainTableViewController.h */,
+				E80FE3291EB4DA3200052244 /* MainTableViewController.m */,
 				E84697211E9027E100C79CAD /* MainWindowController.h */,
 				E84697221E9027E100C79CAD /* MainWindowController.m */,
 				E846972C1E90C9A900C79CAD /* PreferencesViewController.h */,
@@ -245,7 +245,7 @@
 				E83C50111E8FED200036349B /* AppDelegate.m in Sources */,
 				E84C07BA1EB457D90017693B /* Aria2Helper.m in Sources */,
 				E83C50141E8FED200036349B /* main.m in Sources */,
-				E80FE32A1EB4DA3200052244 /* MainViewController.m in Sources */,
+				E80FE32A1EB4DA3200052244 /* MainTableViewController.m in Sources */,
 				E84697231E9027E100C79CAD /* MainWindowController.m in Sources */,
 				E846972E1E90C9A900C79CAD /* PreferencesViewController.m in Sources */,
 				E84697261E90BAA100C79CAD /* SourceTreeViewController.m in Sources */,
