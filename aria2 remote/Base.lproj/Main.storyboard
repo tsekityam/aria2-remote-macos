@@ -872,19 +872,6 @@ Gw
                                         <action selector="stopButtonDidClick:" target="B8D-0N-5wS" id="JZ6-Bu-nwZ"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="AD072317-14B5-4EA1-A049-4877C65EFEB7" label="Refresh" paletteLabel="Refresh" image="ic_refresh" id="6Ub-98-Lbd">
-                                    <nil key="toolTip"/>
-                                    <size key="minSize" width="82" height="32"/>
-                                    <size key="maxSize" width="82" height="32"/>
-                                    <button key="view" verticalHuggingPriority="750" id="EBF-br-Sht">
-                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="ic_refresh" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0qI-Bq-axY">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
-                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Gdg-3w-1Dd"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="NCH-6B-VOU"/>
                             </allowedToolbarItems>
@@ -894,8 +881,6 @@ Gw
                                 <toolbarItem reference="g0U-tY-o7V"/>
                                 <toolbarItem reference="cRM-h4-DQq"/>
                                 <toolbarItem reference="f27-SZ-YpB"/>
-                                <toolbarItem reference="NCH-6B-VOU"/>
-                                <toolbarItem reference="6Ub-98-Lbd"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
@@ -1338,7 +1323,6 @@ Gw
         <image name="ic_add" width="48" height="48"/>
         <image name="ic_pause" width="48" height="48"/>
         <image name="ic_play_arrow" width="48" height="48"/>
-        <image name="ic_refresh" width="48" height="48"/>
         <image name="ic_stop" width="48" height="48"/>
     </resources>
 </document>
