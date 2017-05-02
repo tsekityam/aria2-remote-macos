@@ -50,6 +50,11 @@
     [super viewDidLoad];
     // Do view setup here.
     
+    // Register the preference defaults early.
+    NSDictionary *appDefaults = @{@"server": @"http://localhost:6800/jsonrpc",
+                                  @"token": @""};
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+
     [_tellQueue addOperationWithBlock:^{
         while (true) {
             [[Aria2Helper defaultHelper] tell:^(NSArray *downloads) {
