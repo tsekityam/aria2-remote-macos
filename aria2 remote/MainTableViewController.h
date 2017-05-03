@@ -14,11 +14,24 @@ typedef NS_ENUM(NSInteger, DownloadType) {
     DownloadTypeStopped
 };
 
-@class Aria2Download;
+@class ARADownload;
+@class MainTableViewController;
+@protocol MainTableViewControllerDelegate <NSObject>
+@optional
+- (void)mainTableViewController:(MainTableViewController *)controller selectedDownloadDidChangeTo:(ARADownload *)download;
+
+@end
+
+@protocol MainTableViewControllerDataSource <NSObject>
+@required
+- (ARADownload *)mainTableViewControllerSelectedDownload:(MainTableViewController *)controller;
+
+@end
+
 @interface MainTableViewController : NSViewController
+@property (weak) id<MainTableViewControllerDelegate> delegate;
+@property (weak) id<MainTableViewControllerDataSource> dataSource;
 
 - (void)setVisibleDownloadType:(DownloadType)type;
-
-- (Aria2Download *)selectedDownload;
 
 @end

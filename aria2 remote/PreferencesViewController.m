@@ -8,7 +8,7 @@
 
 #import "PreferencesViewController.h"
 
-#import "Aria2Helper.h"
+#import <ARAJSONRPCClient/ARAJSONRPCClient.h>
 
 @interface PreferencesViewController ()
 @property (weak) IBOutlet NSTextField *serverTextField;
@@ -33,11 +33,14 @@
     NSString *server = [_serverTextField stringValue];
     NSString *token = [_tokenTextField stringValue];
     
-    Aria2Helper *helper = [[Aria2Helper alloc] initWithServer:server token:token];
-    [helper getVersion:^(NSString *version, NSArray *enabledFeatures) {
+    ARAClient *client = [[ARAClient alloc] initWithURL:[NSURL URLWithString:server] token:token];
+    [client getVersion:^(NSString *version, NSArray<NSString *> *enabledFeatures) {
         NSAlert *alert = [[NSAlert alloc] init];
         [alert setMessageText:@"Success"];
         [alert setInformativeText:[NSString stringWithFormat:@"version: %@\nenabled features: %@", version, [enabledFeatures componentsJoinedByString:@", "]]];
+        [alert runModal];
+    } failure:^(NSError *error) {
+        NSAlert *alert = [NSAlert alertWithError:error];
         [alert runModal];
     }];
 }
@@ -53,8 +56,6 @@
     [[NSUserDefaults standardUserDefaults] setValue:server forKey:@"server"];
     [[NSUserDefaults standardUserDefaults] setValue:token forKey:@"token"];
     
-    [[Aria2Helper defaultHelper] setServer:server token:token];
-
     [[[self view] window] close];
 }
 

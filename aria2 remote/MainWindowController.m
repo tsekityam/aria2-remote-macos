@@ -8,13 +8,15 @@
 
 #import "MainWindowController.h"
 
-#import "Aria2Helper.h"
 #import "SourceTreeViewController.h"
 #import "MainTableViewController.h"
 
-@interface MainWindowController () <SourceTreeViewControllerDelegate, NSUserNotificationCenterDelegate>
+#import <ARAJSONRPCClient/ARAJSONRPCClient.h>
+
+@interface MainWindowController () <SourceTreeViewControllerDelegate, MainTableViewControllerDelegate, MainTableViewControllerDataSource, NSUserNotificationCenterDelegate>
 @property SourceTreeViewController *sourceTreeViewController;
 @property MainTableViewController *mainTableViewController;
+@property ARADownload *selectedDownload;
 
 - (IBAction)addButtonDidClick:(id)sender;
 - (IBAction)continueButtonDidClick:(id)sender;
@@ -35,6 +37,8 @@
             [_sourceTreeViewController setDelegate:self];
         } else if ([viewController isKindOfClass:[MainTableViewController class]]) {
             _mainTableViewController = viewController;
+            [_mainTableViewController setDelegate:self];
+            [_mainTableViewController setDataSource:self];
         }
     }
     
@@ -61,66 +65,115 @@
         if (returnCode == NSAlertFirstButtonReturn) {
             NSString *uri = [accessoryView stringValue];
 
-            [[Aria2Helper defaultHelper] addUri:^(NSString *gid) {
+            NSString *server = [[NSUserDefaults standardUserDefaults] stringForKey:@"server"];
+            NSString *token= [[NSUserDefaults standardUserDefaults] stringForKey:@"token"];
+            
+            ARAClient *client = [ARAClient clientWithURL:[NSURL URLWithString:server] token:token];
+
+            [client addUri:^(NSString *gid) {
                 NSUserNotification *notification = [[NSUserNotification alloc] init];
-                [notification setTitle:@"Add uri succeed"];
+                [notification setTitle:@"Add uri succeeded"];
                 [notification setInformativeText:[NSString stringWithFormat:@"%@", uri]];
                 [notification setDeliveryDate:[NSDate date]];
                 [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification:notification];
+            } failure:^(NSError *error) {
+                NSAlert *alert = [NSAlert alertWithError:error];
+                [alert runModal];
             } uris:@[uri]];
         }
     }];
 }
 
 - (IBAction)continueButtonDidClick:(id)sender {
-    Aria2Download *selectedDownload = [_mainTableViewController selectedDownload];
-    [[Aria2Helper defaultHelper] unpause:^(NSString *gid) {
+    if (_selectedDownload == nil) {
+        return;
+    }
+    
+    NSString *server = [[NSUserDefaults standardUserDefaults] stringForKey:@"server"];
+    NSString *token= [[NSUserDefaults standardUserDefaults] stringForKey:@"token"];
+    
+    ARAClient *client = [ARAClient clientWithURL:[NSURL URLWithString:server] token:token];
+    
+    [client unpause:^(NSString *gid) {
         NSUserNotification *notification = [[NSUserNotification alloc] init];
-        [notification setTitle:@"Unpause succeed"];
-        [notification setInformativeText:[NSString stringWithFormat:@"%@", [selectedDownload name]]];
+        [notification setTitle:@"unpause succeeded"];
+        [notification setInformativeText:[NSString stringWithFormat:@"%@", gid]];
         [notification setDeliveryDate:[NSDate date]];
         [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification:notification];
-    } gid:[selectedDownload gid]];
+
+    } failure:^(NSError *error) {
+        NSAlert *alert = [NSAlert alertWithError:error];
+        [alert runModal];
+    } gid:[_selectedDownload gid]];
 }
 
 - (IBAction)pauseButtonDidClick:(id)sender {
-    Aria2Download *selectedDownload = [_mainTableViewController selectedDownload];
-    [[Aria2Helper defaultHelper] pause:^(NSString *gid) {
+    if (_selectedDownload == nil) {
+        return;
+    }
+
+    NSString *server = [[NSUserDefaults standardUserDefaults] stringForKey:@"server"];
+    NSString *token= [[NSUserDefaults standardUserDefaults] stringForKey:@"token"];
+    
+    ARAClient *client = [ARAClient clientWithURL:[NSURL URLWithString:server] token:token];
+
+    [client pause:^(NSString *gid) {
         NSUserNotification *notification = [[NSUserNotification alloc] init];
-        [notification setTitle:@"Pause succeed"];
-        [notification setInformativeText:[NSString stringWithFormat:@"%@", [selectedDownload name]]];
+        [notification setTitle:@"Pause succeeded"];
+        [notification setInformativeText:[NSString stringWithFormat:@"%@", gid]];
         [notification setDeliveryDate:[NSDate date]];
         NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
         [center scheduleNotification:notification];
-    } gid:[selectedDownload gid]];
+    } failure:^(NSError *error) {
+        NSAlert *alert = [NSAlert alertWithError:error];
+        [alert runModal];
+    } gid:[_selectedDownload gid]];
 }
 
 - (IBAction)stopButtonDidClick:(id)sender {
-    Aria2Download *selectedDownload = [_mainTableViewController selectedDownload];
-    [[Aria2Helper defaultHelper] remove:^(NSString *gid) {
+    if (_selectedDownload == nil) {
+        return;
+    }
+    
+    NSString *server = [[NSUserDefaults standardUserDefaults] stringForKey:@"server"];
+    NSString *token= [[NSUserDefaults standardUserDefaults] stringForKey:@"token"];
+    
+    ARAClient *client = [ARAClient clientWithURL:[NSURL URLWithString:server] token:token];
+    [client remove:^(NSString *gid) {
         NSUserNotification *notification = [[NSUserNotification alloc] init];
-        [notification setTitle:@"Remove succeed"];
-        [notification setInformativeText:[NSString stringWithFormat:@"%@", [selectedDownload name]]];
+        [notification setTitle:@"Remove succeeded"];
+        [notification setInformativeText:[NSString stringWithFormat:@"%@", gid]];
         [notification setDeliveryDate:[NSDate date]];
         NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
         [center scheduleNotification:notification];
-    } gid:[selectedDownload gid]];
+    } failure:^(NSError *error) {
+        NSAlert *alert = [NSAlert alertWithError:error];
+        [alert runModal];
+    } gid:[_selectedDownload gid]];
 }
 
 - (void)sourceTreeViewController:(SourceTreeViewController *)controller selectedRowDidChangeTo:(NSInteger)row {
     switch (row) {
-        case ROW_ACTIVE_DOWNLOADS:
+            case ROW_ACTIVE_DOWNLOADS:
             [_mainTableViewController setVisibleDownloadType:DownloadTypeActive];
             break;
-        case ROW_WAITING_DOWNLOADS:
+            case ROW_WAITING_DOWNLOADS:
             [_mainTableViewController setVisibleDownloadType:DownloadTypeWaiting];
             break;
-        case ROW_STOPPED_DOWNLOADS:
+            case ROW_STOPPED_DOWNLOADS:
             [_mainTableViewController setVisibleDownloadType:DownloadTypeStopped];
             break;
         default:
             break;
     }
+}
+
+- (void)mainTableViewController:(MainTableViewController *)controller selectedDownloadDidChangeTo:(ARADownload *)download {
+    _selectedDownload = download;
+}
+
+- (ARADownload *)mainTableViewControllerSelectedDownload:(MainTableViewController *)controller {
+    return _selectedDownload;
 }
 
 - (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification {

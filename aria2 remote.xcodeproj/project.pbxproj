@@ -7,23 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30249613F947417B36AABB25 /* libPods-ARAJSONRPCClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C77B393BB2014B54DAEE3661 /* libPods-ARAJSONRPCClient.a */; };
 		BFEBBEF435DEA7527D1A8A3C /* libPods-aria2 remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */; };
 		E80FE32A1EB4DA3200052244 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E80FE3291EB4DA3200052244 /* MainTableViewController.m */; };
+		E82F09751EB9972C004F1C58 /* ARAHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E82F09731EB9972C004F1C58 /* ARAHelper.h */; };
+		E82F09761EB9972C004F1C58 /* ARAHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E82F09741EB9972C004F1C58 /* ARAHelper.m */; };
 		E83C50111E8FED200036349B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E83C50101E8FED200036349B /* AppDelegate.m */; };
 		E83C50141E8FED200036349B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E83C50131E8FED200036349B /* main.m */; };
 		E83C50191E8FED200036349B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83C50181E8FED200036349B /* Assets.xcassets */; };
 		E83C501C1E8FED200036349B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83C501A1E8FED200036349B /* Main.storyboard */; };
+		E84308B01EB8E71B00E4E6DB /* ARAJSONRPCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E84308AE1EB8E71B00E4E6DB /* ARAJSONRPCClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E84308B31EB8E71B00E4E6DB /* ARAJSONRPCClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84308AC1EB8E71B00E4E6DB /* ARAJSONRPCClient.framework */; };
+		E84308B41EB8E71B00E4E6DB /* ARAJSONRPCClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E84308AC1EB8E71B00E4E6DB /* ARAJSONRPCClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E84308C11EB8E75800E4E6DB /* ARAClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E84308BB1EB8E75800E4E6DB /* ARAClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E84308C21EB8E75800E4E6DB /* ARAClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E84308BC1EB8E75800E4E6DB /* ARAClient.m */; };
+		E84308C31EB8E75800E4E6DB /* ARADownload.h in Headers */ = {isa = PBXBuildFile; fileRef = E84308BD1EB8E75800E4E6DB /* ARADownload.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E84308C41EB8E75800E4E6DB /* ARADownload.m in Sources */ = {isa = PBXBuildFile; fileRef = E84308BE1EB8E75800E4E6DB /* ARADownload.m */; };
+		E84308C51EB8E75800E4E6DB /* ARAFile.h in Headers */ = {isa = PBXBuildFile; fileRef = E84308BF1EB8E75800E4E6DB /* ARAFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E84308C61EB8E75800E4E6DB /* ARAFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E84308C01EB8E75800E4E6DB /* ARAFile.m */; };
 		E84697231E9027E100C79CAD /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84697221E9027E100C79CAD /* MainWindowController.m */; };
 		E84697261E90BAA100C79CAD /* SourceTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84697251E90BAA100C79CAD /* SourceTreeViewController.m */; };
 		E846972E1E90C9A900C79CAD /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E846972D1E90C9A900C79CAD /* PreferencesViewController.m */; };
-		E84C07BA1EB457D90017693B /* Aria2Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E84C07B91EB457D90017693B /* Aria2Helper.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E84308B11EB8E71B00E4E6DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E83C50041E8FED200036349B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E84308AB1EB8E71B00E4E6DB;
+			remoteInfo = ARAJSONRPCClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E84308B81EB8E71B00E4E6DB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E84308B41EB8E71B00E4E6DB /* ARAJSONRPCClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		28EE140CD39DE16F984C247C /* Pods-aria2 remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aria2 remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote.debug.xcconfig"; sourceTree = "<group>"; };
+		5E01269154F6D6D53E84F035 /* Pods-ARAJSONRPCClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARAJSONRPCClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARAJSONRPCClient/Pods-ARAJSONRPCClient.debug.xcconfig"; sourceTree = "<group>"; };
+		875600C5591EB2096054A3F4 /* Pods-ARAJSONRPCClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARAJSONRPCClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARAJSONRPCClient/Pods-ARAJSONRPCClient.release.xcconfig"; sourceTree = "<group>"; };
+		C77B393BB2014B54DAEE3661 /* libPods-ARAJSONRPCClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ARAJSONRPCClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D385B79B8F4BAEDCFC4C2D59 /* Pods-aria2 remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aria2 remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote.release.xcconfig"; sourceTree = "<group>"; };
 		E80FE3281EB4DA3200052244 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		E80FE3291EB4DA3200052244 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		E82F09731EB9972C004F1C58 /* ARAHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAHelper.h; sourceTree = "<group>"; };
+		E82F09741EB9972C004F1C58 /* ARAHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAHelper.m; sourceTree = "<group>"; };
 		E83C500C1E8FED200036349B /* aria2 remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aria2 remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83C500F1E8FED200036349B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E83C50101E8FED200036349B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,14 +71,21 @@
 		E83C50181E8FED200036349B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E83C501B1E8FED200036349B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E83C501D1E8FED200036349B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E84308AC1EB8E71B00E4E6DB /* ARAJSONRPCClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ARAJSONRPCClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84308AE1EB8E71B00E4E6DB /* ARAJSONRPCClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARAJSONRPCClient.h; sourceTree = "<group>"; };
+		E84308AF1EB8E71B00E4E6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E84308BB1EB8E75800E4E6DB /* ARAClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAClient.h; sourceTree = "<group>"; };
+		E84308BC1EB8E75800E4E6DB /* ARAClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAClient.m; sourceTree = "<group>"; };
+		E84308BD1EB8E75800E4E6DB /* ARADownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARADownload.h; sourceTree = "<group>"; };
+		E84308BE1EB8E75800E4E6DB /* ARADownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARADownload.m; sourceTree = "<group>"; };
+		E84308BF1EB8E75800E4E6DB /* ARAFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAFile.h; sourceTree = "<group>"; };
+		E84308C01EB8E75800E4E6DB /* ARAFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAFile.m; sourceTree = "<group>"; };
 		E84697211E9027E100C79CAD /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		E84697221E9027E100C79CAD /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		E84697241E90BAA100C79CAD /* SourceTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceTreeViewController.h; sourceTree = "<group>"; };
 		E84697251E90BAA100C79CAD /* SourceTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceTreeViewController.m; sourceTree = "<group>"; };
 		E846972C1E90C9A900C79CAD /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
 		E846972D1E90C9A900C79CAD /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PreferencesViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		E84C07B81EB457D90017693B /* Aria2Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aria2Helper.h; sourceTree = "<group>"; };
-		E84C07B91EB457D90017693B /* Aria2Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aria2Helper.m; sourceTree = "<group>"; };
 		FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aria2 remote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -47,7 +94,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84308B31EB8E71B00E4E6DB /* ARAJSONRPCClient.framework in Frameworks */,
 				BFEBBEF435DEA7527D1A8A3C /* libPods-aria2 remote.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E84308A81EB8E71B00E4E6DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30249613F947417B36AABB25 /* libPods-ARAJSONRPCClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +115,8 @@
 			children = (
 				28EE140CD39DE16F984C247C /* Pods-aria2 remote.debug.xcconfig */,
 				D385B79B8F4BAEDCFC4C2D59 /* Pods-aria2 remote.release.xcconfig */,
+				5E01269154F6D6D53E84F035 /* Pods-ARAJSONRPCClient.debug.xcconfig */,
+				875600C5591EB2096054A3F4 /* Pods-ARAJSONRPCClient.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -67,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */,
+				C77B393BB2014B54DAEE3661 /* libPods-ARAJSONRPCClient.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				E83C500E1E8FED200036349B /* aria2 remote */,
+				E84308AD1EB8E71B00E4E6DB /* ARAJSONRPCClient */,
 				B49104AF5731B7E13E9CBB7F /* Frameworks */,
 				5BD90AB3698D8D2EEB405E5C /* Pods */,
 				E83C500D1E8FED200036349B /* Products */,
@@ -85,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				E83C500C1E8FED200036349B /* aria2 remote.app */,
+				E84308AC1EB8E71B00E4E6DB /* ARAJSONRPCClient.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,8 +156,6 @@
 				E83C50121E8FED200036349B /* Supporting Files */,
 				E83C500F1E8FED200036349B /* AppDelegate.h */,
 				E83C50101E8FED200036349B /* AppDelegate.m */,
-				E84C07B81EB457D90017693B /* Aria2Helper.h */,
-				E84C07B91EB457D90017693B /* Aria2Helper.m */,
 				E83C50181E8FED200036349B /* Assets.xcassets */,
 				E83C501D1E8FED200036349B /* Info.plist */,
 				E83C501A1E8FED200036349B /* Main.storyboard */,
@@ -120,7 +179,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E84308AD1EB8E71B00E4E6DB /* ARAJSONRPCClient */ = {
+			isa = PBXGroup;
+			children = (
+				E84308BB1EB8E75800E4E6DB /* ARAClient.h */,
+				E84308BC1EB8E75800E4E6DB /* ARAClient.m */,
+				E84308BD1EB8E75800E4E6DB /* ARADownload.h */,
+				E84308BE1EB8E75800E4E6DB /* ARADownload.m */,
+				E84308BF1EB8E75800E4E6DB /* ARAFile.h */,
+				E84308C01EB8E75800E4E6DB /* ARAFile.m */,
+				E84308AE1EB8E71B00E4E6DB /* ARAJSONRPCClient.h */,
+				E84308AF1EB8E71B00E4E6DB /* Info.plist */,
+				E82F09731EB9972C004F1C58 /* ARAHelper.h */,
+				E82F09741EB9972C004F1C58 /* ARAHelper.m */,
+			);
+			path = ARAJSONRPCClient;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E84308A91EB8E71B00E4E6DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82F09751EB9972C004F1C58 /* ARAHelper.h in Headers */,
+				E84308C11EB8E75800E4E6DB /* ARAClient.h in Headers */,
+				E84308C31EB8E75800E4E6DB /* ARADownload.h in Headers */,
+				E84308C51EB8E75800E4E6DB /* ARAFile.h in Headers */,
+				E84308B01EB8E71B00E4E6DB /* ARAJSONRPCClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		E83C500B1E8FED200036349B /* aria2 remote */ = {
@@ -133,15 +224,37 @@
 				E83C500A1E8FED200036349B /* Resources */,
 				01E28813EAEB1AEDCCC74C37 /* [CP] Embed Pods Frameworks */,
 				32D130A2B9AC5E474C170766 /* [CP] Copy Pods Resources */,
+				E84308B81EB8E71B00E4E6DB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E84308B21EB8E71B00E4E6DB /* PBXTargetDependency */,
 			);
 			name = "aria2 remote";
 			productName = "aria2 remote";
 			productReference = E83C500C1E8FED200036349B /* aria2 remote.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E84308AB1EB8E71B00E4E6DB /* ARAJSONRPCClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E84308B71EB8E71B00E4E6DB /* Build configuration list for PBXNativeTarget "ARAJSONRPCClient" */;
+			buildPhases = (
+				31296D6EF62E417F8E20A167 /* [CP] Check Pods Manifest.lock */,
+				E84308A71EB8E71B00E4E6DB /* Sources */,
+				E84308A81EB8E71B00E4E6DB /* Frameworks */,
+				E84308A91EB8E71B00E4E6DB /* Headers */,
+				E84308AA1EB8E71B00E4E6DB /* Resources */,
+				26DAB12514F543A8AFECE577 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARAJSONRPCClient;
+			productName = ARAJSONRPCClient;
+			productReference = E84308AC1EB8E71B00E4E6DB /* ARAJSONRPCClient.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -154,6 +267,11 @@
 				TargetAttributes = {
 					E83C500B1E8FED200036349B = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = JVD8WT99LB;
+						ProvisioningStyle = Automatic;
+					};
+					E84308AB1EB8E71B00E4E6DB = {
+						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = JVD8WT99LB;
 						ProvisioningStyle = Automatic;
 					};
@@ -173,6 +291,7 @@
 			projectRoot = "";
 			targets = (
 				E83C500B1E8FED200036349B /* aria2 remote */,
+				E84308AB1EB8E71B00E4E6DB /* ARAJSONRPCClient */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +303,13 @@
 			files = (
 				E83C50191E8FED200036349B /* Assets.xcassets in Resources */,
 				E83C501C1E8FED200036349B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E84308AA1EB8E71B00E4E6DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +329,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26DAB12514F543A8AFECE577 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARAJSONRPCClient/Pods-ARAJSONRPCClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31296D6EF62E417F8E20A167 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		32D130A2B9AC5E474C170766 /* [CP] Copy Pods Resources */ = {
@@ -232,7 +388,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -243,7 +399,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E83C50111E8FED200036349B /* AppDelegate.m in Sources */,
-				E84C07BA1EB457D90017693B /* Aria2Helper.m in Sources */,
 				E83C50141E8FED200036349B /* main.m in Sources */,
 				E80FE32A1EB4DA3200052244 /* MainTableViewController.m in Sources */,
 				E84697231E9027E100C79CAD /* MainWindowController.m in Sources */,
@@ -252,7 +407,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E84308A71EB8E71B00E4E6DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E84308C61EB8E75800E4E6DB /* ARAFile.m in Sources */,
+				E84308C41EB8E75800E4E6DB /* ARADownload.m in Sources */,
+				E82F09761EB9972C004F1C58 /* ARAHelper.m in Sources */,
+				E84308C21EB8E75800E4E6DB /* ARAClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E84308B21EB8E71B00E4E6DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E84308AB1EB8E71B00E4E6DB /* ARAJSONRPCClient */;
+			targetProxy = E84308B11EB8E71B00E4E6DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E83C501A1E8FED200036349B /* Main.storyboard */ = {
@@ -364,6 +538,7 @@
 				DEVELOPMENT_TEAM = JVD8WT99LB;
 				INFOPLIST_FILE = "aria2 remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kytse.aria2-remote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -378,8 +553,59 @@
 				DEVELOPMENT_TEAM = JVD8WT99LB;
 				INFOPLIST_FILE = "aria2 remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kytse.aria2-remote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E84308B51EB8E71B00E4E6DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E01269154F6D6D53E84F035 /* Pods-ARAJSONRPCClient.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JVD8WT99LB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ARAJSONRPCClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kytse.ARAJSONRPCClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E84308B61EB8E71B00E4E6DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 875600C5591EB2096054A3F4 /* Pods-ARAJSONRPCClient.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JVD8WT99LB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ARAJSONRPCClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kytse.ARAJSONRPCClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -400,6 +626,15 @@
 			buildConfigurations = (
 				E83C50211E8FED200036349B /* Debug */,
 				E83C50221E8FED200036349B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E84308B71EB8E71B00E4E6DB /* Build configuration list for PBXNativeTarget "ARAJSONRPCClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E84308B51EB8E71B00E4E6DB /* Debug */,
+				E84308B61EB8E71B00E4E6DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
