@@ -176,7 +176,7 @@
     _selectedDownload = download;
     [_continueButton setEnabled:([[_selectedDownload status] isEqualToString:@"paused"])];
     [_pauseButton setEnabled:([[_selectedDownload status] isEqualToString:@"active"] || [[_selectedDownload status] isEqualToString:@"waiting"])];
-    [_stopButton setEnabled:(![[_selectedDownload status] isEqualToString:@"removed"])];
+    [_stopButton setEnabled:(![[_selectedDownload status] isEqualToString:@"complete"] && ![[_selectedDownload status] isEqualToString:@"removed"])];
 }
 
 - (ARADownload *)mainTableViewControllerSelectedDownload:(MainTableViewController *)controller {
