@@ -70,58 +70,61 @@
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     // Retrieve to get the @"MyView" from the pool or,
     // if no version is available in the pool, load the Interface Builder version
-    NSTableCellView *result = [tableView makeViewWithIdentifier:[tableColumn identifier] owner:self];
+    NSView *view = [tableView makeViewWithIdentifier:[tableColumn identifier] owner:self];
     
     // Set the stringValue of the cell's text field to the nameArray value at row
     ARADownload *download = [_visibleDownloads objectAtIndex:row];
     if ([[tableColumn identifier] isEqualToString:@"gid"]) {
-        [[result textField] setStringValue:[download gid]];
+        [[(NSTableCellView *)view textField] setStringValue:[download gid]];
     } else if ([[tableColumn identifier] isEqualToString:@"status"]) {
-        [[result textField] setStringValue:[download status]];
+        [[(NSTableCellView *)view textField] setStringValue:[download status]];
     } else if ([[tableColumn identifier] isEqualToString:@"totalLength"]) {
-        [[result textField] setStringValue:[download totalLength]];
+        [[(NSTableCellView *)view textField] setStringValue:[download totalLength]];
     } else if ([[tableColumn identifier] isEqualToString:@"completedLength"]) {
-        [[result textField] setStringValue:[download completedLength]];
+        [[(NSTableCellView *)view textField] setStringValue:[download completedLength]];
     } else if ([[tableColumn identifier] isEqualToString:@"uploadLength"]) {
-        [[result textField] setStringValue:[download uploadLength]];
+        [[(NSTableCellView *)view textField] setStringValue:[download uploadLength]];
     } else if ([[tableColumn identifier] isEqualToString:@"bitfield"]) {
-        [[result textField] setStringValue:[download bitfield]];
+        [[(NSTableCellView *)view textField] setStringValue:[download bitfield]];
     } else if ([[tableColumn identifier] isEqualToString:@"downloadSpeed"]) {
-        [[result textField] setStringValue:[download downloadSpeed]];
+        [[(NSTableCellView *)view textField] setStringValue:[download downloadSpeed]];
     } else if ([[tableColumn identifier] isEqualToString:@"uploadSpeed"]) {
-        [[result textField] setStringValue:[download uploadSpeed]];
+        [[(NSTableCellView *)view textField] setStringValue:[download uploadSpeed]];
     } else if ([[tableColumn identifier] isEqualToString:@"infoHash"]) {
-        [[result textField] setStringValue:[download infoHash]];
+        [[(NSTableCellView *)view textField] setStringValue:[download infoHash]];
     } else if ([[tableColumn identifier] isEqualToString:@"numSeeders"]) {
-        [[result textField] setStringValue:[download numSeeders]];
+        [[(NSTableCellView *)view textField] setStringValue:[download numSeeders]];
     } else if ([[tableColumn identifier] isEqualToString:@"seeder"]) {
-        [[result textField] setStringValue:[download seeder]];
+        [[(NSTableCellView *)view textField] setStringValue:[download seeder]];
     } else if ([[tableColumn identifier] isEqualToString:@"pieceLength"]) {
-        [[result textField] setStringValue:[download pieceLength]];
+        [[(NSTableCellView *)view textField] setStringValue:[download pieceLength]];
     } else if ([[tableColumn identifier] isEqualToString:@"numPieces"]) {
-        [[result textField] setStringValue:[download numPieces]];
+        [[(NSTableCellView *)view textField] setStringValue:[download numPieces]];
     } else if ([[tableColumn identifier] isEqualToString:@"connections"]) {
-        [[result textField] setStringValue:[download connections]];
+        [[(NSTableCellView *)view textField] setStringValue:[download connections]];
     } else if ([[tableColumn identifier] isEqualToString:@"errorCode"]) {
-        [[result textField] setStringValue:[download errorCode]];
+        [[(NSTableCellView *)view textField] setStringValue:[download errorCode]];
     } else if ([[tableColumn identifier] isEqualToString:@"errorMessage"]) {
-        [[result textField] setStringValue:[download errorMessage]];
+        [[(NSTableCellView *)view textField] setStringValue:[download errorMessage]];
     } else if ([[tableColumn identifier] isEqualToString:@"following"]) {
-        [[result textField] setStringValue:[download following]];
+        [[(NSTableCellView *)view textField] setStringValue:[download following]];
     } else if ([[tableColumn identifier] isEqualToString:@"belongsTo"]) {
-        [[result textField] setStringValue:[download belongsTo]];
+        [[(NSTableCellView *)view textField] setStringValue:[download belongsTo]];
     } else if ([[tableColumn identifier] isEqualToString:@"dir"]) {
-        [[result textField] setStringValue:[download dir]];
+        [[(NSTableCellView *)view textField] setStringValue:[download dir]];
     } else if ([[tableColumn identifier] isEqualToString:@"verifiedLength"]) {
-        [[result textField] setStringValue:[download verifiedLength]];
+        [[(NSTableCellView *)view textField] setStringValue:[download verifiedLength]];
     } else if ([[tableColumn identifier] isEqualToString:@"verifyIntegrityPending"]) {
-        [[result textField] setStringValue:[download verifyIntegrityPending]];
+        [[(NSTableCellView *)view textField] setStringValue:[download verifyIntegrityPending]];
     } else if ([[tableColumn identifier] isEqualToString:@"name"]) {
-        [[result textField] setStringValue:[download name]];
+        [[(NSTableCellView *)view textField] setStringValue:[download name]];
+    } else if ([[tableColumn identifier] isEqualToString:@"completedPercentage"]) {
+        [(NSProgressIndicator *)view setMaxValue:[[download totalLength] doubleValue]];
+        [(NSProgressIndicator *)view setDoubleValue:[[download completedLength] doubleValue]];
     }
     
     // Return the result
-    return result;
+    return view;
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
