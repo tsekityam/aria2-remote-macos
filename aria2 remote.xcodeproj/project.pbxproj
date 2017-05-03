@@ -120,10 +120,10 @@
 			children = (
 				5E01269154F6D6D53E84F035 /* Pods-ARAJSONRPCClient.debug.xcconfig */,
 				875600C5591EB2096054A3F4 /* Pods-ARAJSONRPCClient.release.xcconfig */,
-				A82ECFD23D45CBC0F364B6FD /* Pods-aria2 remote.debug.xcconfig */,
-				4413A446762CFBAF1D034F9F /* Pods-aria2 remote.release.xcconfig */,
 				8B205DDC6B6AEA337C12C0B0 /* Pods-aria2 remote-ARAJSONRPCClient.debug.xcconfig */,
 				BF1D9AA27A0ED376DF4645C3 /* Pods-aria2 remote-ARAJSONRPCClient.release.xcconfig */,
+				A82ECFD23D45CBC0F364B6FD /* Pods-aria2 remote.debug.xcconfig */,
+				4413A446762CFBAF1D034F9F /* Pods-aria2 remote.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -131,9 +131,9 @@
 		B49104AF5731B7E13E9CBB7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */,
 				C77B393BB2014B54DAEE3661 /* libPods-ARAJSONRPCClient.a */,
 				E7D67FAA2EAF4C91A099221A /* libPods-aria2 remote-ARAJSONRPCClient.a */,
+				FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,8 +141,8 @@
 		E83C50031E8FED200036349B = {
 			isa = PBXGroup;
 			children = (
-				E83C500E1E8FED200036349B /* aria2 remote */,
 				E84308AD1EB8E71B00E4E6DB /* ARAJSONRPCClient */,
+				E83C500E1E8FED200036349B /* aria2 remote */,
 				B49104AF5731B7E13E9CBB7F /* Frameworks */,
 				5BD90AB3698D8D2EEB405E5C /* Pods */,
 				E83C500D1E8FED200036349B /* Products */,
@@ -152,8 +152,8 @@
 		E83C500D1E8FED200036349B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E83C500C1E8FED200036349B /* aria2 remote.app */,
 				E84308AC1EB8E71B00E4E6DB /* ARAJSONRPCClient.framework */,
+				E83C500C1E8FED200036349B /* aria2 remote.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,10 +196,10 @@
 				E84308BE1EB8E75800E4E6DB /* ARADownload.m */,
 				E84308BF1EB8E75800E4E6DB /* ARAFile.h */,
 				E84308C01EB8E75800E4E6DB /* ARAFile.m */,
-				E84308AE1EB8E71B00E4E6DB /* ARAJSONRPCClient.h */,
-				E84308AF1EB8E71B00E4E6DB /* Info.plist */,
 				E82F09731EB9972C004F1C58 /* ARAHelper.h */,
 				E82F09741EB9972C004F1C58 /* ARAHelper.m */,
+				E84308AE1EB8E71B00E4E6DB /* ARAJSONRPCClient.h */,
+				E84308AF1EB8E71B00E4E6DB /* Info.plist */,
 			);
 			path = ARAJSONRPCClient;
 			sourceTree = "<group>";
@@ -211,10 +211,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E82F09751EB9972C004F1C58 /* ARAHelper.h in Headers */,
 				E84308C11EB8E75800E4E6DB /* ARAClient.h in Headers */,
 				E84308C31EB8E75800E4E6DB /* ARADownload.h in Headers */,
 				E84308C51EB8E75800E4E6DB /* ARAFile.h in Headers */,
+				E82F09751EB9972C004F1C58 /* ARAHelper.h in Headers */,
 				E84308B01EB8E71B00E4E6DB /* ARAJSONRPCClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,10 +418,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E84308C61EB8E75800E4E6DB /* ARAFile.m in Sources */,
-				E84308C41EB8E75800E4E6DB /* ARADownload.m in Sources */,
-				E82F09761EB9972C004F1C58 /* ARAHelper.m in Sources */,
 				E84308C21EB8E75800E4E6DB /* ARAClient.m in Sources */,
+				E84308C41EB8E75800E4E6DB /* ARADownload.m in Sources */,
+				E84308C61EB8E75800E4E6DB /* ARAFile.m in Sources */,
+				E82F09761EB9972C004F1C58 /* ARAHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
