@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192842A8E2CC0B4FD12915BD /* libPods-aria2 remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */; };
+		2A82DBBC3981F630A0795CF8 /* libPods-aria2 remote-ARAJSONRPCClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D67FAA2EAF4C91A099221A /* libPods-aria2 remote-ARAJSONRPCClient.a */; };
 		30249613F947417B36AABB25 /* libPods-ARAJSONRPCClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C77B393BB2014B54DAEE3661 /* libPods-ARAJSONRPCClient.a */; };
-		BFEBBEF435DEA7527D1A8A3C /* libPods-aria2 remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */; };
 		E80FE32A1EB4DA3200052244 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E80FE3291EB4DA3200052244 /* MainTableViewController.m */; };
 		E82F09751EB9972C004F1C58 /* ARAHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E82F09731EB9972C004F1C58 /* ARAHelper.h */; };
 		E82F09761EB9972C004F1C58 /* ARAHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E82F09741EB9972C004F1C58 /* ARAHelper.m */; };
@@ -55,11 +56,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		28EE140CD39DE16F984C247C /* Pods-aria2 remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aria2 remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote.debug.xcconfig"; sourceTree = "<group>"; };
+		4413A446762CFBAF1D034F9F /* Pods-aria2 remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aria2 remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote.release.xcconfig"; sourceTree = "<group>"; };
 		5E01269154F6D6D53E84F035 /* Pods-ARAJSONRPCClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARAJSONRPCClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARAJSONRPCClient/Pods-ARAJSONRPCClient.debug.xcconfig"; sourceTree = "<group>"; };
 		875600C5591EB2096054A3F4 /* Pods-ARAJSONRPCClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARAJSONRPCClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARAJSONRPCClient/Pods-ARAJSONRPCClient.release.xcconfig"; sourceTree = "<group>"; };
+		8B205DDC6B6AEA337C12C0B0 /* Pods-aria2 remote-ARAJSONRPCClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aria2 remote-ARAJSONRPCClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aria2 remote-ARAJSONRPCClient/Pods-aria2 remote-ARAJSONRPCClient.debug.xcconfig"; sourceTree = "<group>"; };
+		A82ECFD23D45CBC0F364B6FD /* Pods-aria2 remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aria2 remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote.debug.xcconfig"; sourceTree = "<group>"; };
+		BF1D9AA27A0ED376DF4645C3 /* Pods-aria2 remote-ARAJSONRPCClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aria2 remote-ARAJSONRPCClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-aria2 remote-ARAJSONRPCClient/Pods-aria2 remote-ARAJSONRPCClient.release.xcconfig"; sourceTree = "<group>"; };
 		C77B393BB2014B54DAEE3661 /* libPods-ARAJSONRPCClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ARAJSONRPCClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D385B79B8F4BAEDCFC4C2D59 /* Pods-aria2 remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aria2 remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote.release.xcconfig"; sourceTree = "<group>"; };
+		E7D67FAA2EAF4C91A099221A /* libPods-aria2 remote-ARAJSONRPCClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aria2 remote-ARAJSONRPCClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80FE3281EB4DA3200052244 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		E80FE3291EB4DA3200052244 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		E82F09731EB9972C004F1C58 /* ARAHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAHelper.h; sourceTree = "<group>"; };
@@ -95,7 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E84308B31EB8E71B00E4E6DB /* ARAJSONRPCClient.framework in Frameworks */,
-				BFEBBEF435DEA7527D1A8A3C /* libPods-aria2 remote.a in Frameworks */,
+				192842A8E2CC0B4FD12915BD /* libPods-aria2 remote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30249613F947417B36AABB25 /* libPods-ARAJSONRPCClient.a in Frameworks */,
+				2A82DBBC3981F630A0795CF8 /* libPods-aria2 remote-ARAJSONRPCClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,10 +118,12 @@
 		5BD90AB3698D8D2EEB405E5C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				28EE140CD39DE16F984C247C /* Pods-aria2 remote.debug.xcconfig */,
-				D385B79B8F4BAEDCFC4C2D59 /* Pods-aria2 remote.release.xcconfig */,
 				5E01269154F6D6D53E84F035 /* Pods-ARAJSONRPCClient.debug.xcconfig */,
 				875600C5591EB2096054A3F4 /* Pods-ARAJSONRPCClient.release.xcconfig */,
+				A82ECFD23D45CBC0F364B6FD /* Pods-aria2 remote.debug.xcconfig */,
+				4413A446762CFBAF1D034F9F /* Pods-aria2 remote.release.xcconfig */,
+				8B205DDC6B6AEA337C12C0B0 /* Pods-aria2 remote-ARAJSONRPCClient.debug.xcconfig */,
+				BF1D9AA27A0ED376DF4645C3 /* Pods-aria2 remote-ARAJSONRPCClient.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 			children = (
 				FDE069713B5F157BF813EA77 /* libPods-aria2 remote.a */,
 				C77B393BB2014B54DAEE3661 /* libPods-ARAJSONRPCClient.a */,
+				E7D67FAA2EAF4C91A099221A /* libPods-aria2 remote-ARAJSONRPCClient.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,13 +226,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E83C50201E8FED200036349B /* Build configuration list for PBXNativeTarget "aria2 remote" */;
 			buildPhases = (
-				A031AE9EF2A5B5960F83F502 /* [CP] Check Pods Manifest.lock */,
+				7F443761E9E59A6679B1B265 /* [CP] Check Pods Manifest.lock */,
 				E83C50081E8FED200036349B /* Sources */,
 				E83C50091E8FED200036349B /* Frameworks */,
 				E83C500A1E8FED200036349B /* Resources */,
-				01E28813EAEB1AEDCCC74C37 /* [CP] Embed Pods Frameworks */,
-				32D130A2B9AC5E474C170766 /* [CP] Copy Pods Resources */,
 				E84308B81EB8E71B00E4E6DB /* Embed Frameworks */,
+				3DAABB3DD6C58AFAD9438A30 /* [CP] Embed Pods Frameworks */,
+				05AEC45EB1C10D398ACA7DC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,19 +324,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01E28813EAEB1AEDCCC74C37 /* [CP] Embed Pods Frameworks */ = {
+		05AEC45EB1C10D398ACA7DC0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		26DAB12514F543A8AFECE577 /* [CP] Copy Pods Resources */ = {
@@ -361,22 +369,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		32D130A2B9AC5E474C170766 /* [CP] Copy Pods Resources */ = {
+		3DAABB3DD6C58AFAD9438A30 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aria2 remote/Pods-aria2 remote-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A031AE9EF2A5B5960F83F502 /* [CP] Check Pods Manifest.lock */ = {
+		7F443761E9E59A6679B1B265 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -531,7 +539,7 @@
 		};
 		E83C50211E8FED200036349B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28EE140CD39DE16F984C247C /* Pods-aria2 remote.debug.xcconfig */;
+			baseConfigurationReference = A82ECFD23D45CBC0F364B6FD /* Pods-aria2 remote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -546,7 +554,7 @@
 		};
 		E83C50221E8FED200036349B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D385B79B8F4BAEDCFC4C2D59 /* Pods-aria2 remote.release.xcconfig */;
+			baseConfigurationReference = 4413A446762CFBAF1D034F9F /* Pods-aria2 remote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
