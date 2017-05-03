@@ -14,6 +14,10 @@
 #import <ARAJSONRPCClient/ARAJSONRPCClient.h>
 
 @interface MainWindowController () <SourceTreeViewControllerDelegate, MainTableViewControllerDelegate, MainTableViewControllerDataSource, NSUserNotificationCenterDelegate>
+@property (weak) IBOutlet NSToolbarItem *addButton;
+@property (weak) IBOutlet NSToolbarItem *continueButton;
+@property (weak) IBOutlet NSToolbarItem *pauseButton;
+@property (weak) IBOutlet NSToolbarItem *stopButton;
 @property SourceTreeViewController *sourceTreeViewController;
 @property MainTableViewController *mainTableViewController;
 @property ARADownload *selectedDownload;
@@ -170,6 +174,9 @@
 
 - (void)mainTableViewController:(MainTableViewController *)controller selectedDownloadDidChangeTo:(ARADownload *)download {
     _selectedDownload = download;
+    [_continueButton setEnabled:([[_selectedDownload status] isEqualToString:@"paused"])];
+    [_pauseButton setEnabled:([[_selectedDownload status] isEqualToString:@"active"] || [[_selectedDownload status] isEqualToString:@"waiting"])];
+    [_stopButton setEnabled:(![[_selectedDownload status] isEqualToString:@"removed"])];
 }
 
 - (ARADownload *)mainTableViewControllerSelectedDownload:(MainTableViewController *)controller {

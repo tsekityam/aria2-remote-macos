@@ -831,7 +831,7 @@ Gw
                                     <button key="view" verticalHuggingPriority="750" id="awi-eO-33N">
                                         <rect key="frame" x="0.0" y="14" width="82" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="ic_play_arrow" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="62D-55-guE">
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="ic_play_arrow" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="62D-55-guE">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -847,7 +847,7 @@ Gw
                                     <button key="view" verticalHuggingPriority="750" id="yNW-sg-yiM">
                                         <rect key="frame" x="0.0" y="14" width="82" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="ic_pause" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wSP-B1-R1h">
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="ic_pause" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wSP-B1-R1h">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -863,7 +863,7 @@ Gw
                                     <button key="view" verticalHuggingPriority="750" id="ebd-K1-Wnr">
                                         <rect key="frame" x="0.0" y="14" width="82" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="ic_stop" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bo4-XI-jor">
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="ic_stop" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bo4-XI-jor">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -885,6 +885,10 @@ Gw
                         </toolbar>
                     </window>
                     <connections>
+                        <outlet property="addButton" destination="tel-rm-HBE" id="M7H-XM-lR6"/>
+                        <outlet property="continueButton" destination="g0U-tY-o7V" id="vVj-CH-Bwz"/>
+                        <outlet property="pauseButton" destination="cRM-h4-DQq" id="RG7-fs-iOt"/>
+                        <outlet property="stopButton" destination="f27-SZ-YpB" id="59r-kH-BGa"/>
                         <segue destination="Cdu-qD-RTK" kind="relationship" relationship="window.shadowedContentViewController" id="8LB-5m-FSx"/>
                     </connections>
                 </windowController>
